@@ -9,7 +9,8 @@ All data in this repository is synthetic: fictional couples and a simulated busi
 ## Run it in Google Colab
 
 Open the badge above and choose **Runtime → Run all**. The first two cells clone this repository and install
-PostgreSQL 16 inside the Colab session (about 3 minutes); the rest runs in about one minute. The notebook
+PostgreSQL 16 inside the Colab session. A full run takes about 7 minutes on a standard Colab machine (about 2
+for the setup, about 3 for the automated tests). The notebook
 shows the architecture and schema, both business problems followed run by run, data-quality and error
 handling, recovery, the source-to-target check, performance and the batch-cap queue, and all automated tests.
 

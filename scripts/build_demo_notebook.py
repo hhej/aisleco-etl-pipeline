@@ -955,8 +955,9 @@ if COLAB:
 
 Choose **Runtime → Run all**. The next two cells fetch the project from GitHub
 ([`{REPO}`](https://github.com/{REPO})) and install PostgreSQL 16 and the Python driver inside this Colab
-session, which takes about 3 minutes. The rest of the notebook then runs in about one minute. Nothing is
-installed on your own computer. To run it again from a clean state, use Runtime → Restart session and
+session. A full Run all takes about 7 minutes on a standard Colab machine: about 2 for the setup, about 3
+for the automated tests in section 14, and the rest for the demo itself. Nothing is installed on your own
+computer. To run it again from a clean state, use Runtime → Restart session and
 run all."""),
         nbf.v4.new_code_cell(f'''# 1. Fetch the project and the Python packages
 import os, subprocess, sys

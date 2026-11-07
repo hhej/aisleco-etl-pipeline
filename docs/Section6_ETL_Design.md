@@ -146,22 +146,22 @@ fails anywhere therefore leaves the next run to pick up exactly where this one s
 | Idempotency | A second run on unchanged data | 0 rows inserted, updated or deleted |
 | Error handling | Source unavailable, bad row → dead letter → corrected, rejected parent with child, blocking gate, crash + resume, damaged landing file, resuming an old run, as-of date moving backwards | All behave as in 6.6 |
 | Batch cap | A burst larger than the cap is queued and drained over several runs; a new child pulls its new parent into the batch | Each run takes at most the cap; no dead letters; the drained warehouse equals a full refresh |
-| Performance: history | The simulated year copied up to 1,000 times (4.25 M CRM rows, about 1,000 years of Aisle & Co. at today's volume); one full and one small incremental run per size | Incremental run: 0.5 s at ×10, 4.8 s at ×100, **52.6 s at ×1000**, within the 2-minute target. Full (initial) load: 80 s at 2.1 M rows, 213 s at 4.25 M, so above about 2.7 M rows it is a one-off outside the target |
-| Performance: burst | At ×100 history, up to 326,000 changes committed as 1,000-row CRM transactions, no cap | 9.8 s for 326,000 changes (≈ 33,000 changes/s) |
-| Performance: overflow | The same 326,000 changes with the batch cap of 100,000 and the production 5-minute overlap | Drained in 4 runs of 5–7 s; queue 206 k → 106 k → 14 k → 0 |
+| Performance: history | The simulated year copied up to 1,000 times (4.25 M CRM rows, about 1,000 years of Aisle & Co. at today's volume); one full and one small incremental run per size | Incremental run: 0.5 s at ×10, 9.3 s at ×100, **50.6 s at ×1000**, within the 2-minute target. Full (initial) load: 105 s at 2.1 M rows, 219 s at 4.25 M, so above about 2.4 M rows it is a one-off outside the target. Repeated runs vary by a few seconds (laptop) |
+| Performance: burst | At ×100 history, up to 326,000 changes committed as 1,000-row CRM transactions, no cap | 10.1 s for 326,000 changes (≈ 32,000 changes/s) |
+| Performance: overflow | The same 326,000 changes with the batch cap of 100,000 and the production 5-minute overlap | Drained in 4 runs of 5–8 s; queue 206 k → 106 k → 14 k → 0 |
 
 The 33 automated tests are in `tests/` and run with `pytest`. The performance numbers come from
 `scripts/benchmark.py --stress` on a laptop (results and chart in `docs/stress_test.txt` / `.png`).
 **Capacity, as designed:** one run must finish within 2 minutes. Measured: an incremental run stays
 within it up to at least 4.25 M CRM rows of history, and one run absorbs at least 326,000 changes in
-under 10 s. Above that, the batch cap (100,000 changes per run) holds each run at about 7 s and the
-excess waits in the backlog queue. A linear fit puts the limits near 10 M rows of history and 9 M
+about 10 s. Above that, the batch cap (100,000 changes per run) holds each run at about 7 s and the
+excess waits in the backlog queue. A linear fit puts the limits near 10 M rows of history and 8 M
 changes per run, but that is an extrapolation beyond what was measured.
 
 ## 6.8 Known limits
 
 - The transform steps recompute every fact row from staging and then write only the changed ones, so
-  a run's time grows with history (12 s per million CRM rows measured), not only with the changes. At
+  a run's time grows with history (about 11 s per million CRM rows measured), not only with the changes. At
   80–120 weddings a year this takes well under a second. Near 10 M rows the transforms would need
   limiting to the inquiries and employees touched by the changed rows.
 - The batch cap bounds the changes per run, not the history. A backlog drains one run at a time; with
