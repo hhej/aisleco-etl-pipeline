@@ -1,0 +1,12 @@
+EmployeeKey,EmployeeID,FullName,RoleName,EmploymentType,EmployeeStatus
+-1,-1,Unknown / none,,,
+1,1,Som Test,Lead Planner,FullTime,Active
+2,2,Beam Test,Lead Planner,FullTime,Active
+3,3,Ann Test,Lead Planner,FullTime,Active
+4,4,Nina Test,Planner,FullTime,Active
+5,5,Pim Test,Coordinator,FullTime,Active
+6,6,Mook Test,Coordinator,FullTime,Active
+7,7,Golf Test,Event Staff,FullTime,Active
+8,8,May Test,Sales Executive,FullTime,Active
+9,9,Ice Test,Marketing Executive,FullTime,Active
+10,10,Toey Test,Finance Officer,FullTime,Active

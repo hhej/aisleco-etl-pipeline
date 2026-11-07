@@ -1,0 +1,9 @@
+ChannelID,ChannelName,ChannelType,TrackingCode,Status,_ingested_at,_source,_batch_id
+1,LINE OA,Online,,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+2,Facebook,Online,,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+3,Instagram,Online,,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+4,TikTok,Online,#TIKTOK,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+5,Website,Online,#WEB,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+6,Wedding Fair,Offline,#FAIR,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+7,Referral,Offline,,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily
+8,Walk-in,Offline,,Active,2027-01-15T02:00:00,crm_MarketingChannel,2027-01-15_daily

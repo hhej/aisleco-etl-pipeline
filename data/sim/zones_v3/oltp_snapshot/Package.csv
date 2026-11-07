@@ -1,0 +1,7 @@
+PackageID,PackageName,PackageType,BasePrice,ServiceFeeType,ServiceFeeRate,EffectiveFrom,EffectiveTo,Status
+1,Full Planning,Full,,Percent,12.5,2025-01-01,2026-06-30,Retired
+2,Full Planning,Full,,Percent,13.5,2026-07-01,,Active
+3,Partial Planning,Partial,90000.0,Fixed,,2025-01-01,,Active
+4,Day-of Coordination,DayOf,45000.0,Fixed,,2025-01-01,2026-06-30,Retired
+5,Day-of Coordination,DayOf,52000.0,Fixed,,2026-07-01,,Active
+6,Custom,Custom,,Fixed,,2025-01-01,,Active

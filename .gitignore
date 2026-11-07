@@ -1,0 +1,23 @@
+# environments and caches
+.venv/
+.venv-airflow/
+.pytest_cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# data written at run time (landing files of each run)
+data/landing*/
+data/sim/*
+!data/sim/zones_v3/
+
+# Airflow: only the DAG is part of the project (config, logs and the admin password stay local)
+airflow/*
+!airflow/dags/
+
+# not distributed: course material, the report draft, superseded files
+*.pdf
+*.docx
+crosscheck_v3.py
+docs/benchmark_x10.txt

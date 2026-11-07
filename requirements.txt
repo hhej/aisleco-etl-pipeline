@@ -1,0 +1,7 @@
+# pipeline, tests, demo notebook (Python 3.11). Airflow has its own venv, see README.
+psycopg[binary]==3.2.3
+pandas==2.2.3
+pytest==8.3.4
+matplotlib==3.9.2
+nbformat==5.11.1
+jupyter==1.1.1

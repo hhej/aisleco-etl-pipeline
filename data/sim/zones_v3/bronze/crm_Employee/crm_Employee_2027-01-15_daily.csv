@@ -1,0 +1,11 @@
+EmployeeID,RoleID,EmployeeCode,FirstName,LastName,EmploymentType,HireDate,StandardWeeklyHours,MaxConcurrentEvents,Status,_ingested_at,_source,_batch_id
+1,1,E001,Som,Test,FullTime,2023-01-01,50,25.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+2,1,E002,Beam,Test,FullTime,2023-01-01,50,25.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+3,1,E003,Ann,Test,FullTime,2023-01-01,48,25.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+4,2,E004,Nina,Test,FullTime,2023-01-01,44,20.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+5,3,E005,Pim,Test,FullTime,2023-01-01,44,30.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+6,3,E006,Mook,Test,FullTime,2023-01-01,44,30.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+7,4,E007,Golf,Test,FullTime,2023-01-01,40,40.0,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+8,5,E008,May,Test,FullTime,2023-01-01,44,,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+9,6,E009,Ice,Test,FullTime,2023-01-01,44,,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily
+10,7,E010,Toey,Test,FullTime,2023-01-01,40,,Active,2027-01-15T02:00:00,crm_Employee,2027-01-15_daily

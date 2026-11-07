@@ -1,0 +1,346 @@
+EventEmployeeAssignmentID,EventID,EmployeeID,AssignmentRole,AssignedDate,WorkloadHours,IsLead,Status,_ingested_at,_source,_batch_id
+1,1,1,Lead Planner,2026-02-02 12:37:00,42.28,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+2,1,6,Coordinator,2026-12-04 12:37:00,20.16,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+3,1,7,Event Staff,2026-11-23 12:37:00,14.68,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+4,2,3,Lead Planner,2026-01-29 17:09:00,85.92,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+5,2,4,Planner,2026-01-29 17:09:00,33.97,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+6,2,6,Coordinator,2026-10-31 17:09:00,16.28,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+7,2,7,Event Staff,2026-11-07 17:09:00,10.87,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+8,3,2,Lead Planner,2026-02-09 12:06:00,78.89,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+9,3,4,Planner,2026-02-09 12:06:00,32.1,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+10,3,5,Coordinator,2027-01-17 12:06:00,22.97,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+11,3,7,Event Staff,2027-02-05 12:06:00,11.77,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+12,4,1,Lead Planner,2026-02-05 19:17:00,42.64,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+13,4,4,Planner,2026-02-05 19:17:00,43.9,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+14,4,5,Coordinator,2026-11-18 19:17:00,22.53,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+15,4,7,Event Staff,2026-11-12 19:17:00,10.64,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+16,5,1,Lead Planner,2026-02-22 16:12:00,53.68,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+17,5,4,Planner,2026-02-22 16:12:00,39.2,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+18,5,6,Coordinator,2026-10-07 16:12:00,22.91,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+19,5,7,Event Staff,2026-10-12 16:12:00,11.61,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+20,6,2,Lead Planner,2026-02-21 10:42:00,26.22,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+21,6,5,Coordinator,2027-01-13 10:42:00,19.91,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+22,6,7,Event Staff,2027-01-27 10:42:00,10.39,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+23,7,2,Lead Planner,2026-02-20 09:36:00,30.2,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+24,7,5,Coordinator,2026-09-11 09:36:00,18.81,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+25,7,7,Event Staff,2026-09-30 09:36:00,10.17,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+26,8,2,Lead Planner,2026-02-21 10:57:00,91.83,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+27,8,4,Planner,2026-02-21 10:57:00,56.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+28,8,5,Coordinator,2026-11-30 10:57:00,18.74,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+29,8,7,Event Staff,2026-11-13 10:57:00,13.04,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+30,9,1,Lead Planner,2026-02-20 09:50:00,16.6,Y,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+31,9,5,Coordinator,2027-01-07 09:50:00,20.52,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+32,9,7,Event Staff,2027-01-01 09:50:00,10.02,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+33,10,2,Lead Planner,2026-02-26 09:32:00,98.23,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+34,10,4,Planner,2026-02-26 09:32:00,53.14,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+35,10,5,Coordinator,2026-10-24 09:32:00,19.27,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+36,10,7,Event Staff,2026-10-05 09:32:00,13.3,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+37,11,3,Lead Planner,2026-02-24 09:44:00,75.01,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+38,11,4,Planner,2026-02-24 09:44:00,40.09,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+39,11,6,Coordinator,2026-12-20 09:44:00,21.43,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+40,11,7,Event Staff,2026-11-27 09:44:00,14.25,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+41,12,1,Lead Planner,2026-02-08 14:33:00,29.16,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+42,12,6,Coordinator,2026-12-17 14:33:00,21.42,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+43,12,7,Event Staff,2026-12-05 14:33:00,10.08,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+44,13,1,Lead Planner,2026-03-21 11:24:00,25.73,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+45,13,5,Coordinator,2026-11-04 11:24:00,17.5,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+46,13,7,Event Staff,2026-11-16 11:24:00,11.4,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+47,14,2,Lead Planner,2026-03-07 10:09:00,27.79,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+48,14,6,Coordinator,2026-08-21 10:09:00,22.38,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+49,14,7,Event Staff,2026-09-09 10:09:00,11.47,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+50,15,2,Lead Planner,2026-03-28 11:27:00,33.78,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+51,15,6,Coordinator,2026-11-02 11:27:00,18.61,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+52,15,7,Event Staff,2026-11-19 11:27:00,10.25,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+53,16,1,Lead Planner,2026-04-07 10:23:00,62.54,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+54,16,4,Planner,2026-04-07 10:23:00,37.89,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+55,16,5,Coordinator,2027-01-23 10:23:00,15.89,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+56,16,7,Event Staff,2027-02-10 10:23:00,10.74,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+57,17,1,Lead Planner,2026-04-04 09:06:00,71.88,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+58,17,4,Planner,2026-04-04 09:06:00,25.7,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+59,17,5,Coordinator,2027-01-08 09:06:00,16.21,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+60,17,7,Event Staff,2027-01-01 09:06:00,11.46,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+61,18,3,Lead Planner,2026-04-01 11:39:00,32.07,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+62,18,5,Coordinator,2026-07-16 11:39:00,14.38,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+63,18,7,Event Staff,2026-07-25 11:39:00,11.82,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+64,19,3,Lead Planner,2026-04-06 18:01:00,66.87,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+65,19,4,Planner,2026-04-06 18:01:00,29.24,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+66,19,5,Coordinator,2027-03-15 18:01:00,16.74,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+67,19,7,Event Staff,2027-03-01 18:01:00,11.16,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+68,20,2,Lead Planner,2026-04-07 15:31:00,33.44,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+69,20,6,Coordinator,2027-04-06 15:31:00,22.6,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+70,20,7,Event Staff,2027-04-03 15:31:00,11.75,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+71,21,1,Lead Planner,2026-04-02 10:27:00,34.08,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+72,21,5,Coordinator,2027-01-28 10:27:00,22.12,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+73,21,7,Event Staff,2027-01-31 10:27:00,10.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+74,22,3,Lead Planner,2026-04-10 13:35:00,72.9,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+75,22,4,Planner,2026-04-10 13:35:00,25.72,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+76,22,6,Coordinator,2026-12-07 13:35:00,16.68,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+77,22,7,Event Staff,2026-11-30 13:35:00,11.49,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+78,23,2,Lead Planner,2026-04-07 09:57:00,48.77,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+79,23,4,Planner,2026-04-07 09:57:00,20.49,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+80,23,6,Coordinator,2026-06-13 09:57:00,18.92,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+81,23,7,Event Staff,2026-06-21 09:57:00,11.47,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+82,24,1,Lead Planner,2026-04-04 13:02:00,23.2,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+83,24,6,Coordinator,2026-11-18 13:02:00,23.47,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+84,24,7,Event Staff,2026-11-14 13:02:00,10.89,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+85,25,1,Lead Planner,2026-04-23 18:14:00,60.86,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+86,25,4,Planner,2026-04-23 18:14:00,36.85,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+87,25,6,Coordinator,2027-01-22 18:14:00,26.76,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+88,25,7,Event Staff,2027-01-28 18:14:00,13.28,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+89,26,1,Lead Planner,2026-04-03 11:44:00,73.52,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+90,26,4,Planner,2026-04-03 11:44:00,27.53,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+91,26,6,Coordinator,2026-08-31 11:44:00,16.37,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+92,26,7,Event Staff,2026-08-26 11:44:00,11.48,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+93,27,2,Lead Planner,2026-04-21 09:57:00,64.73,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+94,27,4,Planner,2026-04-21 09:57:00,40.83,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+95,27,6,Coordinator,2026-12-04 09:57:00,17.17,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+96,27,7,Event Staff,2026-11-19 09:57:00,11.76,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+97,28,3,Lead Planner,2026-04-21 10:37:00,25.44,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+98,28,5,Coordinator,2027-02-01 10:37:00,23.06,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+99,28,7,Event Staff,2027-01-26 10:37:00,11.79,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+100,29,3,Lead Planner,2026-04-20 10:00:00,73.12,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+101,29,4,Planner,2026-04-20 10:00:00,38.84,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+102,29,5,Coordinator,2026-11-16 10:00:00,19.35,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+103,29,7,Event Staff,2026-11-24 10:00:00,11.87,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+104,30,1,Lead Planner,2026-05-04 15:04:00,64.72,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+105,30,4,Planner,2026-05-04 15:04:00,38.9,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+106,30,6,Coordinator,2027-01-15 15:04:00,20.89,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+107,30,7,Event Staff,2027-01-20 15:04:00,13.54,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+108,31,2,Lead Planner,2026-04-29 10:12:00,29.06,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+109,31,5,Coordinator,2027-02-09 10:12:00,14.32,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+110,31,7,Event Staff,2027-02-14 10:12:00,10.14,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+111,32,1,Lead Planner,2026-05-12 19:57:00,82.74,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+112,32,4,Planner,2026-05-12 19:57:00,34.69,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+113,32,6,Coordinator,2027-03-22 19:57:00,20.13,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+114,32,7,Event Staff,2027-03-31 19:57:00,10.87,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+115,33,3,Lead Planner,2026-05-12 16:24:00,114.55,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+116,33,4,Planner,2026-05-12 16:24:00,53.53,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+117,33,6,Coordinator,2026-12-31 16:24:00,23.57,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+118,33,7,Event Staff,2027-01-01 16:24:00,13.37,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+119,34,2,Lead Planner,2026-05-20 09:36:00,69.87,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+120,34,4,Planner,2026-05-20 09:36:00,25.33,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+121,34,6,Coordinator,2026-08-17 09:36:00,16.42,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+122,34,7,Event Staff,2026-09-02 09:36:00,11.95,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+123,35,2,Lead Planner,2026-06-04 12:15:00,27.3,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+124,35,6,Coordinator,2026-11-12 12:15:00,25.11,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+125,35,7,Event Staff,2026-11-18 12:15:00,13.05,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+126,36,3,Lead Planner,2026-06-04 10:58:00,43.57,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+127,36,6,Coordinator,2027-02-21 10:58:00,19.46,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+128,36,7,Event Staff,2027-02-14 10:58:00,14.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+129,37,3,Lead Planner,2026-06-25 09:30:00,22.99,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+130,37,6,Coordinator,2026-09-23 09:30:00,17.44,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+131,37,7,Event Staff,2026-09-23 09:30:00,11.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+132,38,2,Lead Planner,2026-07-04 09:42:00,95.64,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+133,38,4,Planner,2026-07-04 09:42:00,57.47,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+134,38,6,Coordinator,2026-12-13 09:42:00,29.94,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+135,38,7,Event Staff,2026-12-17 09:42:00,15.45,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+136,39,3,Lead Planner,2026-06-21 10:24:00,78.95,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+137,39,4,Planner,2026-06-21 10:24:00,29.51,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+138,39,5,Coordinator,2027-01-04 10:24:00,23.0,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+139,39,7,Event Staff,2027-01-05 10:24:00,11.81,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+140,40,1,Lead Planner,2026-07-06 09:31:00,31.14,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+141,40,6,Coordinator,2027-06-23 09:31:00,21.88,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+142,40,7,Event Staff,2027-07-02 09:31:00,11.89,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+143,41,2,Lead Planner,2026-07-10 10:40:00,17.24,Y,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+144,41,6,Coordinator,2026-11-10 10:40:00,23.15,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+145,41,7,Event Staff,2026-11-10 10:40:00,11.25,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+146,42,1,Lead Planner,2026-07-03 10:00:00,73.48,Y,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+147,42,4,Planner,2026-07-03 10:00:00,45.5,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+148,42,6,Coordinator,2027-06-01 10:00:00,24.19,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+149,42,7,Event Staff,2027-05-29 10:00:00,14.66,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+150,43,2,Lead Planner,2026-07-12 10:35:00,62.71,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+151,43,4,Planner,2026-07-12 10:35:00,42.85,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+152,43,6,Coordinator,2026-12-19 10:35:00,14.05,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+153,43,7,Event Staff,2026-12-22 10:35:00,10.53,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+154,44,3,Lead Planner,2026-07-15 19:24:00,24.12,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+155,44,5,Coordinator,2027-04-21 19:24:00,19.54,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+156,44,7,Event Staff,2027-04-09 19:24:00,10.2,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+157,45,3,Lead Planner,2026-06-30 18:27:00,115.12,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+158,45,4,Planner,2026-06-30 18:27:00,50.59,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+159,45,5,Coordinator,2027-04-20 18:27:00,18.51,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+160,45,7,Event Staff,2027-04-17 18:27:00,13.93,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+161,46,1,Lead Planner,2026-07-15 10:02:00,73.85,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+162,46,4,Planner,2026-07-15 10:02:00,46.3,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+163,46,5,Coordinator,2027-02-09 10:02:00,26.4,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+164,46,7,Event Staff,2027-01-25 10:02:00,13.38,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+165,47,1,Lead Planner,2026-07-29 10:10:00,25.78,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+166,47,5,Coordinator,2026-11-19 10:10:00,18.06,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+167,47,7,Event Staff,2026-11-04 10:10:00,10.9,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+168,48,1,Lead Planner,2026-08-01 10:04:00,57.78,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+169,48,4,Planner,2026-08-01 10:04:00,38.06,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+170,48,6,Coordinator,2027-10-11 10:04:00,23.72,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+171,48,7,Event Staff,2027-10-31 10:04:00,10.6,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+172,49,2,Lead Planner,2026-08-08 09:28:00,53.44,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+173,49,4,Planner,2026-08-08 09:28:00,32.63,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+174,49,5,Coordinator,2027-04-12 09:28:00,22.28,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+175,49,7,Event Staff,2027-04-19 09:28:00,11.35,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+176,50,2,Lead Planner,2026-08-04 13:57:00,79.28,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+177,50,4,Planner,2026-08-04 13:57:00,23.11,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+178,50,6,Coordinator,2026-12-03 13:57:00,14.94,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+179,50,7,Event Staff,2026-12-01 13:57:00,10.38,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+180,51,2,Lead Planner,2026-08-04 10:09:00,70.31,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+181,51,4,Planner,2026-08-04 10:09:00,43.37,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+182,51,5,Coordinator,2027-04-06 10:09:00,15.91,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+183,51,7,Event Staff,2027-04-03 10:09:00,10.98,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+184,52,1,Lead Planner,2026-08-09 09:56:00,26.98,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+185,52,6,Coordinator,2027-04-13 09:56:00,16.35,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+186,52,7,Event Staff,2027-03-31 09:56:00,11.19,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+187,53,2,Lead Planner,2026-08-04 09:37:00,34.26,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+188,53,6,Coordinator,2027-05-10 09:37:00,18.96,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+189,53,7,Event Staff,2027-05-06 09:37:00,11.53,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+190,54,2,Lead Planner,2026-08-01 16:58:00,37.72,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+191,54,5,Coordinator,2027-01-10 16:58:00,19.85,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+192,54,7,Event Staff,2026-12-19 16:58:00,13.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+193,55,1,Lead Planner,2026-08-25 15:45:00,81.87,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+194,55,4,Planner,2026-08-25 15:45:00,52.99,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+195,55,6,Coordinator,2026-12-17 15:45:00,18.3,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+196,55,7,Event Staff,2026-12-08 15:45:00,15.06,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+197,56,3,Lead Planner,2026-09-01 10:21:00,85.29,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+198,56,4,Planner,2026-09-01 10:21:00,26.88,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+199,56,5,Coordinator,2026-12-21 10:21:00,22.33,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+200,56,7,Event Staff,2026-12-13 10:21:00,13.48,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+201,57,3,Lead Planner,2026-08-30 11:15:00,21.39,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+202,57,6,Coordinator,2027-09-30 11:15:00,15.79,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+203,57,7,Event Staff,2027-10-13 11:15:00,11.42,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+204,58,3,Lead Planner,2026-08-21 15:55:00,52.69,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+205,58,4,Planner,2026-08-21 15:55:00,39.06,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+206,58,6,Coordinator,2027-01-24 15:55:00,21.11,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+207,58,7,Event Staff,2027-01-13 15:55:00,15.25,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+208,59,3,Lead Planner,2026-09-04 17:36:00,70.87,Y,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+209,59,4,Planner,2026-09-04 17:36:00,37.35,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+210,59,6,Coordinator,2026-12-05 17:36:00,14.62,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+211,59,7,Event Staff,2026-12-28 17:36:00,10.55,N,Cancelled,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+212,60,1,Lead Planner,2026-09-13 09:25:00,25.71,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+213,60,6,Coordinator,2027-06-08 09:25:00,18.1,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+214,60,7,Event Staff,2027-06-23 09:25:00,11.57,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+215,61,2,Lead Planner,2026-09-22 09:14:00,34.26,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+216,61,6,Coordinator,2027-05-20 09:14:00,21.85,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+217,61,7,Event Staff,2027-05-25 09:14:00,10.72,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+218,62,2,Lead Planner,2026-09-27 09:13:00,36.81,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+219,62,5,Coordinator,2027-01-15 09:13:00,22.32,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+220,62,7,Event Staff,2027-01-19 09:13:00,14.12,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+221,63,2,Lead Planner,2026-09-16 10:54:00,31.57,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+222,63,5,Coordinator,2027-03-21 10:54:00,16.83,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+223,63,7,Event Staff,2027-04-04 10:54:00,10.32,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+224,64,1,Lead Planner,2026-09-15 10:15:00,83.21,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+225,64,4,Planner,2026-09-15 10:15:00,22.01,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+226,64,6,Coordinator,2027-03-12 10:15:00,18.82,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+227,64,7,Event Staff,2027-03-20 10:15:00,11.31,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+228,65,2,Lead Planner,2026-09-30 15:33:00,30.28,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+229,65,5,Coordinator,2027-06-09 15:33:00,24.77,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+230,65,7,Event Staff,2027-06-05 15:33:00,15.54,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+231,66,2,Lead Planner,2026-10-07 17:03:00,59.1,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+232,66,4,Planner,2026-10-07 17:03:00,33.95,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+233,66,5,Coordinator,2027-05-14 17:03:00,20.95,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+234,66,7,Event Staff,2027-05-10 17:03:00,10.1,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+235,67,3,Lead Planner,2026-10-12 16:25:00,26.49,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+236,67,5,Coordinator,2027-04-21 16:25:00,23.75,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+237,67,7,Event Staff,2027-04-27 16:25:00,10.84,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+238,68,3,Lead Planner,2026-10-17 10:01:00,81.82,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+239,68,4,Planner,2026-10-17 10:01:00,25.48,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+240,68,5,Coordinator,2027-03-20 10:01:00,20.89,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+241,68,7,Event Staff,2027-03-17 10:01:00,11.69,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+242,69,1,Lead Planner,2026-10-30 09:10:00,88.06,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+243,69,4,Planner,2026-10-30 09:10:00,40.36,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+244,69,6,Coordinator,2027-03-20 09:10:00,22.25,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+245,69,7,Event Staff,2027-03-18 09:10:00,11.4,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+246,70,3,Lead Planner,2026-11-04 11:02:00,106.2,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+247,70,4,Planner,2026-11-04 11:02:00,44.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+248,70,6,Coordinator,2027-05-25 11:02:00,18.59,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+249,70,7,Event Staff,2027-05-07 11:02:00,13.84,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+250,71,2,Lead Planner,2026-10-23 12:34:00,83.29,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+251,71,4,Planner,2026-10-23 12:34:00,36.69,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+252,71,6,Coordinator,2027-03-15 12:34:00,16.48,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+253,71,7,Event Staff,2027-03-06 12:34:00,11.78,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+254,72,3,Lead Planner,2026-11-15 11:00:00,25.84,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+255,72,5,Coordinator,2027-03-11 11:00:00,17.01,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+256,72,7,Event Staff,2027-03-04 11:00:00,10.66,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+257,73,1,Lead Planner,2026-11-01 17:20:00,28.59,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+258,73,5,Coordinator,2027-05-15 17:20:00,23.16,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+259,73,7,Event Staff,2027-05-21 17:20:00,10.42,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+260,74,1,Lead Planner,2026-11-22 18:28:00,17.22,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+261,74,5,Coordinator,2027-03-07 18:28:00,23.32,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+262,74,7,Event Staff,2027-03-22 18:28:00,11.88,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+263,75,2,Lead Planner,2026-11-07 18:10:00,22.03,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+264,75,5,Coordinator,2027-09-24 18:10:00,21.59,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+265,75,7,Event Staff,2027-10-10 18:10:00,15.3,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+266,76,2,Lead Planner,2026-11-22 13:46:00,89.2,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+267,76,4,Planner,2026-11-22 13:46:00,36.97,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+268,76,6,Coordinator,2027-03-17 13:46:00,22.76,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+269,76,7,Event Staff,2027-03-18 13:46:00,11.99,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+270,77,1,Lead Planner,2026-11-14 11:55:00,79.12,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+271,77,4,Planner,2026-11-14 11:55:00,39.43,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+272,77,6,Coordinator,2027-04-21 11:55:00,24.9,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+273,77,7,Event Staff,2027-04-25 11:55:00,15.29,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+274,78,3,Lead Planner,2026-11-25 10:59:00,25.1,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+275,78,5,Coordinator,2027-06-21 10:59:00,22.69,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+276,78,7,Event Staff,2027-06-04 10:59:00,10.7,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+277,79,2,Lead Planner,2026-12-06 18:55:00,17.17,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+278,79,5,Coordinator,2027-03-01 18:55:00,16.56,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+279,79,7,Event Staff,2027-02-17 18:55:00,10.16,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+280,80,1,Lead Planner,2026-12-07 09:47:00,24.82,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+281,80,6,Coordinator,2027-04-14 09:47:00,18.31,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+282,80,7,Event Staff,2027-04-09 09:47:00,10.86,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+283,81,2,Lead Planner,2026-11-28 10:25:00,42.85,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+284,81,5,Coordinator,2027-05-30 10:25:00,28.33,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+285,81,7,Event Staff,2027-05-31 10:25:00,14.81,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+286,82,1,Lead Planner,2026-12-04 10:21:00,52.26,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+287,82,4,Planner,2026-12-04 10:21:00,42.74,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+288,82,5,Coordinator,2027-04-02 10:21:00,25.64,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+289,82,7,Event Staff,2027-03-30 10:21:00,14.37,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+290,83,1,Lead Planner,2026-12-18 09:47:00,30.07,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+291,83,5,Coordinator,2027-05-23 09:47:00,16.58,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+292,83,7,Event Staff,2027-06-07 09:47:00,11.94,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+293,84,3,Lead Planner,2026-12-12 10:27:00,28.77,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+294,84,6,Coordinator,2027-09-02 10:27:00,18.66,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+295,84,7,Event Staff,2027-08-28 10:27:00,10.91,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+296,85,3,Lead Planner,2026-12-17 18:20:00,36.82,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+297,85,6,Coordinator,2027-06-05 18:20:00,30.35,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+298,85,7,Event Staff,2027-06-03 18:20:00,13.21,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+299,86,2,Lead Planner,2026-12-20 19:50:00,63.86,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+300,86,4,Planner,2026-12-20 19:50:00,25.44,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+301,86,6,Coordinator,2027-04-26 19:50:00,14.59,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+302,86,7,Event Staff,2027-05-05 19:50:00,11.33,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+303,87,2,Lead Planner,2026-12-25 19:29:00,81.69,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+304,87,4,Planner,2026-12-25 19:29:00,34.75,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+305,87,6,Coordinator,2027-11-06 19:29:00,16.22,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+306,87,7,Event Staff,2027-11-17 19:29:00,11.46,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+307,88,2,Lead Planner,2026-12-26 10:26:00,59.34,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+308,88,4,Planner,2026-12-26 10:26:00,33.96,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+309,88,5,Coordinator,2027-09-13 10:26:00,21.15,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+310,88,7,Event Staff,2027-09-20 10:26:00,10.57,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+311,89,1,Lead Planner,2026-12-30 14:20:00,46.4,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+312,89,4,Planner,2026-12-30 14:20:00,37.86,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+313,89,6,Coordinator,2027-06-09 14:20:00,23.8,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+314,89,7,Event Staff,2027-06-14 14:20:00,10.98,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+315,90,3,Lead Planner,2027-01-02 15:27:00,65.62,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+316,90,4,Planner,2027-01-02 15:27:00,32.55,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+317,90,6,Coordinator,2027-12-22 15:27:00,23.76,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+318,90,7,Event Staff,2027-12-13 15:27:00,11.24,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+319,91,3,Lead Planner,2027-01-14 15:53:00,30.89,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+320,91,5,Coordinator,2027-10-25 15:53:00,24.17,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+321,91,7,Event Staff,2027-10-28 15:53:00,13.08,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+322,92,1,Lead Planner,2026-08-25 10:00:00,16.8,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+323,92,6,Coordinator,2026-10-31 10:00:00,22.5,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+324,92,7,Event Staff,2026-11-09 10:00:00,10.97,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+325,93,2,Lead Planner,2026-06-14 10:00:00,20.17,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+326,93,6,Coordinator,2026-08-25 10:00:00,22.48,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+327,93,7,Event Staff,2026-08-15 10:00:00,11.39,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+328,94,1,Lead Planner,2026-04-23 10:00:00,27.65,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+329,94,5,Coordinator,2026-07-02 10:00:00,20.25,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+330,94,7,Event Staff,2026-07-10 10:00:00,11.44,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+331,95,1,Lead Planner,2025-10-28 10:00:00,33.0,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+332,95,6,Coordinator,2026-03-08 10:00:00,16.77,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+333,95,7,Event Staff,2026-03-05 10:00:00,11.28,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+334,96,3,Lead Planner,2026-07-16 10:00:00,22.1,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+335,96,6,Coordinator,2026-11-12 10:00:00,23.19,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+336,96,7,Event Staff,2026-11-07 10:00:00,11.26,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+337,97,1,Lead Planner,2026-03-23 10:00:00,17.3,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+338,97,5,Coordinator,2026-06-11 10:00:00,14.13,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+339,97,7,Event Staff,2026-05-28 10:00:00,11.09,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+340,98,2,Lead Planner,2026-09-06 10:00:00,20.59,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+341,98,5,Coordinator,2026-12-07 10:00:00,16.09,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+342,98,7,Event Staff,2026-11-27 10:00:00,10.93,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+343,99,2,Lead Planner,2026-03-16 10:00:00,19.75,Y,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+344,99,6,Coordinator,2026-07-10 10:00:00,17.31,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily
+345,99,7,Event Staff,2026-06-27 10:00:00,10.65,N,Active,2027-01-15T02:00:00,crm_EventEmployeeAssignment,2027-01-15_daily

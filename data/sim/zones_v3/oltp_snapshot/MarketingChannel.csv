@@ -1,0 +1,9 @@
+ChannelID,ChannelName,ChannelType,TrackingCode,Status
+1,LINE OA,Online,,Active
+2,Facebook,Online,,Active
+3,Instagram,Online,,Active
+4,TikTok,Online,#TIKTOK,Active
+5,Website,Online,#WEB,Active
+6,Wedding Fair,Offline,#FAIR,Active
+7,Referral,Offline,,Active
+8,Walk-in,Offline,,Active

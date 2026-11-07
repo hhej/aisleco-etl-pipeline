@@ -1,0 +1,11 @@
+EmployeeID,RoleID,EmployeeCode,FirstName,LastName,EmploymentType,HireDate,StandardWeeklyHours,MaxConcurrentEvents,Status
+1,1,E001,Som,Test,FullTime,2023-01-01,50,25.0,Active
+2,1,E002,Beam,Test,FullTime,2023-01-01,50,25.0,Active
+3,1,E003,Ann,Test,FullTime,2023-01-01,48,25.0,Active
+4,2,E004,Nina,Test,FullTime,2023-01-01,44,20.0,Active
+5,3,E005,Pim,Test,FullTime,2023-01-01,44,30.0,Active
+6,3,E006,Mook,Test,FullTime,2023-01-01,44,30.0,Active
+7,4,E007,Golf,Test,FullTime,2023-01-01,40,40.0,Active
+8,5,E008,May,Test,FullTime,2023-01-01,44,,Active
+9,6,E009,Ice,Test,FullTime,2023-01-01,44,,Active
+10,7,E010,Toey,Test,FullTime,2023-01-01,40,,Active

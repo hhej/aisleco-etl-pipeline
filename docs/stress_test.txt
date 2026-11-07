@@ -1,0 +1,31 @@
+Stress test: latency target 120 s per run. Machine: this laptop, local PostgreSQL 16.
+
+A. History size (simulated CRM copied N times)
+ copies    CRM rows  full run s  incremental s
+     10      42,692         1.0            0.5
+    100     425,102        11.4            4.8
+    250   1,062,452        32.4           18.9
+    500   2,124,702        80.0           23.3
+   1000   4,249,202       213.5           52.6
+
+B. Burst size (history x100; changes committed as 1,000-row CRM transactions; no cap)
+ changed rows  incremental s    rows/s
+       10,000            5.7     1,744
+       50,000            6.5     7,709
+      100,000            6.9    14,436
+      200,000            8.4    23,887
+      326,000            9.8    33,307
+
+C. The largest burst (326,000 changes) again, drained with the batch cap of 100,000 rows per run (5-minute overlap, runs spaced as scheduled)
+ run  rows read*  queued after  seconds
+   1     119,763       206,237      7.1
+   2     119,767       106,233      7.4
+   3     112,149        13,851      6.4
+   4      25,800             0      5.2
+  * rows read = up to 100,000 changes + the parent inquiries pulled forward with them
+
+Limits (linear fit; measured up to 4,249,202 rows of history and 326,000 changes, beyond that it is an extrapolation)
+  incremental run ≈ 1.0 s + 12.0 s per million CRM rows of history
+  each changed row adds ≈ 12.7 s per million changes
+  history at which a small incremental run reaches 120 s ≈ 9,889,860 CRM rows
+  changes per run that fit in 120 s at history x100 ≈ 9,013,886

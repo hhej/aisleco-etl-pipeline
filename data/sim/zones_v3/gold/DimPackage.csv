@@ -1,0 +1,8 @@
+PackageKey,PackageID,PackageFamily,PackageType,IsCurrentVersion
+-1,-1,Unknown,,
+1,1,Full Planning,Full,N
+2,2,Full Planning,Full,Y
+3,3,Partial Planning,Partial,Y
+4,4,Day-of Coordination,DayOf,N
+5,5,Day-of Coordination,DayOf,Y
+6,6,Custom,Custom,Y
