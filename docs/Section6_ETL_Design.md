@@ -50,7 +50,7 @@ Two schema changes support the pipeline:
 | Late commits | A row written by a slow transaction that commits after the previous snapshot can carry a timestamp up to 5 minutes before that snapshot. Each run therefore re-reads from 5 minutes before the **previous snapshot time** (`etl.Watermark.ExtractedAt`), never later than the watermark. Re-reading is harmless because the load step only writes rows that changed. Anchoring the overlap to the snapshot rather than the watermark matters when a backlog is drained: the watermark is then far behind the snapshot, and nothing is re-read, so each run stays within its cap. |
 | Deleted rows | A timestamp cannot show a row that no longer exists, so every run also extracts the full list of primary keys (small and cheap). Staging rows whose key has disappeared are deleted. |
 | Consistency | The nine tables are read in parallel by separate connections, but all of them use **one shared database snapshot** (`pg_export_snapshot`). A child row (e.g. an assignment) can never arrive without the version of its parent (the event) that it points to. |
-| Load on the CRM | Bulk `COPY ... TO STDOUT` straight into CSV files, read through the `UpdatedAt` index. One extract of the ×10 test volume takes 0.07 s. |
+| Load on the CRM | Bulk `COPY ... TO STDOUT` straight into CSV files, read through the `UpdatedAt` index. Extracting all 6.5 M rows of the largest stress-test history takes 11 s. |
 | Batch cap (backlog queue) | `ETL_MAX_ROWS_PER_RUN` limits the changed transaction rows (inquiries, messages, events, assignments) one incremental run takes, oldest first, so a run stays inside the 2-minute target (6.7). Changes after the cutoff wait in the CRM behind the watermark: that backlog is the queue, and the next run continues from it. A CRM transaction is never split; a taken row pulls its parent rows into the same batch (so nothing is rejected as an orphan); the key file marks queued keys `Pending` so reconciliation does not count them as missing; and the watermark moves exactly to the cutoff, so every run makes progress. A run that leaves a backlog writes a warning alert with the queue size. Full refreshes are not capped. |
 | Output | `data/landing/run_NNNNN/`: one CSV per table, one key file per table, and `manifest.json` with the row count, the highest `UpdatedAt` and a SHA-256 checksum per file. |
 
@@ -146,23 +146,23 @@ fails anywhere therefore leaves the next run to pick up exactly where this one s
 | Idempotency | A second run on unchanged data | 0 rows inserted, updated or deleted |
 | Error handling | Source unavailable, bad row → dead letter → corrected, rejected parent with child, blocking gate, crash + resume, damaged landing file, resuming an old run, as-of date moving backwards | All behave as in 6.6 |
 | Batch cap | A burst larger than the cap is queued and drained over several runs; a new child pulls its new parent into the batch | Each run takes at most the cap; no dead letters; the drained warehouse equals a full refresh |
-| Performance: history | The simulated year copied up to 1,000 times (4.25 M CRM rows, about 1,000 years of Aisle & Co. at today's volume); one full and one small incremental run per size | Incremental run: 0.5 s at ×10, 9.3 s at ×100, **50.6 s at ×1000**, within the 2-minute target. Full (initial) load: 105 s at 2.1 M rows, 219 s at 4.25 M, so above about 2.4 M rows it is a one-off outside the target. Repeated runs vary by a few seconds (laptop) |
-| Performance: burst | At ×100 history, up to 326,000 changes committed as 1,000-row CRM transactions, no cap | 10.1 s for 326,000 changes (≈ 32,000 changes/s) |
-| Performance: overflow | The same 326,000 changes with the batch cap of 100,000 and the production 5-minute overlap | Drained in 4 runs of 5–8 s; queue 206 k → 106 k → 14 k → 0 |
+| Performance: history | The three simulated years copied up to 240 times (6.55 M CRM rows, about 720 years of Aisle & Co. at today's volume); one full and one small incremental run per size | Incremental run: 2.4 s at 0.4 M rows, 39 s at 4.4 M, **68.7 s at 6.55 M**, within the 2-minute target. Full (initial) load: 89 s at 4.4 M rows, 147 s at 6.55 M, so above about 5 M rows it is a one-off outside the target. Repeated runs vary by a few seconds (laptop) |
+| Performance: burst | At 0.47 M rows of history, up to 326,000 changes committed as 1,000-row CRM transactions, no cap | 7.5 s for 326,000 changes (≈ 43,000 changes/s) |
+| Performance: overflow | The same 326,000 changes with the batch cap of 100,000 and the production 5-minute overlap | Drained in 4 runs of 3–5 s; queue 226 k → 126 k → 26 k → 0 |
 
 The 38 automated tests (5 of them for the conversion model of Section 7) are in `tests/` and run with `pytest`. The performance numbers come from
 `scripts/benchmark.py --stress` on a laptop (results and chart in `docs/stress_test.txt` / `.png`).
 **Capacity, as designed:** one run must finish within 2 minutes. Measured: an incremental run stays
-within it up to at least 4.25 M CRM rows of history, and one run absorbs at least 326,000 changes in
-about 10 s. Above that, the batch cap (100,000 changes per run) holds each run at about 7 s and the
-excess waits in the backlog queue. A linear fit puts the limits near 10 M rows of history and 8 M
+within it up to at least 6.5 M CRM rows of history, and one run absorbs at least 326,000 changes in
+about 8 s. Above that, the batch cap (100,000 changes per run) holds each run at 3–5 s and the
+excess waits in the backlog queue. A linear fit puts the limits near 12 M rows of history and 8 M
 changes per run, but that is an extrapolation beyond what was measured.
 
 ## 6.8 Known limits
 
 - The transform steps recompute every fact row from staging and then write only the changed ones, so
-  a run's time grows with history (about 11 s per million CRM rows measured), not only with the changes. At
-  80–120 weddings a year this takes well under a second. Near 10 M rows the transforms would need
+  a run's time grows with history (about 10.5 s per million CRM rows measured), not only with the changes. At
+  80–120 weddings a year this takes well under a second. Near 12 M rows the transforms would need
   limiting to the inquiries and employees touched by the changed rows.
 - The batch cap bounds the changes per run, not the history. A backlog drains one run at a time; with
   the daily schedule that means one batch a day, so after a large burst the DAG should be triggered

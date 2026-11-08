@@ -28,7 +28,7 @@ class Config:
     # ChatMessage, Event, assignments) per run, oldest first, so a run stays inside the
     # 2-minute latency target. The rest waits in the CRM behind the watermark (the backlog
     # queue) and the next run continues. 0 = no cap. Full refreshes are never capped.
-    # 100,000 = the cap tested in the stress test (docs/stress_test.txt): about 7 s per run.
+    # 100,000 = the cap tested in the stress test (docs/stress_test.txt): 3-5 s per run.
     max_rows_per_run: int = field(default_factory=lambda: int(os.getenv("ETL_MAX_ROWS_PER_RUN", "100000")))
     # Test hook: name of a step that raises just before it commits (simulates a crash).
     fail_at: str = field(default_factory=lambda: os.getenv("ETL_FAIL_AT", ""))

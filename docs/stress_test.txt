@@ -2,30 +2,31 @@ Stress test: latency target 120 s per run. Machine: this laptop, local PostgreSQ
 
 A. History size (simulated CRM copied N times)
  copies    CRM rows  full run s  incremental s
-     10      42,692         0.9            0.5
-    100     425,102        11.4            9.3
-    250   1,062,452        44.2           29.0
-    500   2,124,702       105.1           33.8
-   1000   4,249,202       218.9           50.6
+      2      54,894         0.9            0.4
+     15     409,768         6.4            2.4
+     40   1,092,218        18.4            6.1
+     80   2,184,138        42.1           16.8
+    160   4,367,978        89.4           39.0
+    240   6,551,818       146.7           68.7
 
-B. Burst size (history x100; changes committed as 1,000-row CRM transactions; no cap)
+B. Burst size (history x17; changes committed as 1,000-row CRM transactions; no cap)
  changed rows  incremental s    rows/s
-       10,000            5.7     1,765
-       50,000            6.1     8,204
-      100,000            6.8    14,730
-      200,000            8.8    22,623
-      326,000           10.1    32,273
+       10,000            2.8     3,594
+       50,000            3.4    14,822
+      100,000            4.3    23,374
+      200,000            5.3    37,508
+      326,000            7.5    43,224
 
 C. The largest burst (326,000 changes) again, drained with the batch cap of 100,000 rows per run (5-minute overlap, runs spaced as scheduled)
  run  rows read*  queued after  seconds
-   1     119,763       206,237      5.9
-   2     119,767       106,233      7.6
-   3     112,149        13,851      7.1
-   4      25,800             0      5.4
+   1     100,000       226,000      4.5
+   2     100,000       126,000      4.5
+   3     100,000        26,000      3.9
+   4      26,000             0      3.1
   * rows read = up to 100,000 changes + the parent inquiries pulled forward with them
 
-Limits (linear fit; measured up to 4,249,202 rows of history and 326,000 changes, beyond that it is an extrapolation)
-  incremental run ≈ 7.0 s + 11.1 s per million CRM rows of history
-  each changed row adds ≈ 14.8 s per million changes
-  history at which a small incremental run reaches 120 s ≈ 10,141,228 CRM rows
-  changes per run that fit in 120 s at history x100 ≈ 7,746,041
+Limits (linear fit; measured up to 6,551,818 rows of history and 326,000 changes, beyond that it is an extrapolation)
+  incremental run ≈ -3.4 s + 10.5 s per million CRM rows of history
+  each changed row adds ≈ 14.7 s per million changes
+  history at which a small incremental run reaches 120 s ≈ 11,771,987 CRM rows
+  changes per run that fit in 120 s at history x17 ≈ 7,986,609
