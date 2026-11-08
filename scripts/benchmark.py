@@ -178,8 +178,8 @@ def main():
     p.add_argument("zones")
     p.add_argument("--scale", type=int, default=10)
     p.add_argument("--stress", action="store_true")
-    p.add_argument("--scales", default="10,100,250,500,1000,1500,1999")
-    p.add_argument("--burst-scale", type=int, default=100)
+    p.add_argument("--scales", default="2,15,40,80,160,240,320")    # x ~25,600 CRM rows per copy
+    p.add_argument("--burst-scale", type=int, default=17)
     p.add_argument("--bursts", default="10000,50000,100000,200000,326000")
     p.add_argument("--cap", type=int, default=100000)
     a = p.parse_args()

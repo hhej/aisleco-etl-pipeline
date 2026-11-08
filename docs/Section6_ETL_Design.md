@@ -3,7 +3,7 @@
 This section describes how data moves from the CRM into the data warehouse of Section 5. The pipeline
 is built and running: the code is in the `etl/` folder, the warehouse schema in
 `WeddingOrganizer_DW_v7_dbdiagram.sql`, and `AisleCo_ETL_Pipeline_Demo.ipynb` runs every step shown
-here on the Appendix B story and on a simulated business year.
+here on the Appendix B story and on three simulated business years (2024–2026).
 
 ## 6.1 Overview
 
@@ -85,7 +85,7 @@ should hold now (in schema `work`), and a generic load step then compares it wit
 
 | Target | Transform (from `stg`) | Load strategy |
 |---|---|---|
-| DimDate | Calendar 2025–2028, high season, Buddhist Lent, auspicious level from AuspiciousDate | Upsert by DateKey; only changed flags rewritten |
+| DimDate | Calendar 2023–2028, high season, Buddhist Lent, auspicious level from AuspiciousDate | Upsert by DateKey; only changed flags rewritten |
 | DimPackage, DimEmployee | Package price versions; employee + role | Type 1 upsert by OLTP ID; keys never change |
 | DimInquiryOutcome + FactInquiry | Response time and first responder from ChatMessage (bot ignored), outcome and furthest stage, stage days, budget midpoint. New outcome combinations are added to DimInquiryOutcome in the same step (keys never change) | **Merge with change detection** by InquiryID: insert new, update only rows whose values changed, delete rows whose inquiry is gone |
 | FactEventBooking | Staff count, planning / wedding-day / total hours per wedding | Merge with change detection by EventID |
@@ -141,7 +141,7 @@ fails anywhere therefore leaves the next run to pick up exactly where this one s
 |---|---|---|
 | Transformation logic | 14 small hand-made cases: bot greeting ignored, staff message before the couple's first message ignored, only-bot reply = "Not logged", walk-in = "In person", quote share, unreadable budget, hours assigned in / after the wedding week, missing assignment date, ≤ 12 h assignments, cancelled events | All pass |
 | End-to-end | Appendix B replayed through four incremental runs | Every Appendix B number reproduced (Beam 109 %, Arm 120 %, Fah 120 %, Beam 82 % / Fah 60 %, Nina 67 % on 36 h, response times 11 / 745 / 7 min, quote share 12.7 %) |
-| Source-to-target | The simulated business year (619 inquiries, 2,652 messages, 345 assignments) through the pipeline, compared value by value with the facts the v3 notebook computes independently in pandas | 28,638 values, 0 differences |
+| Source-to-target | The three simulated business years (1,905 inquiries, 22,432 messages, 1,040 assignments) through the pipeline, compared value by value with the facts the v3 notebook computes independently in pandas | 76,770 values, 0 differences |
 | Incremental = full | Four incremental runs compared with one full rebuild of the same final data | Identical, except Nina's ended weeks, which correctly keep 44 h |
 | Idempotency | A second run on unchanged data | 0 rows inserted, updated or deleted |
 | Error handling | Source unavailable, bad row → dead letter → corrected, rejected parent with child, blocking gate, crash + resume, damaged landing file, resuming an old run, as-of date moving backwards | All behave as in 6.6 |
@@ -150,7 +150,7 @@ fails anywhere therefore leaves the next run to pick up exactly where this one s
 | Performance: burst | At ×100 history, up to 326,000 changes committed as 1,000-row CRM transactions, no cap | 10.1 s for 326,000 changes (≈ 32,000 changes/s) |
 | Performance: overflow | The same 326,000 changes with the batch cap of 100,000 and the production 5-minute overlap | Drained in 4 runs of 5–8 s; queue 206 k → 106 k → 14 k → 0 |
 
-The 33 automated tests are in `tests/` and run with `pytest`. The performance numbers come from
+The 38 automated tests (5 of them for the conversion model of Section 7) are in `tests/` and run with `pytest`. The performance numbers come from
 `scripts/benchmark.py --stress` on a laptop (results and chart in `docs/stress_test.txt` / `.png`).
 **Capacity, as designed:** one run must finish within 2 minutes. Measured: an incremental run stays
 within it up to at least 4.25 M CRM rows of history, and one run absorbs at least 326,000 changes in
@@ -182,6 +182,7 @@ changes per run, but that is an extrapolation beyond what was measured.
 | Revision | Changes |
 |---|---|
 | 10 → 11 | ETL pipeline built (Section 6). OLTP v5: `UpdatedAt` on every table, kept by a trigger, indexed on the 9 extracted tables. DW v7: DW v6 star schema without stored ratios (utilization and quote share are calculated in views) and with the inquiry outcome labels moved to the new DimInquiryOutcome junk dimension (InquiryStatus, IsLost, IsOpen dropped), plus staging (`stg`, 9 tables), ETL control (`etl`, 7 tables: Run, StepRun, Watermark, DqRule, DqResult, RejectedRow, Alert) and views (`mart`, 11 views: base inquiry view + 10 KPI views). Facts are merged with change detection instead of truncated, so surrogate keys are stable. |
+| 11 → 12 | Conversion model (Section 7): feature store (`feature` schema), model registry, scores and monitoring (`ml` schema), 4 more `mart` views (no-reply rate, follow-up list, model health, model versions), Streamlit dashboard. DimDate extended to 2023–2028 for three simulated years. |
 
 ### Correction to Appendix B.5
 

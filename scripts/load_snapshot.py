@@ -21,7 +21,7 @@ MASTER = ["MarketingChannel", "Package", "EmployeeRole", "AuspiciousDate"]
 # weekly workload stays realistic instead of 10 people carrying every copy's weddings
 TRANSACTION = ["Employee", "CustomerChannelAccount", "Inquiry", "ChatMessage", "Event", "EventEmployeeAssignment"]
 SHIFT = {"CustomerID", "CustomerAccountID", "InquiryID", "ChatMessageID", "EventID", "EventEmployeeAssignmentID", "EmployeeID"}
-OFFSET = 5_000    # base IDs < 3,000; walk-in customers start at 10,000,001, so up to x1999 copies never collide
+OFFSET = 50_000   # base IDs < 30,000; walk-in customers start at 1,000,000,000, so up to x19999 copies never collide
 
 
 def _copy(conn, schema, table, df):

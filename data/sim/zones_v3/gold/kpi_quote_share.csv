@@ -1,4 +1,4 @@
 Outcome,count,median,mean
-Booked,87,0.132,0.133
-Lost on price,38,0.167,0.16
-Other,125,0.131,0.142
+Booked,262,0.13,0.136
+Lost on price,87,0.174,0.178
+Other,404,0.131,0.139

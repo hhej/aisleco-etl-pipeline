@@ -1,6 +1,6 @@
 ResponseTimeBand,Inquiries,ConsultRate,ConversionRate
-<1h,214,0.556,0.182
-1-24h,285,0.488,0.123
->24h,18,0.667,0.167
-Not logged,7,0.571,0.286
-In person,95,0.495,0.084
+<1h,622,0.571,0.148
+1-24h,946,0.483,0.134
+>24h,29,0.862,0.138
+Not logged,17,0.0,0.0
+In person,291,0.533,0.134

@@ -1,7 +1,7 @@
 step,rows_in,rows_out,note
-chat webhooks -> inbound messages,1267,1236,31 re-delivered duplicates dropped; text dropped
-inbox send log -> outbound messages,1416,1416,bot greetings kept but flagged SenderType=Bot
-kiosk form -> kiosk_leads,194,183,11 retried syncs dropped; 0 submissions missing in CRM
-inquiries: response time from messages,524,524,18 first replies sent from a phone; measured time comes from a later logged reply (overstated)
-assignments -> weekly hours,345,5834,hours in 9537.87 = hours out 9537.87
-calendar -> one row per date,181,174,"Thai and Chinese entries merged, highest level kept"
+chat webhooks -> inbound messages,11909,11687,222 re-delivered duplicates dropped; text dropped
+inbox send log -> outbound messages,10745,10745,bot greetings kept but flagged SenderType=Bot
+kiosk form -> kiosk_leads,534,516,18 retried syncs dropped; 0 submissions missing in CRM
+inquiries: response time from messages,1614,1614,66 first replies sent from a phone; measured time comes from a later logged reply (overstated)
+assignments -> weekly hours,1040,18686,hours in 28498.93 = hours out 28498.93
+calendar -> one row per date,277,268,"Thai and Chinese entries merged, highest level kept"

@@ -24,7 +24,8 @@ business rule itself. Two PostgreSQL databases are used:
 
 * `aisleco_crm`: the source, OLTP v5 (OLTP v4 plus `UpdatedAt` on every table)
 * `aisleco_dw`: the target, DW v7: a star schema of 4 dimensions and 3 facts, plus `stg` (9 staging
-  tables), `etl` (7 control tables) and `mart` (11 views)
+  tables), `etl` (7 control tables) and `mart` (15 views). The conversion model of Chapter 7 adds `feature`
+  and `ml` (feature store, model registry, scores); it has its own notebook, `AisleCo_ML_Conversion_Demo.ipynb`
 
 | Chapter 6 topic | How the pipeline does it | Section |
 |---|---|---|
@@ -39,8 +40,8 @@ business rule itself. Two PostgreSQL databases are used:
 | Error handling | Connection retry with backoff, step log `etl.StepRun`, dead-letter queue `etl.RejectedRow`, alerts `etl.Alert` | 7 to 10 |
 | Recovery | Resume skips the steps that succeeded; running again changes nothing | 9, 11 |
 | Capacity | Batch cap of 100,000 changes per run; the rest waits in the backlog queue in the CRM | 13 |
-| Testing | 33 automated tests, a 28,638-value source-to-target check, a stress test against the 2-minute target | 12 to 14 |
-| Business problems | Problem 1 (seasonal demand and capacity): staffing decisions run by run. Problem 2 (high inquiry, low conversion): inquiries followed run by run. The KPIs of both on a business year | 5, 6, 12 |
+| Testing | 38 automated tests (5 for the conversion model), a 76,770-value source-to-target check, a stress test against the 2-minute target | 12 to 14 |
+| Business problems | Problem 1 (seasonal demand and capacity): staffing decisions run by run. Problem 2 (high inquiry, low conversion): inquiries followed run by run. The KPIs of both on three simulated business years | 5, 6, 12 |
 | ETL or ELT | Python extracts and lands the data; the transformations run as SQL inside the warehouse, so strictly ELT | 1 |
 """)
 
@@ -131,7 +132,7 @@ box(zx[0], ZY, ZW, ZH, "① Collection", "CRM aisleco_crm (OLTP v5)\n9 tables re
 box(zx[1], ZY, ZW, ZH, "② Bronze", "landing files\ndata/landing/run_NNNNN/\none CSV + one key list per table\nmanifest.json (rows, sha256)", fc=BRONZE)
 box(zx[2], ZY, ZW, ZH, "③ Silver", "schema stg, 9 tables\ncleaned copy of the CRM tables\nno personal data\n_RunID on every row (lineage)", fc=BLUE)
 box(zx[3], ZY, ZW, ZH, "④ Gold", "schemas dim + fact\n4 dimensions, 3 facts\n(star schema: next image)\nsurrogate keys, Unknown = -1", fc=GOLD)
-box(zx[4], ZY, ZW, ZH, "⑤ Consumption", "schema mart, 11 views\nweekly operations meeting\nweekly sales review\nmonthly management report", fc=GREEN)
+box(zx[4], ZY, ZW, ZH, "⑤ Consumption", "schema mart, 15 views\nStreamlit dashboard (meetings)\nfeature store + conversion\nmodel (schemas feature, ml):\ndaily follow-up scores", fc=GREEN)
 for i, lab in enumerate(["E", "L1", "T + L2", "read"]):
     arrow(zx[i] + ZW, ZY + ZH / 2, zx[i + 1], ZY + ZH / 2, lab)
 
@@ -661,9 +662,9 @@ print("Staging:"); staged(run10)[["extracted", "inserted", "updated", "unchanged
 """)
 
 md("""
-## 12. Source-to-target check, and the KPIs of both problems on a business year
+## 12. Source-to-target check, and the KPIs of both problems on three simulated years
 
-The v3 notebook simulates a business year (619 inquiries, 2,652 chat messages, 345 staff assignments) and
+The v3 notebook simulates three business years, 2024 to 2026 (1,905 inquiries, 22,432 chat messages, 1,040 staff assignments), and
 computes its own Gold zone in pandas. The pipeline loads the same simulated CRM into separate databases
 (`aisleco_crm_sim`, `aisleco_dw_sim`), and every value of the three facts is compared.
 """)
@@ -682,9 +683,9 @@ run_log(sim_run, sim)[["Step", "sec", "RowsIn", "RowsOut"]]
 """)
 
 md("""
-### The KPIs of both problems on the simulated year
+### The KPIs of both problems on the simulated years
 
-Every KPI of Section 2.1, read from the `mart` views of the simulated year. The sentence under each table is
+Every KPI of Section 2.1, read from the `mart` views of the simulated years. The sentence under each table is
 computed from the same numbers. The data is simulated: it shows that the warehouse computes what Section 2.1
 specifies, not what Aisle & Co.'s real figures are (Section 5.6).
 
@@ -771,7 +772,7 @@ print(st); display(Image(filename=str(ROOT / "docs" / "stress_test.png")))
 hist = re.findall(r"^\s*(\d+)\s+([\d,]+)\s+([\d.]+)\s+([\d.]+)\s*$", st.split("\nA. ")[1].split("\nB. ")[0], re.M)
 bursts = re.findall(r"^\s*([\d,]+)\s+([\d.]+)\s+([\d,]+)\s*$", st.split("\nB. ")[1].split("\nC. ")[0], re.M)
 top, ok, big = hist[-1], [h for h in hist if float(h[2]) <= 120][-1], bursts[-1]
-print(f"Result: an incremental run took {top[3]} s at {top[1]} CRM rows of history ({top[0]} copies of the simulated year), "
+print(f"Result: an incremental run took {top[3]} s at {top[1]} CRM rows of history ({top[0]} copies of the simulated years), "
       f"and one run absorbed {big[0]} changes in {big[1]} s. The full load stayed within 2 minutes up to {ok[1]} rows "
       f"({ok[2]} s) and took {top[2]} s at {top[1]} rows; it runs once, outside the target. The limits printed under "
       "'Limits' go beyond the measured points and are a linear extrapolation.")
@@ -790,7 +791,7 @@ cutoff. Four rules keep this correct:
 * the watermark moves to the cutoff, and the overlap is measured from the previous snapshot, so every run
   moves forward without reading earlier batches again.
 
-On the simulated year from section 12: 1,500 changes committed as 15 CRM transactions, with a cap of 500.
+On the simulated years from section 12: 1,500 changes committed as 15 CRM transactions, with a cap of 500.
 """)
 
 code("""
@@ -816,7 +817,7 @@ slowest = lambda c: float(dw('''SELECT max(extract(epoch FROM "FinishedAt" - "St
                                 WHERE "Status"='success' ''', c=c).s[0])
 pd.DataFrame([
     {"measure": "slowest run, Appendix B (incremental)", "seconds": round(slowest(cfg), 2)},
-    {"measure": "slowest run, simulated year (full + capped runs)", "seconds": round(slowest(sim), 2)},
+    {"measure": "slowest run, simulated years (full + capped runs)", "seconds": round(slowest(sim), 2)},
     {"measure": "whole notebook so far (sections 3 to 13)", "seconds": round(time.perf_counter() - T0, 1)},
 ]).assign(target_s=120, within_target=lambda d: d.seconds <= 120)
 """)
@@ -832,8 +833,9 @@ worked out in advance.
 |---|---|---|---|
 | Functional: transformation rules | One small case per rule with a known answer, e.g. a bot greeting is not a reply (`test_transform_rules.py`) | 14 hand-made CRM cases | The warehouse value equals the expected value |
 | Functional: end to end | Appendix B replayed through four incremental runs (`test_walkthrough.py`) | The Appendix B story | Every Appendix B figure reproduced (Beam 109 %, Arm 120 %, Nina 67 % on 36 h and others); incremental equals full refresh; a second run changes nothing |
-| Functional: source to target | The same CRM computed twice, independently: in pandas (v3 notebook) and by the pipeline (`test_source_to_target.py`, section 12) | Simulated business year | 28,638 values, 0 differences |
-| Performance | History and burst grown until a run passes 2 minutes (`scripts/benchmark.py --stress`, section 13); a burst drained through the batch cap (`test_backlog.py`) | Up to 1,000 copies of the simulated year | Measured limits; no capped run takes more than the cap; the drained warehouse equals a full refresh |
+| Functional: source to target | The same CRM computed twice, independently: in pandas (v3 notebook) and by the pipeline (`test_source_to_target.py`, section 12) | Three simulated business years | 76,770 values, 0 differences |
+| Performance | History and burst grown until a run passes 2 minutes (`scripts/benchmark.py --stress`, section 13); a burst drained through the batch cap (`test_backlog.py`) | Hundreds of copies of the simulated years | Measured limits; no capped run takes more than the cap; the drained warehouse equals a full refresh |
+| Functional: conversion model | Features built at a past date must not change when later rows arrive; training gate; one score per open inquiry; drift alert on the 2026 channel shift (`test_ml.py`) | Simulated years | No leakage; gate and registry behave; drift flagged |
 | Error handling and recovery | The failure is injected: closed port, bad row, crash hook (`ETL_FAIL_AT`), damaged file; then the outcome is checked (`test_error_handling.py`) | Appendix B data | Warehouse unchanged or correctly resumed, alert written, watermark not moved, dead-letter row resolved after the fix |
 
 Three tests in full, one per test type. Every test is listed and shown further down. The code is read
@@ -862,7 +864,7 @@ show_test("test_backlog.py", "test_burst_is_queued_then_drained")
 """)
 
 md("""
-### All 33 tests, run now
+### All tests, run now
 
 The Scenario and Expected columns come from each test's docstring in `tests/`. The result comes from this
 run of pytest.
@@ -871,7 +873,7 @@ run of pytest.
 code("""
 import ast, tempfile, xml.etree.ElementTree as ET
 TYPE = {"test_transform_rules.py": "Functional: transformation rules", "test_walkthrough.py": "Functional: end to end (Appendix B)",
-        "test_source_to_target.py": "Functional: source to target", "test_backlog.py": "Performance: batch cap / backlog queue",
+        "test_source_to_target.py": "Functional: source to target", "test_ml.py": "Functional: conversion model (Chapter 7)", "test_backlog.py": "Performance: batch cap / backlog queue",
         "test_error_handling.py": "Error handling and recovery"}
 docs = {}
 for f in TYPE:
@@ -920,6 +922,7 @@ for n in ast.parse(src).body:
 for f, title in [("test_transform_rules.py", "Functional: transformation rules (hand-made CRM data, one rule per test)"),
                  ("test_walkthrough.py", "Functional: end to end, Appendix B of the report"),
                  ("test_source_to_target.py", "Functional: source to target"),
+                 ("test_ml.py", "Functional: conversion model (Chapter 7)"),
                  ("test_error_handling.py", "Error handling and recovery"),
                  ("test_backlog.py", "Performance: batch cap / backlog queue")]:
     code_collapsed(CODE_CELL.replace("FILE", f).replace("TITLE", title).replace("SHOWFIX", str(f == "test_transform_rules.py")))
@@ -927,7 +930,8 @@ for f, title in [("test_transform_rules.py", "Functional: transformation rules (
 md("""
 ## 15. Airflow and DBeaver
 
-Airflow runs the same steps as tasks (graph in section 2): daily at 02:00 Bangkok time, two retries with
+Airflow runs the same steps as tasks (graph in section 2), followed by the conversion model's daily tasks
+(`ml_features`, `ml_score`, `ml_monitor`); `aisleco_weekly_train` retrains the model every Sunday. The daily DAG runs at 02:00 Bangkok time, two retries with
 backoff, one run at a time, and an alert callback on failure.
 
 ```bash
@@ -950,61 +954,13 @@ if COLAB:
     def at(text):
         return next(i for i, c in enumerate(cells) if text in c.source)
 
-    setup = [
-        nbf.v4.new_markdown_cell(f"""### Running this notebook in Google Colab
-
-Choose **Runtime → Run all**. The next two cells fetch the project from GitHub
-([`{REPO}`](https://github.com/{REPO})) and install PostgreSQL 16 and the Python driver inside this Colab
-session. A full Run all takes about 7 minutes on a standard Colab machine: about 2 for the setup, about 3
-for the automated tests in section 14, and the rest for the demo itself. Nothing is installed on your own
-computer. To run it again from a clean state, use Runtime → Restart session and
-run all."""),
-        nbf.v4.new_code_cell(f'''# 1. Fetch the project and the Python packages
-import os, subprocess, sys
-IN_COLAB = "google.colab" in sys.modules
-HOME = "/content/aisleco-etl-pipeline"
-
-def sh(cmd):
-    r = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-    if r.returncode:
-        raise RuntimeError(f"command failed: {{cmd}}\\n{{r.stdout[-1500:]}}\\n{{r.stderr[-1500:]}}")
-    return r.stdout
-
-if IN_COLAB:
-    if not os.path.exists(HOME):
-        sh("git clone -q https://github.com/{REPO}.git " + HOME)
-    os.chdir(HOME)
-    sh('pip -q install "psycopg[binary]==3.2.3" "pytest==8.3.4"')
-    print("project:", HOME, "| commit", sh("git rev-parse --short HEAD").strip())
-else:
-    print("local run: using the project folder", os.getcwd())'''),
-        nbf.v4.new_code_cell('''# 2. PostgreSQL 16 (the pipeline uses MERGE, which needs version 15 or later)
-if IN_COLAB:
-    if subprocess.run("pg_lsclusters -h 2>/dev/null | grep -q '^16 '", shell=True).returncode:
-        print("installing PostgreSQL 16 from apt.postgresql.org ...")
-        sh("apt-get -qq update && apt-get -qq install -y curl ca-certificates > /dev/null")
-        sh("install -d /usr/share/postgresql-common/pgdg && curl -fsS -o "
-           "/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc")
-        sh('. /etc/os-release && echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] '
-           'https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main" > /etc/apt/sources.list.d/pgdg.list')
-        sh("apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y postgresql-16 > /dev/null")
-    sh("pg_ctlcluster 16 main status > /dev/null || pg_ctlcluster 16 main start")
-    os.environ["PGPORT"] = sh("pg_lsclusters -h | awk '$1 == 16 {print $3}'").strip()     # used by every connection
-    r = subprocess.run(f"su postgres -c \\"psql -p {os.environ['PGPORT']} -c 'CREATE ROLE root SUPERUSER LOGIN'\\"",
-                       shell=True, capture_output=True, text=True)
-    if r.returncode and "already exists" not in r.stderr:
-        raise RuntimeError(r.stderr)
-    import psycopg
-    with psycopg.connect("dbname=postgres") as c:
-        print(c.execute("SELECT version()").fetchone()[0])
-else:
-    print("local run: using the existing PostgreSQL")'''),
-    ]
+    from colab_setup import setup_cells
+    setup = setup_cells()
     cells[1:1] = setup
 
     cells[at("## 15. Airflow and DBeaver")] = nbf.v4.new_markdown_cell("""## 15. Airflow and DBeaver
 
-Both belong to the local setup and are not used in Colab. Airflow runs the same 11 steps as this notebook
+Both belong to the local setup and are not used in Colab. Airflow runs the same 11 steps as this notebook, then the model's daily tasks,
 as a daily DAG (`airflow/dags/aisleco_daily_etl.py`, graph in section 2); `README_current_files.md`
 explains how to start it locally.""")
 
@@ -1015,11 +971,11 @@ explains how to start it locally.""")
 
     i = at('stress_test.png')
     cells[i + 1:i + 1] = [
-        nbf.v4.new_markdown_cell("The same pipeline on this Colab machine: one full and one incremental run on 10 copies "
-                                 "of the simulated year (about 43,000 CRM rows), in separate databases."),
+        nbf.v4.new_markdown_cell("The same pipeline on this Colab machine: one full and one incremental run on 2 copies "
+                                 "of the simulated years (about 51,000 CRM rows), in separate databases."),
         nbf.v4.new_code_cell('''env = {**os.environ, "ETL_CRM_DSN": "dbname=aisleco_crm_bench", "ETL_DW_DSN": "dbname=aisleco_dw_bench",
        "ETL_LANDING_DIR": str(ROOT / "data" / "landing_bench")}
-out = subprocess.run([sys.executable, "scripts/benchmark.py", str(ZONES), "--scale", "10"], env=env, capture_output=True, text=True)
+out = subprocess.run([sys.executable, "scripts/benchmark.py", str(ZONES), "--scale", "2"], env=env, capture_output=True, text=True)
 print(out.stdout[-2500:] if out.returncode == 0 else out.stderr[-2500:])'''),
     ]
 

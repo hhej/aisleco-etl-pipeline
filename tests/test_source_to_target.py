@@ -16,11 +16,11 @@ ZONES = Path(__file__).resolve().parent.parent / "data" / "sim" / "zones_v3"
 
 @pytest.mark.skipif(not (ZONES / "gold").exists(), reason="run the v3 notebook first (README, step 3)")
 def test_pipeline_matches_notebook_gold(cfg):
-    """Scenario: The simulated business year (619 inquiries, 2,652 messages, 345 assignments) through the pipeline, vs the facts pandas computed independently (v3 notebook).
-    Expected: 28,638 values compared, 0 differences."""
+    """Scenario: The simulated three business years (1,905 inquiries, 22,432 messages, 1,040 assignments) through the pipeline, vs the facts pandas computed independently (v3 notebook).
+    Expected: 76,770 values compared, 0 differences."""
     load(ZONES, 1, cfg)
     init_dw(cfg, drop=True)
     pipeline.run(cfg, date(2027, 1, 15), "full")
     checks, fails = compare_with_gold(ZONES, cfg)
-    assert checks == 28638      # 29257 before InquiryStatus left the warehouse (619 inquiries)
+    assert checks == 76770      # three simulated years (1,905 inquiries)
     assert fails == []

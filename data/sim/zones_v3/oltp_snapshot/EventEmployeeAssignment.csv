@@ -1,346 +1,1041 @@
 EventEmployeeAssignmentID,EventID,EmployeeID,AssignmentRole,AssignedDate,WorkloadHours,IsLead,Status
-1,1,1,Lead Planner,2026-02-02 12:37:00,42.28,Y,Active
-2,1,6,Coordinator,2026-12-04 12:37:00,20.16,N,Active
-3,1,7,Event Staff,2026-11-23 12:37:00,14.68,N,Active
-4,2,3,Lead Planner,2026-01-29 17:09:00,85.92,Y,Active
-5,2,4,Planner,2026-01-29 17:09:00,33.97,N,Active
-6,2,6,Coordinator,2026-10-31 17:09:00,16.28,N,Active
-7,2,7,Event Staff,2026-11-07 17:09:00,10.87,N,Active
-8,3,2,Lead Planner,2026-02-09 12:06:00,78.89,Y,Active
-9,3,4,Planner,2026-02-09 12:06:00,32.1,N,Active
-10,3,5,Coordinator,2027-01-17 12:06:00,22.97,N,Active
-11,3,7,Event Staff,2027-02-05 12:06:00,11.77,N,Active
-12,4,1,Lead Planner,2026-02-05 19:17:00,42.64,Y,Active
-13,4,4,Planner,2026-02-05 19:17:00,43.9,N,Active
-14,4,5,Coordinator,2026-11-18 19:17:00,22.53,N,Active
-15,4,7,Event Staff,2026-11-12 19:17:00,10.64,N,Active
-16,5,1,Lead Planner,2026-02-22 16:12:00,53.68,Y,Active
-17,5,4,Planner,2026-02-22 16:12:00,39.2,N,Active
-18,5,6,Coordinator,2026-10-07 16:12:00,22.91,N,Active
-19,5,7,Event Staff,2026-10-12 16:12:00,11.61,N,Active
-20,6,2,Lead Planner,2026-02-21 10:42:00,26.22,Y,Active
-21,6,5,Coordinator,2027-01-13 10:42:00,19.91,N,Active
-22,6,7,Event Staff,2027-01-27 10:42:00,10.39,N,Active
-23,7,2,Lead Planner,2026-02-20 09:36:00,30.2,Y,Active
-24,7,5,Coordinator,2026-09-11 09:36:00,18.81,N,Active
-25,7,7,Event Staff,2026-09-30 09:36:00,10.17,N,Active
-26,8,2,Lead Planner,2026-02-21 10:57:00,91.83,Y,Active
-27,8,4,Planner,2026-02-21 10:57:00,56.65,N,Active
-28,8,5,Coordinator,2026-11-30 10:57:00,18.74,N,Active
-29,8,7,Event Staff,2026-11-13 10:57:00,13.04,N,Active
-30,9,1,Lead Planner,2026-02-20 09:50:00,16.6,Y,Cancelled
-31,9,5,Coordinator,2027-01-07 09:50:00,20.52,N,Cancelled
-32,9,7,Event Staff,2027-01-01 09:50:00,10.02,N,Cancelled
-33,10,2,Lead Planner,2026-02-26 09:32:00,98.23,Y,Active
-34,10,4,Planner,2026-02-26 09:32:00,53.14,N,Active
-35,10,5,Coordinator,2026-10-24 09:32:00,19.27,N,Active
-36,10,7,Event Staff,2026-10-05 09:32:00,13.3,N,Active
-37,11,3,Lead Planner,2026-02-24 09:44:00,75.01,Y,Active
-38,11,4,Planner,2026-02-24 09:44:00,40.09,N,Active
-39,11,6,Coordinator,2026-12-20 09:44:00,21.43,N,Active
-40,11,7,Event Staff,2026-11-27 09:44:00,14.25,N,Active
-41,12,1,Lead Planner,2026-02-08 14:33:00,29.16,Y,Active
-42,12,6,Coordinator,2026-12-17 14:33:00,21.42,N,Active
-43,12,7,Event Staff,2026-12-05 14:33:00,10.08,N,Active
-44,13,1,Lead Planner,2026-03-21 11:24:00,25.73,Y,Active
-45,13,5,Coordinator,2026-11-04 11:24:00,17.5,N,Active
-46,13,7,Event Staff,2026-11-16 11:24:00,11.4,N,Active
-47,14,2,Lead Planner,2026-03-07 10:09:00,27.79,Y,Active
-48,14,6,Coordinator,2026-08-21 10:09:00,22.38,N,Active
-49,14,7,Event Staff,2026-09-09 10:09:00,11.47,N,Active
-50,15,2,Lead Planner,2026-03-28 11:27:00,33.78,Y,Active
-51,15,6,Coordinator,2026-11-02 11:27:00,18.61,N,Active
-52,15,7,Event Staff,2026-11-19 11:27:00,10.25,N,Active
-53,16,1,Lead Planner,2026-04-07 10:23:00,62.54,Y,Active
-54,16,4,Planner,2026-04-07 10:23:00,37.89,N,Active
-55,16,5,Coordinator,2027-01-23 10:23:00,15.89,N,Active
-56,16,7,Event Staff,2027-02-10 10:23:00,10.74,N,Active
-57,17,1,Lead Planner,2026-04-04 09:06:00,71.88,Y,Active
-58,17,4,Planner,2026-04-04 09:06:00,25.7,N,Active
-59,17,5,Coordinator,2027-01-08 09:06:00,16.21,N,Active
-60,17,7,Event Staff,2027-01-01 09:06:00,11.46,N,Active
-61,18,3,Lead Planner,2026-04-01 11:39:00,32.07,Y,Active
-62,18,5,Coordinator,2026-07-16 11:39:00,14.38,N,Active
-63,18,7,Event Staff,2026-07-25 11:39:00,11.82,N,Active
-64,19,3,Lead Planner,2026-04-06 18:01:00,66.87,Y,Active
-65,19,4,Planner,2026-04-06 18:01:00,29.24,N,Active
-66,19,5,Coordinator,2027-03-15 18:01:00,16.74,N,Active
-67,19,7,Event Staff,2027-03-01 18:01:00,11.16,N,Active
-68,20,2,Lead Planner,2026-04-07 15:31:00,33.44,Y,Active
-69,20,6,Coordinator,2027-04-06 15:31:00,22.6,N,Active
-70,20,7,Event Staff,2027-04-03 15:31:00,11.75,N,Active
-71,21,1,Lead Planner,2026-04-02 10:27:00,34.08,Y,Active
-72,21,5,Coordinator,2027-01-28 10:27:00,22.12,N,Active
-73,21,7,Event Staff,2027-01-31 10:27:00,10.65,N,Active
-74,22,3,Lead Planner,2026-04-10 13:35:00,72.9,Y,Active
-75,22,4,Planner,2026-04-10 13:35:00,25.72,N,Active
-76,22,6,Coordinator,2026-12-07 13:35:00,16.68,N,Active
-77,22,7,Event Staff,2026-11-30 13:35:00,11.49,N,Active
-78,23,2,Lead Planner,2026-04-07 09:57:00,48.77,Y,Active
-79,23,4,Planner,2026-04-07 09:57:00,20.49,N,Active
-80,23,6,Coordinator,2026-06-13 09:57:00,18.92,N,Active
-81,23,7,Event Staff,2026-06-21 09:57:00,11.47,N,Active
-82,24,1,Lead Planner,2026-04-04 13:02:00,23.2,Y,Active
-83,24,6,Coordinator,2026-11-18 13:02:00,23.47,N,Active
-84,24,7,Event Staff,2026-11-14 13:02:00,10.89,N,Active
-85,25,1,Lead Planner,2026-04-23 18:14:00,60.86,Y,Active
-86,25,4,Planner,2026-04-23 18:14:00,36.85,N,Active
-87,25,6,Coordinator,2027-01-22 18:14:00,26.76,N,Active
-88,25,7,Event Staff,2027-01-28 18:14:00,13.28,N,Active
-89,26,1,Lead Planner,2026-04-03 11:44:00,73.52,Y,Active
-90,26,4,Planner,2026-04-03 11:44:00,27.53,N,Active
-91,26,6,Coordinator,2026-08-31 11:44:00,16.37,N,Active
-92,26,7,Event Staff,2026-08-26 11:44:00,11.48,N,Active
-93,27,2,Lead Planner,2026-04-21 09:57:00,64.73,Y,Active
-94,27,4,Planner,2026-04-21 09:57:00,40.83,N,Active
-95,27,6,Coordinator,2026-12-04 09:57:00,17.17,N,Active
-96,27,7,Event Staff,2026-11-19 09:57:00,11.76,N,Active
-97,28,3,Lead Planner,2026-04-21 10:37:00,25.44,Y,Active
-98,28,5,Coordinator,2027-02-01 10:37:00,23.06,N,Active
-99,28,7,Event Staff,2027-01-26 10:37:00,11.79,N,Active
-100,29,3,Lead Planner,2026-04-20 10:00:00,73.12,Y,Active
-101,29,4,Planner,2026-04-20 10:00:00,38.84,N,Active
-102,29,5,Coordinator,2026-11-16 10:00:00,19.35,N,Active
-103,29,7,Event Staff,2026-11-24 10:00:00,11.87,N,Active
-104,30,1,Lead Planner,2026-05-04 15:04:00,64.72,Y,Active
-105,30,4,Planner,2026-05-04 15:04:00,38.9,N,Active
-106,30,6,Coordinator,2027-01-15 15:04:00,20.89,N,Active
-107,30,7,Event Staff,2027-01-20 15:04:00,13.54,N,Active
-108,31,2,Lead Planner,2026-04-29 10:12:00,29.06,Y,Active
-109,31,5,Coordinator,2027-02-09 10:12:00,14.32,N,Active
-110,31,7,Event Staff,2027-02-14 10:12:00,10.14,N,Active
-111,32,1,Lead Planner,2026-05-12 19:57:00,82.74,Y,Active
-112,32,4,Planner,2026-05-12 19:57:00,34.69,N,Active
-113,32,6,Coordinator,2027-03-22 19:57:00,20.13,N,Active
-114,32,7,Event Staff,2027-03-31 19:57:00,10.87,N,Active
-115,33,3,Lead Planner,2026-05-12 16:24:00,114.55,Y,Active
-116,33,4,Planner,2026-05-12 16:24:00,53.53,N,Active
-117,33,6,Coordinator,2026-12-31 16:24:00,23.57,N,Active
-118,33,7,Event Staff,2027-01-01 16:24:00,13.37,N,Active
-119,34,2,Lead Planner,2026-05-20 09:36:00,69.87,Y,Active
-120,34,4,Planner,2026-05-20 09:36:00,25.33,N,Active
-121,34,6,Coordinator,2026-08-17 09:36:00,16.42,N,Active
-122,34,7,Event Staff,2026-09-02 09:36:00,11.95,N,Active
-123,35,2,Lead Planner,2026-06-04 12:15:00,27.3,Y,Active
-124,35,6,Coordinator,2026-11-12 12:15:00,25.11,N,Active
-125,35,7,Event Staff,2026-11-18 12:15:00,13.05,N,Active
-126,36,3,Lead Planner,2026-06-04 10:58:00,43.57,Y,Active
-127,36,6,Coordinator,2027-02-21 10:58:00,19.46,N,Active
-128,36,7,Event Staff,2027-02-14 10:58:00,14.65,N,Active
-129,37,3,Lead Planner,2026-06-25 09:30:00,22.99,Y,Active
-130,37,6,Coordinator,2026-09-23 09:30:00,17.44,N,Active
-131,37,7,Event Staff,2026-09-23 09:30:00,11.65,N,Active
-132,38,2,Lead Planner,2026-07-04 09:42:00,95.64,Y,Active
-133,38,4,Planner,2026-07-04 09:42:00,57.47,N,Active
-134,38,6,Coordinator,2026-12-13 09:42:00,29.94,N,Active
-135,38,7,Event Staff,2026-12-17 09:42:00,15.45,N,Active
-136,39,3,Lead Planner,2026-06-21 10:24:00,78.95,Y,Active
-137,39,4,Planner,2026-06-21 10:24:00,29.51,N,Active
-138,39,5,Coordinator,2027-01-04 10:24:00,23.0,N,Active
-139,39,7,Event Staff,2027-01-05 10:24:00,11.81,N,Active
-140,40,1,Lead Planner,2026-07-06 09:31:00,31.14,Y,Active
-141,40,6,Coordinator,2027-06-23 09:31:00,21.88,N,Active
-142,40,7,Event Staff,2027-07-02 09:31:00,11.89,N,Active
-143,41,2,Lead Planner,2026-07-10 10:40:00,17.24,Y,Cancelled
-144,41,6,Coordinator,2026-11-10 10:40:00,23.15,N,Cancelled
-145,41,7,Event Staff,2026-11-10 10:40:00,11.25,N,Cancelled
-146,42,1,Lead Planner,2026-07-03 10:00:00,73.48,Y,Cancelled
-147,42,4,Planner,2026-07-03 10:00:00,45.5,N,Cancelled
-148,42,6,Coordinator,2027-06-01 10:00:00,24.19,N,Cancelled
-149,42,7,Event Staff,2027-05-29 10:00:00,14.66,N,Cancelled
-150,43,2,Lead Planner,2026-07-12 10:35:00,62.71,Y,Active
-151,43,4,Planner,2026-07-12 10:35:00,42.85,N,Active
-152,43,6,Coordinator,2026-12-19 10:35:00,14.05,N,Active
-153,43,7,Event Staff,2026-12-22 10:35:00,10.53,N,Active
-154,44,3,Lead Planner,2026-07-15 19:24:00,24.12,Y,Active
-155,44,5,Coordinator,2027-04-21 19:24:00,19.54,N,Active
-156,44,7,Event Staff,2027-04-09 19:24:00,10.2,N,Active
-157,45,3,Lead Planner,2026-06-30 18:27:00,115.12,Y,Active
-158,45,4,Planner,2026-06-30 18:27:00,50.59,N,Active
-159,45,5,Coordinator,2027-04-20 18:27:00,18.51,N,Active
-160,45,7,Event Staff,2027-04-17 18:27:00,13.93,N,Active
-161,46,1,Lead Planner,2026-07-15 10:02:00,73.85,Y,Active
-162,46,4,Planner,2026-07-15 10:02:00,46.3,N,Active
-163,46,5,Coordinator,2027-02-09 10:02:00,26.4,N,Active
-164,46,7,Event Staff,2027-01-25 10:02:00,13.38,N,Active
-165,47,1,Lead Planner,2026-07-29 10:10:00,25.78,Y,Active
-166,47,5,Coordinator,2026-11-19 10:10:00,18.06,N,Active
-167,47,7,Event Staff,2026-11-04 10:10:00,10.9,N,Active
-168,48,1,Lead Planner,2026-08-01 10:04:00,57.78,Y,Active
-169,48,4,Planner,2026-08-01 10:04:00,38.06,N,Active
-170,48,6,Coordinator,2027-10-11 10:04:00,23.72,N,Active
-171,48,7,Event Staff,2027-10-31 10:04:00,10.6,N,Active
-172,49,2,Lead Planner,2026-08-08 09:28:00,53.44,Y,Active
-173,49,4,Planner,2026-08-08 09:28:00,32.63,N,Active
-174,49,5,Coordinator,2027-04-12 09:28:00,22.28,N,Active
-175,49,7,Event Staff,2027-04-19 09:28:00,11.35,N,Active
-176,50,2,Lead Planner,2026-08-04 13:57:00,79.28,Y,Active
-177,50,4,Planner,2026-08-04 13:57:00,23.11,N,Active
-178,50,6,Coordinator,2026-12-03 13:57:00,14.94,N,Active
-179,50,7,Event Staff,2026-12-01 13:57:00,10.38,N,Active
-180,51,2,Lead Planner,2026-08-04 10:09:00,70.31,Y,Active
-181,51,4,Planner,2026-08-04 10:09:00,43.37,N,Active
-182,51,5,Coordinator,2027-04-06 10:09:00,15.91,N,Active
-183,51,7,Event Staff,2027-04-03 10:09:00,10.98,N,Active
-184,52,1,Lead Planner,2026-08-09 09:56:00,26.98,Y,Active
-185,52,6,Coordinator,2027-04-13 09:56:00,16.35,N,Active
-186,52,7,Event Staff,2027-03-31 09:56:00,11.19,N,Active
-187,53,2,Lead Planner,2026-08-04 09:37:00,34.26,Y,Active
-188,53,6,Coordinator,2027-05-10 09:37:00,18.96,N,Active
-189,53,7,Event Staff,2027-05-06 09:37:00,11.53,N,Active
-190,54,2,Lead Planner,2026-08-01 16:58:00,37.72,Y,Active
-191,54,5,Coordinator,2027-01-10 16:58:00,19.85,N,Active
-192,54,7,Event Staff,2026-12-19 16:58:00,13.65,N,Active
-193,55,1,Lead Planner,2026-08-25 15:45:00,81.87,Y,Active
-194,55,4,Planner,2026-08-25 15:45:00,52.99,N,Active
-195,55,6,Coordinator,2026-12-17 15:45:00,18.3,N,Active
-196,55,7,Event Staff,2026-12-08 15:45:00,15.06,N,Active
-197,56,3,Lead Planner,2026-09-01 10:21:00,85.29,Y,Active
-198,56,4,Planner,2026-09-01 10:21:00,26.88,N,Active
-199,56,5,Coordinator,2026-12-21 10:21:00,22.33,N,Active
-200,56,7,Event Staff,2026-12-13 10:21:00,13.48,N,Active
-201,57,3,Lead Planner,2026-08-30 11:15:00,21.39,Y,Active
-202,57,6,Coordinator,2027-09-30 11:15:00,15.79,N,Active
-203,57,7,Event Staff,2027-10-13 11:15:00,11.42,N,Active
-204,58,3,Lead Planner,2026-08-21 15:55:00,52.69,Y,Active
-205,58,4,Planner,2026-08-21 15:55:00,39.06,N,Active
-206,58,6,Coordinator,2027-01-24 15:55:00,21.11,N,Active
-207,58,7,Event Staff,2027-01-13 15:55:00,15.25,N,Active
-208,59,3,Lead Planner,2026-09-04 17:36:00,70.87,Y,Cancelled
-209,59,4,Planner,2026-09-04 17:36:00,37.35,N,Cancelled
-210,59,6,Coordinator,2026-12-05 17:36:00,14.62,N,Cancelled
-211,59,7,Event Staff,2026-12-28 17:36:00,10.55,N,Cancelled
-212,60,1,Lead Planner,2026-09-13 09:25:00,25.71,Y,Active
-213,60,6,Coordinator,2027-06-08 09:25:00,18.1,N,Active
-214,60,7,Event Staff,2027-06-23 09:25:00,11.57,N,Active
-215,61,2,Lead Planner,2026-09-22 09:14:00,34.26,Y,Active
-216,61,6,Coordinator,2027-05-20 09:14:00,21.85,N,Active
-217,61,7,Event Staff,2027-05-25 09:14:00,10.72,N,Active
-218,62,2,Lead Planner,2026-09-27 09:13:00,36.81,Y,Active
-219,62,5,Coordinator,2027-01-15 09:13:00,22.32,N,Active
-220,62,7,Event Staff,2027-01-19 09:13:00,14.12,N,Active
-221,63,2,Lead Planner,2026-09-16 10:54:00,31.57,Y,Active
-222,63,5,Coordinator,2027-03-21 10:54:00,16.83,N,Active
-223,63,7,Event Staff,2027-04-04 10:54:00,10.32,N,Active
-224,64,1,Lead Planner,2026-09-15 10:15:00,83.21,Y,Active
-225,64,4,Planner,2026-09-15 10:15:00,22.01,N,Active
-226,64,6,Coordinator,2027-03-12 10:15:00,18.82,N,Active
-227,64,7,Event Staff,2027-03-20 10:15:00,11.31,N,Active
-228,65,2,Lead Planner,2026-09-30 15:33:00,30.28,Y,Active
-229,65,5,Coordinator,2027-06-09 15:33:00,24.77,N,Active
-230,65,7,Event Staff,2027-06-05 15:33:00,15.54,N,Active
-231,66,2,Lead Planner,2026-10-07 17:03:00,59.1,Y,Active
-232,66,4,Planner,2026-10-07 17:03:00,33.95,N,Active
-233,66,5,Coordinator,2027-05-14 17:03:00,20.95,N,Active
-234,66,7,Event Staff,2027-05-10 17:03:00,10.1,N,Active
-235,67,3,Lead Planner,2026-10-12 16:25:00,26.49,Y,Active
-236,67,5,Coordinator,2027-04-21 16:25:00,23.75,N,Active
-237,67,7,Event Staff,2027-04-27 16:25:00,10.84,N,Active
-238,68,3,Lead Planner,2026-10-17 10:01:00,81.82,Y,Active
-239,68,4,Planner,2026-10-17 10:01:00,25.48,N,Active
-240,68,5,Coordinator,2027-03-20 10:01:00,20.89,N,Active
-241,68,7,Event Staff,2027-03-17 10:01:00,11.69,N,Active
-242,69,1,Lead Planner,2026-10-30 09:10:00,88.06,Y,Active
-243,69,4,Planner,2026-10-30 09:10:00,40.36,N,Active
-244,69,6,Coordinator,2027-03-20 09:10:00,22.25,N,Active
-245,69,7,Event Staff,2027-03-18 09:10:00,11.4,N,Active
-246,70,3,Lead Planner,2026-11-04 11:02:00,106.2,Y,Active
-247,70,4,Planner,2026-11-04 11:02:00,44.65,N,Active
-248,70,6,Coordinator,2027-05-25 11:02:00,18.59,N,Active
-249,70,7,Event Staff,2027-05-07 11:02:00,13.84,N,Active
-250,71,2,Lead Planner,2026-10-23 12:34:00,83.29,Y,Active
-251,71,4,Planner,2026-10-23 12:34:00,36.69,N,Active
-252,71,6,Coordinator,2027-03-15 12:34:00,16.48,N,Active
-253,71,7,Event Staff,2027-03-06 12:34:00,11.78,N,Active
-254,72,3,Lead Planner,2026-11-15 11:00:00,25.84,Y,Active
-255,72,5,Coordinator,2027-03-11 11:00:00,17.01,N,Active
-256,72,7,Event Staff,2027-03-04 11:00:00,10.66,N,Active
-257,73,1,Lead Planner,2026-11-01 17:20:00,28.59,Y,Active
-258,73,5,Coordinator,2027-05-15 17:20:00,23.16,N,Active
-259,73,7,Event Staff,2027-05-21 17:20:00,10.42,N,Active
-260,74,1,Lead Planner,2026-11-22 18:28:00,17.22,Y,Active
-261,74,5,Coordinator,2027-03-07 18:28:00,23.32,N,Active
-262,74,7,Event Staff,2027-03-22 18:28:00,11.88,N,Active
-263,75,2,Lead Planner,2026-11-07 18:10:00,22.03,Y,Active
-264,75,5,Coordinator,2027-09-24 18:10:00,21.59,N,Active
-265,75,7,Event Staff,2027-10-10 18:10:00,15.3,N,Active
-266,76,2,Lead Planner,2026-11-22 13:46:00,89.2,Y,Active
-267,76,4,Planner,2026-11-22 13:46:00,36.97,N,Active
-268,76,6,Coordinator,2027-03-17 13:46:00,22.76,N,Active
-269,76,7,Event Staff,2027-03-18 13:46:00,11.99,N,Active
-270,77,1,Lead Planner,2026-11-14 11:55:00,79.12,Y,Active
-271,77,4,Planner,2026-11-14 11:55:00,39.43,N,Active
-272,77,6,Coordinator,2027-04-21 11:55:00,24.9,N,Active
-273,77,7,Event Staff,2027-04-25 11:55:00,15.29,N,Active
-274,78,3,Lead Planner,2026-11-25 10:59:00,25.1,Y,Active
-275,78,5,Coordinator,2027-06-21 10:59:00,22.69,N,Active
-276,78,7,Event Staff,2027-06-04 10:59:00,10.7,N,Active
-277,79,2,Lead Planner,2026-12-06 18:55:00,17.17,Y,Active
-278,79,5,Coordinator,2027-03-01 18:55:00,16.56,N,Active
-279,79,7,Event Staff,2027-02-17 18:55:00,10.16,N,Active
-280,80,1,Lead Planner,2026-12-07 09:47:00,24.82,Y,Active
-281,80,6,Coordinator,2027-04-14 09:47:00,18.31,N,Active
-282,80,7,Event Staff,2027-04-09 09:47:00,10.86,N,Active
-283,81,2,Lead Planner,2026-11-28 10:25:00,42.85,Y,Active
-284,81,5,Coordinator,2027-05-30 10:25:00,28.33,N,Active
-285,81,7,Event Staff,2027-05-31 10:25:00,14.81,N,Active
-286,82,1,Lead Planner,2026-12-04 10:21:00,52.26,Y,Active
-287,82,4,Planner,2026-12-04 10:21:00,42.74,N,Active
-288,82,5,Coordinator,2027-04-02 10:21:00,25.64,N,Active
-289,82,7,Event Staff,2027-03-30 10:21:00,14.37,N,Active
-290,83,1,Lead Planner,2026-12-18 09:47:00,30.07,Y,Active
-291,83,5,Coordinator,2027-05-23 09:47:00,16.58,N,Active
-292,83,7,Event Staff,2027-06-07 09:47:00,11.94,N,Active
-293,84,3,Lead Planner,2026-12-12 10:27:00,28.77,Y,Active
-294,84,6,Coordinator,2027-09-02 10:27:00,18.66,N,Active
-295,84,7,Event Staff,2027-08-28 10:27:00,10.91,N,Active
-296,85,3,Lead Planner,2026-12-17 18:20:00,36.82,Y,Active
-297,85,6,Coordinator,2027-06-05 18:20:00,30.35,N,Active
-298,85,7,Event Staff,2027-06-03 18:20:00,13.21,N,Active
-299,86,2,Lead Planner,2026-12-20 19:50:00,63.86,Y,Active
-300,86,4,Planner,2026-12-20 19:50:00,25.44,N,Active
-301,86,6,Coordinator,2027-04-26 19:50:00,14.59,N,Active
-302,86,7,Event Staff,2027-05-05 19:50:00,11.33,N,Active
-303,87,2,Lead Planner,2026-12-25 19:29:00,81.69,Y,Active
-304,87,4,Planner,2026-12-25 19:29:00,34.75,N,Active
-305,87,6,Coordinator,2027-11-06 19:29:00,16.22,N,Active
-306,87,7,Event Staff,2027-11-17 19:29:00,11.46,N,Active
-307,88,2,Lead Planner,2026-12-26 10:26:00,59.34,Y,Active
-308,88,4,Planner,2026-12-26 10:26:00,33.96,N,Active
-309,88,5,Coordinator,2027-09-13 10:26:00,21.15,N,Active
-310,88,7,Event Staff,2027-09-20 10:26:00,10.57,N,Active
-311,89,1,Lead Planner,2026-12-30 14:20:00,46.4,Y,Active
-312,89,4,Planner,2026-12-30 14:20:00,37.86,N,Active
-313,89,6,Coordinator,2027-06-09 14:20:00,23.8,N,Active
-314,89,7,Event Staff,2027-06-14 14:20:00,10.98,N,Active
-315,90,3,Lead Planner,2027-01-02 15:27:00,65.62,Y,Active
-316,90,4,Planner,2027-01-02 15:27:00,32.55,N,Active
-317,90,6,Coordinator,2027-12-22 15:27:00,23.76,N,Active
-318,90,7,Event Staff,2027-12-13 15:27:00,11.24,N,Active
-319,91,3,Lead Planner,2027-01-14 15:53:00,30.89,Y,Active
-320,91,5,Coordinator,2027-10-25 15:53:00,24.17,N,Active
-321,91,7,Event Staff,2027-10-28 15:53:00,13.08,N,Active
-322,92,1,Lead Planner,2026-08-25 10:00:00,16.8,Y,Active
-323,92,6,Coordinator,2026-10-31 10:00:00,22.5,N,Active
-324,92,7,Event Staff,2026-11-09 10:00:00,10.97,N,Active
-325,93,2,Lead Planner,2026-06-14 10:00:00,20.17,Y,Active
-326,93,6,Coordinator,2026-08-25 10:00:00,22.48,N,Active
-327,93,7,Event Staff,2026-08-15 10:00:00,11.39,N,Active
-328,94,1,Lead Planner,2026-04-23 10:00:00,27.65,Y,Active
-329,94,5,Coordinator,2026-07-02 10:00:00,20.25,N,Active
-330,94,7,Event Staff,2026-07-10 10:00:00,11.44,N,Active
-331,95,1,Lead Planner,2025-10-28 10:00:00,33.0,Y,Active
-332,95,6,Coordinator,2026-03-08 10:00:00,16.77,N,Active
-333,95,7,Event Staff,2026-03-05 10:00:00,11.28,N,Active
-334,96,3,Lead Planner,2026-07-16 10:00:00,22.1,Y,Active
-335,96,6,Coordinator,2026-11-12 10:00:00,23.19,N,Active
-336,96,7,Event Staff,2026-11-07 10:00:00,11.26,N,Active
-337,97,1,Lead Planner,2026-03-23 10:00:00,17.3,Y,Active
-338,97,5,Coordinator,2026-06-11 10:00:00,14.13,N,Active
-339,97,7,Event Staff,2026-05-28 10:00:00,11.09,N,Active
-340,98,2,Lead Planner,2026-09-06 10:00:00,20.59,Y,Active
-341,98,5,Coordinator,2026-12-07 10:00:00,16.09,N,Active
-342,98,7,Event Staff,2026-11-27 10:00:00,10.93,N,Active
-343,99,2,Lead Planner,2026-03-16 10:00:00,19.75,Y,Active
-344,99,6,Coordinator,2026-07-10 10:00:00,17.31,N,Active
-345,99,7,Event Staff,2026-06-27 10:00:00,10.65,N,Active
+1,1,2,Lead Planner,2024-01-26 17:04:00,31.3,Y,Active
+2,1,5,Coordinator,2024-02-22 17:04:00,19.22,N,Active
+3,1,7,Event Staff,2024-02-17 17:04:00,13.54,N,Active
+4,2,2,Lead Planner,2024-01-24 10:25:00,28.91,Y,Active
+5,2,5,Coordinator,2024-11-14 10:25:00,23.09,N,Active
+6,2,7,Event Staff,2024-11-08 10:25:00,14.43,N,Active
+7,3,3,Lead Planner,2024-02-03 11:52:00,70.06,Y,Active
+8,3,4,Planner,2024-02-03 11:52:00,26.48,N,Active
+9,3,6,Coordinator,2024-10-03 11:52:00,20.23,N,Active
+10,3,7,Event Staff,2024-09-30 11:52:00,10.02,N,Active
+11,4,2,Lead Planner,2024-02-17 17:46:00,57.45,Y,Active
+12,4,4,Planner,2024-02-17 17:46:00,21.13,N,Active
+13,4,6,Coordinator,2024-11-03 17:46:00,18.34,N,Active
+14,4,7,Event Staff,2024-11-10 17:46:00,10.62,N,Active
+15,5,3,Lead Planner,2024-02-18 12:35:00,94.18,Y,Active
+16,5,4,Planner,2024-02-18 12:35:00,37.13,N,Active
+17,5,5,Coordinator,2024-09-21 12:35:00,28.98,N,Active
+18,5,7,Event Staff,2024-09-24 12:35:00,13.74,N,Active
+19,6,3,Lead Planner,2024-02-15 09:48:00,59.95,Y,Active
+20,6,4,Planner,2024-02-15 09:48:00,57.49,N,Active
+21,6,5,Coordinator,2024-03-08 09:48:00,28.71,N,Active
+22,6,7,Event Staff,2024-03-04 09:48:00,15.39,N,Active
+23,7,2,Lead Planner,2024-03-02 16:01:00,89.53,Y,Active
+24,7,4,Planner,2024-03-02 16:01:00,33.08,N,Active
+25,7,6,Coordinator,2024-10-29 16:01:00,18.34,N,Active
+26,7,7,Event Staff,2024-10-13 16:01:00,11.91,N,Active
+27,8,2,Lead Planner,2024-02-27 14:37:00,43.04,Y,Active
+28,8,4,Planner,2024-02-27 14:37:00,37.84,N,Active
+29,8,6,Coordinator,2024-12-24 14:37:00,19.47,N,Active
+30,8,7,Event Staff,2024-12-20 14:37:00,10.54,N,Active
+31,9,3,Lead Planner,2024-02-19 10:46:00,16.17,Y,Active
+32,9,6,Coordinator,2024-11-07 10:46:00,14.51,N,Active
+33,9,7,Event Staff,2024-11-17 10:46:00,10.04,N,Active
+34,10,2,Lead Planner,2024-02-17 10:09:00,62.39,Y,Active
+35,10,4,Planner,2024-02-17 10:09:00,44.93,N,Active
+36,10,6,Coordinator,2024-10-04 10:09:00,20.83,N,Active
+37,10,7,Event Staff,2024-09-26 10:09:00,11.37,N,Active
+38,11,2,Lead Planner,2024-03-27 09:22:00,40.03,Y,Active
+39,11,5,Coordinator,2024-11-13 09:22:00,23.94,N,Active
+40,11,7,Event Staff,2024-11-18 09:22:00,14.34,N,Active
+41,12,2,Lead Planner,2024-03-03 18:49:00,40.56,Y,Active
+42,12,5,Coordinator,2024-10-21 18:49:00,30.73,N,Active
+43,12,7,Event Staff,2024-11-03 18:49:00,13.64,N,Active
+44,13,2,Lead Planner,2024-03-13 13:01:00,52.79,Y,Active
+45,13,4,Planner,2024-03-13 13:01:00,37.13,N,Active
+46,13,6,Coordinator,2024-05-02 13:01:00,18.41,N,Active
+47,13,7,Event Staff,2024-05-17 13:01:00,11.9,N,Active
+48,14,3,Lead Planner,2024-03-23 11:02:00,28.14,Y,Active
+49,14,5,Coordinator,2024-09-14 11:02:00,14.98,N,Active
+50,14,7,Event Staff,2024-09-30 11:02:00,10.05,N,Active
+51,15,3,Lead Planner,2024-03-22 09:30:00,24.95,Y,Active
+52,15,5,Coordinator,2024-10-16 09:30:00,17.07,N,Active
+53,15,7,Event Staff,2024-09-27 09:30:00,11.89,N,Active
+54,16,3,Lead Planner,2024-03-25 13:56:00,32.28,Y,Active
+55,16,6,Coordinator,2024-12-16 13:56:00,16.87,N,Active
+56,16,7,Event Staff,2024-12-16 13:56:00,11.79,N,Active
+57,17,3,Lead Planner,2024-03-19 10:30:00,40.64,Y,Active
+58,17,4,Planner,2024-03-19 10:30:00,30.32,N,Active
+59,17,5,Coordinator,2024-11-05 10:30:00,16.48,N,Active
+60,17,7,Event Staff,2024-10-27 10:30:00,10.82,N,Active
+61,18,2,Lead Planner,2024-03-24 11:41:00,25.92,Y,Active
+62,18,5,Coordinator,2024-12-17 11:41:00,16.22,N,Active
+63,18,7,Event Staff,2024-12-29 11:41:00,10.96,N,Active
+64,19,3,Lead Planner,2024-04-06 13:08:00,17.68,Y,Active
+65,19,5,Coordinator,2024-11-06 13:08:00,19.83,N,Active
+66,19,7,Event Staff,2024-11-01 13:08:00,11.73,N,Active
+67,20,1,Lead Planner,2024-04-14 15:23:00,21.51,Y,Active
+68,20,5,Coordinator,2024-08-14 15:23:00,14.51,N,Active
+69,20,7,Event Staff,2024-08-15 15:23:00,11.64,N,Active
+70,21,1,Lead Planner,2024-04-21 14:54:00,51.28,Y,Active
+71,21,4,Planner,2024-04-21 14:54:00,37.76,N,Active
+72,21,6,Coordinator,2024-12-31 14:54:00,14.05,N,Active
+73,21,7,Event Staff,2024-12-20 14:54:00,11.78,N,Active
+74,22,3,Lead Planner,2024-04-19 13:45:00,49.34,Y,Active
+75,22,4,Planner,2024-04-19 13:45:00,44.97,N,Active
+76,22,6,Coordinator,2024-09-27 13:45:00,18.28,N,Active
+77,22,7,Event Staff,2024-09-27 13:45:00,11.82,N,Active
+78,23,3,Lead Planner,2024-04-16 18:18:00,85.5,Y,Active
+79,23,4,Planner,2024-04-16 18:18:00,57.04,N,Active
+80,23,5,Coordinator,2025-04-25 18:18:00,24.22,N,Active
+81,23,7,Event Staff,2025-04-04 18:18:00,14.89,N,Active
+82,24,1,Lead Planner,2024-04-10 15:57:00,22.49,Y,Active
+83,24,5,Coordinator,2025-04-24 15:57:00,17.07,N,Active
+84,24,7,Event Staff,2025-04-20 15:57:00,10.42,N,Active
+85,25,1,Lead Planner,2024-04-01 16:31:00,57.11,Y,Active
+86,25,4,Planner,2024-04-01 16:31:00,42.38,N,Active
+87,25,6,Coordinator,2024-10-13 16:31:00,20.97,N,Active
+88,25,7,Event Staff,2024-10-19 16:31:00,10.34,N,Active
+89,26,1,Lead Planner,2024-04-10 11:05:00,45.4,Y,Active
+90,26,4,Planner,2024-04-10 11:05:00,42.48,N,Active
+91,26,5,Coordinator,2024-05-23 11:05:00,19.74,N,Active
+92,26,7,Event Staff,2024-05-23 11:05:00,10.84,N,Active
+93,27,2,Lead Planner,2024-05-02 16:53:00,17.73,Y,Active
+94,27,6,Coordinator,2024-10-23 16:53:00,23.53,N,Active
+95,27,7,Event Staff,2024-10-17 16:53:00,10.77,N,Active
+96,28,3,Lead Planner,2024-05-07 16:33:00,29.63,Y,Active
+97,28,6,Coordinator,2024-11-15 16:33:00,23.25,N,Active
+98,28,7,Event Staff,2024-11-18 16:33:00,13.69,N,Active
+99,29,3,Lead Planner,2024-04-30 15:07:00,47.33,Y,Active
+100,29,4,Planner,2024-04-30 15:07:00,21.71,N,Active
+101,29,6,Coordinator,2025-06-01 15:07:00,22.47,N,Active
+102,29,7,Event Staff,2025-06-09 15:07:00,10.8,N,Active
+103,30,2,Lead Planner,2024-04-24 14:16:00,60.43,Y,Active
+104,30,4,Planner,2024-04-24 14:16:00,38.76,N,Active
+105,30,6,Coordinator,2025-01-16 14:16:00,14.77,N,Active
+106,30,7,Event Staff,2025-01-13 14:16:00,10.6,N,Active
+107,31,1,Lead Planner,2024-05-04 10:49:00,33.33,Y,Active
+108,31,6,Coordinator,2024-10-17 10:49:00,18.95,N,Active
+109,31,7,Event Staff,2024-10-19 10:49:00,10.67,N,Active
+110,32,2,Lead Planner,2024-05-14 10:20:00,27.13,Y,Active
+111,32,6,Coordinator,2024-09-18 10:20:00,23.44,N,Active
+112,32,7,Event Staff,2024-09-12 10:20:00,10.96,N,Active
+113,33,2,Lead Planner,2024-05-08 14:26:00,94.04,Y,Active
+114,33,4,Planner,2024-05-08 14:26:00,50.28,N,Active
+115,33,5,Coordinator,2024-12-24 14:26:00,22.69,N,Active
+116,33,7,Event Staff,2024-12-04 14:26:00,13.83,N,Active
+117,34,3,Lead Planner,2024-05-04 11:06:00,58.62,Y,Active
+118,34,4,Planner,2024-05-04 11:06:00,31.05,N,Active
+119,34,5,Coordinator,2025-01-27 11:06:00,21.73,N,Active
+120,34,7,Event Staff,2025-01-26 11:06:00,13.46,N,Active
+121,35,1,Lead Planner,2024-05-10 11:46:00,87.61,Y,Active
+122,35,4,Planner,2024-05-10 11:46:00,27.31,N,Active
+123,35,6,Coordinator,2025-01-07 11:46:00,18.33,N,Active
+124,35,7,Event Staff,2025-01-13 11:46:00,13.16,N,Active
+125,36,3,Lead Planner,2024-05-07 11:39:00,28.38,Y,Active
+126,36,6,Coordinator,2024-12-09 11:39:00,21.01,N,Active
+127,36,7,Event Staff,2024-12-24 11:39:00,10.07,N,Active
+128,37,3,Lead Planner,2024-05-26 19:24:00,17.17,Y,Active
+129,37,5,Coordinator,2025-02-25 19:24:00,22.51,N,Active
+130,37,7,Event Staff,2025-02-22 19:24:00,11.33,N,Active
+131,38,3,Lead Planner,2024-05-23 18:19:00,27.84,Y,Active
+132,38,6,Coordinator,2025-01-13 18:19:00,14.88,N,Active
+133,38,7,Event Staff,2025-01-12 18:19:00,10.78,N,Active
+134,39,2,Lead Planner,2024-05-25 15:18:00,30.14,Y,Active
+135,39,6,Coordinator,2025-10-05 15:18:00,26.63,N,Active
+136,39,7,Event Staff,2025-10-21 15:18:00,13.04,N,Active
+137,40,1,Lead Planner,2024-05-30 11:27:00,55.39,Y,Active
+138,40,4,Planner,2024-05-30 11:27:00,31.64,N,Active
+139,40,5,Coordinator,2024-06-24 11:27:00,22.96,N,Active
+140,40,7,Event Staff,2024-06-22 11:27:00,15.25,N,Active
+141,41,3,Lead Planner,2024-06-05 09:50:00,52.86,Y,Active
+142,41,4,Planner,2024-06-05 09:50:00,24.89,N,Active
+143,41,5,Coordinator,2024-12-21 09:50:00,16.53,N,Active
+144,41,7,Event Staff,2025-01-01 09:50:00,10.27,N,Active
+145,42,1,Lead Planner,2024-05-26 09:17:00,77.09,Y,Active
+146,42,4,Planner,2024-05-26 09:17:00,20.5,N,Active
+147,42,5,Coordinator,2025-01-17 09:17:00,21.59,N,Active
+148,42,7,Event Staff,2025-01-18 09:17:00,10.72,N,Active
+149,43,3,Lead Planner,2024-06-17 13:57:00,47.92,Y,Active
+150,43,4,Planner,2024-06-17 13:57:00,28.55,N,Active
+151,43,6,Coordinator,2025-02-10 13:57:00,14.61,N,Active
+152,43,7,Event Staff,2025-02-15 13:57:00,11.16,N,Active
+153,44,1,Lead Planner,2024-06-17 09:39:00,57.08,Y,Active
+154,44,4,Planner,2024-06-17 09:39:00,57.62,N,Active
+155,44,6,Coordinator,2024-12-06 09:39:00,19.3,N,Active
+156,44,7,Event Staff,2024-12-12 09:39:00,13.38,N,Active
+157,45,2,Lead Planner,2024-07-03 12:42:00,31.45,Y,Active
+158,45,5,Coordinator,2024-12-21 12:42:00,18.21,N,Active
+159,45,7,Event Staff,2024-12-24 12:42:00,15.32,N,Active
+160,46,2,Lead Planner,2024-06-26 09:19:00,23.91,Y,Active
+161,46,6,Coordinator,2024-12-11 09:19:00,18.02,N,Active
+162,46,7,Event Staff,2024-12-03 09:19:00,10.64,N,Active
+163,47,1,Lead Planner,2024-06-27 16:57:00,41.19,Y,Active
+164,47,4,Planner,2024-06-27 16:57:00,35.95,N,Active
+165,47,5,Coordinator,2024-09-26 16:57:00,18.95,N,Active
+166,47,7,Event Staff,2024-09-29 16:57:00,11.65,N,Active
+167,48,2,Lead Planner,2024-07-02 09:11:00,18.05,Y,Active
+168,48,5,Coordinator,2024-12-13 09:11:00,23.01,N,Active
+169,48,7,Event Staff,2024-12-27 09:11:00,10.34,N,Active
+170,49,1,Lead Planner,2024-07-04 16:12:00,21.49,Y,Active
+171,49,5,Coordinator,2024-10-10 16:12:00,18.93,N,Active
+172,49,7,Event Staff,2024-10-13 16:12:00,11.06,N,Active
+173,50,2,Lead Planner,2024-07-28 09:51:00,74.11,Y,Active
+174,50,4,Planner,2024-07-28 09:51:00,29.68,N,Active
+175,50,5,Coordinator,2025-09-22 09:51:00,14.8,N,Active
+176,50,7,Event Staff,2025-09-12 09:51:00,10.67,N,Active
+177,51,1,Lead Planner,2024-07-07 10:57:00,65.99,Y,Active
+178,51,4,Planner,2024-07-07 10:57:00,31.36,N,Active
+179,51,5,Coordinator,2025-12-04 10:57:00,18.53,N,Active
+180,51,7,Event Staff,2025-12-10 10:57:00,10.9,N,Active
+181,52,1,Lead Planner,2024-07-28 09:40:00,29.05,Y,Active
+182,52,5,Coordinator,2025-02-12 09:40:00,16.44,N,Active
+183,52,7,Event Staff,2025-02-16 09:40:00,10.64,N,Active
+184,53,2,Lead Planner,2024-08-09 10:47:00,116.0,Y,Active
+185,53,4,Planner,2024-08-09 10:47:00,33.97,N,Active
+186,53,6,Coordinator,2024-10-13 10:47:00,26.03,N,Active
+187,53,7,Event Staff,2024-09-29 10:47:00,13.14,N,Active
+188,54,3,Lead Planner,2024-08-09 19:03:00,75.3,Y,Active
+189,54,4,Planner,2024-08-09 19:03:00,20.3,N,Active
+190,54,5,Coordinator,2025-03-17 19:03:00,20.91,N,Active
+191,54,7,Event Staff,2025-04-03 19:03:00,11.93,N,Active
+192,55,2,Lead Planner,2024-07-21 09:28:00,22.63,Y,Active
+193,55,5,Coordinator,2025-03-06 09:28:00,19.38,N,Active
+194,55,7,Event Staff,2025-03-14 09:28:00,10.42,N,Active
+195,56,1,Lead Planner,2024-08-07 10:26:00,63.76,Y,Active
+196,56,4,Planner,2024-08-07 10:26:00,42.01,N,Active
+197,56,5,Coordinator,2024-11-05 10:26:00,14.04,N,Active
+198,56,7,Event Staff,2024-11-13 10:26:00,10.91,N,Active
+199,57,1,Lead Planner,2024-08-12 09:29:00,56.35,Y,Active
+200,57,4,Planner,2024-08-12 09:29:00,41.05,N,Active
+201,57,6,Coordinator,2025-01-09 09:29:00,22.7,N,Active
+202,57,7,Event Staff,2025-01-13 09:29:00,11.91,N,Active
+203,58,1,Lead Planner,2024-08-28 10:39:00,99.86,Y,Active
+204,58,4,Planner,2024-08-28 10:39:00,50.01,N,Active
+205,58,5,Coordinator,2025-03-11 10:39:00,22.03,N,Active
+206,58,7,Event Staff,2025-03-10 10:39:00,13.58,N,Active
+207,59,2,Lead Planner,2024-09-09 09:46:00,69.14,Y,Active
+208,59,4,Planner,2024-09-09 09:46:00,45.39,N,Active
+209,59,5,Coordinator,2025-01-15 09:46:00,26.1,N,Active
+210,59,7,Event Staff,2025-01-23 09:46:00,13.41,N,Active
+211,60,3,Lead Planner,2024-08-30 19:43:00,29.27,Y,Active
+212,60,6,Coordinator,2025-09-11 19:43:00,30.1,N,Active
+213,60,7,Event Staff,2025-08-22 19:43:00,13.19,N,Active
+214,61,2,Lead Planner,2024-09-16 09:23:00,38.6,Y,Active
+215,61,6,Coordinator,2025-04-15 09:23:00,21.74,N,Active
+216,61,7,Event Staff,2025-03-25 09:23:00,13.47,N,Active
+217,62,3,Lead Planner,2024-09-10 11:13:00,87.11,Y,Cancelled
+218,62,4,Planner,2024-09-10 11:13:00,49.96,N,Cancelled
+219,62,5,Coordinator,2025-04-24 11:13:00,26.02,N,Cancelled
+220,62,7,Event Staff,2025-04-28 11:13:00,14.35,N,Cancelled
+221,63,1,Lead Planner,2024-09-15 10:59:00,49.69,Y,Active
+222,63,4,Planner,2024-09-15 10:59:00,38.57,N,Active
+223,63,5,Coordinator,2025-02-06 10:59:00,21.05,N,Active
+224,63,7,Event Staff,2025-02-12 10:59:00,11.1,N,Active
+225,64,3,Lead Planner,2024-09-08 14:10:00,34.95,Y,Active
+226,64,5,Coordinator,2025-09-14 14:10:00,22.82,N,Active
+227,64,7,Event Staff,2025-09-05 14:10:00,14.71,N,Active
+228,65,3,Lead Planner,2024-09-12 17:04:00,36.82,Y,Active
+229,65,5,Coordinator,2025-01-21 17:04:00,26.68,N,Active
+230,65,7,Event Staff,2025-01-20 17:04:00,15.55,N,Active
+231,66,3,Lead Planner,2024-09-23 14:56:00,29.69,Y,Active
+232,66,5,Coordinator,2025-01-17 14:56:00,15.88,N,Active
+233,66,7,Event Staff,2025-01-15 14:56:00,10.54,N,Active
+234,67,3,Lead Planner,2024-09-09 14:16:00,106.92,Y,Active
+235,67,4,Planner,2024-09-09 14:16:00,33.74,N,Active
+236,67,5,Coordinator,2025-04-21 14:16:00,19.75,N,Active
+237,67,7,Event Staff,2025-04-21 14:16:00,14.4,N,Active
+238,68,1,Lead Planner,2024-09-12 11:57:00,113.69,Y,Active
+239,68,4,Planner,2024-09-12 11:57:00,53.11,N,Active
+240,68,6,Coordinator,2025-11-24 11:57:00,26.89,N,Active
+241,68,7,Event Staff,2025-11-08 11:57:00,13.96,N,Active
+242,69,1,Lead Planner,2024-09-16 19:50:00,99.26,Y,Active
+243,69,4,Planner,2024-09-16 19:50:00,42.17,N,Active
+244,69,6,Coordinator,2025-02-07 19:50:00,20.9,N,Active
+245,69,7,Event Staff,2025-01-27 19:50:00,15.5,N,Active
+246,70,2,Lead Planner,2024-09-07 10:20:00,30.2,Y,Active
+247,70,5,Coordinator,2025-02-18 10:20:00,15.84,N,Active
+248,70,7,Event Staff,2025-03-02 10:20:00,10.86,N,Active
+249,71,3,Lead Planner,2024-09-08 12:49:00,16.78,Y,Active
+250,71,6,Coordinator,2025-05-30 12:49:00,14.79,N,Active
+251,71,7,Event Staff,2025-06-04 12:49:00,11.9,N,Active
+252,72,3,Lead Planner,2024-09-14 10:04:00,32.28,Y,Active
+253,72,5,Coordinator,2025-03-09 10:04:00,18.55,N,Active
+254,72,7,Event Staff,2025-02-27 10:04:00,11.14,N,Active
+255,73,2,Lead Planner,2024-09-18 16:22:00,64.86,Y,Active
+256,73,4,Planner,2024-09-18 16:22:00,42.17,N,Active
+257,73,6,Coordinator,2025-03-14 16:22:00,20.17,N,Active
+258,73,7,Event Staff,2025-03-14 16:22:00,11.62,N,Active
+259,74,2,Lead Planner,2024-10-01 10:39:00,36.56,Y,Active
+260,74,6,Coordinator,2025-08-29 10:39:00,25.05,N,Active
+261,74,7,Event Staff,2025-09-11 10:39:00,15.03,N,Active
+262,75,2,Lead Planner,2024-09-28 12:07:00,77.77,Y,Active
+263,75,4,Planner,2024-09-28 12:07:00,31.16,N,Active
+264,75,6,Coordinator,2025-11-01 12:07:00,22.12,N,Active
+265,75,7,Event Staff,2025-10-30 12:07:00,11.78,N,Active
+266,76,3,Lead Planner,2024-10-14 10:41:00,44.3,Y,Active
+267,76,4,Planner,2024-10-14 10:41:00,30.16,N,Active
+268,76,5,Coordinator,2025-11-03 10:41:00,16.51,N,Active
+269,76,7,Event Staff,2025-11-12 10:41:00,11.68,N,Active
+270,77,3,Lead Planner,2024-10-08 15:05:00,41.46,Y,Active
+271,77,5,Coordinator,2025-01-31 15:05:00,30.65,N,Active
+272,77,7,Event Staff,2025-02-16 15:05:00,15.59,N,Active
+273,78,3,Lead Planner,2024-09-26 15:57:00,64.92,Y,Active
+274,78,4,Planner,2024-09-26 15:57:00,28.48,N,Active
+275,78,5,Coordinator,2025-10-22 15:57:00,17.95,N,Active
+276,78,7,Event Staff,2025-10-15 15:57:00,11.93,N,Active
+277,79,2,Lead Planner,2024-10-15 09:19:00,81.98,Y,Active
+278,79,4,Planner,2024-10-15 09:19:00,31.93,N,Active
+279,79,6,Coordinator,2025-08-14 09:19:00,18.57,N,Active
+280,79,7,Event Staff,2025-08-07 09:19:00,10.1,N,Active
+281,80,1,Lead Planner,2024-10-02 10:27:00,86.78,Y,Active
+282,80,4,Planner,2024-10-02 10:27:00,51.0,N,Active
+283,80,5,Coordinator,2025-03-28 10:27:00,28.89,N,Active
+284,80,7,Event Staff,2025-03-30 10:27:00,13.2,N,Active
+285,81,1,Lead Planner,2024-10-08 09:31:00,21.61,Y,Active
+286,81,5,Coordinator,2025-06-14 09:31:00,17.29,N,Active
+287,81,7,Event Staff,2025-06-06 09:31:00,10.33,N,Active
+288,82,3,Lead Planner,2024-10-23 12:03:00,31.42,Y,Active
+289,82,6,Coordinator,2025-10-02 12:03:00,21.11,N,Active
+290,82,7,Event Staff,2025-10-01 12:03:00,13.18,N,Active
+291,83,3,Lead Planner,2024-10-16 09:38:00,21.54,Y,Active
+292,83,5,Coordinator,2025-01-30 09:38:00,17.92,N,Active
+293,83,7,Event Staff,2025-02-06 09:38:00,10.2,N,Active
+294,84,3,Lead Planner,2024-10-23 15:29:00,48.08,Y,Active
+295,84,4,Planner,2024-10-23 15:29:00,25.89,N,Active
+296,84,6,Coordinator,2025-09-30 15:29:00,21.78,N,Active
+297,84,7,Event Staff,2025-09-28 15:29:00,11.63,N,Active
+298,85,2,Lead Planner,2024-10-27 13:39:00,78.65,Y,Active
+299,85,4,Planner,2024-10-27 13:39:00,34.97,N,Active
+300,85,6,Coordinator,2025-12-10 13:39:00,16.84,N,Active
+301,85,7,Event Staff,2025-12-02 13:39:00,11.72,N,Active
+302,86,1,Lead Planner,2024-10-19 10:32:00,73.34,Y,Cancelled
+303,86,4,Planner,2024-10-19 10:32:00,41.76,N,Cancelled
+304,86,6,Coordinator,2025-11-11 10:32:00,17.0,N,Cancelled
+305,86,7,Event Staff,2025-11-06 10:32:00,10.34,N,Cancelled
+306,87,3,Lead Planner,2024-11-07 12:36:00,46.69,Y,Active
+307,87,4,Planner,2024-11-07 12:36:00,37.68,N,Active
+308,87,6,Coordinator,2025-03-27 12:36:00,22.88,N,Active
+309,87,7,Event Staff,2025-04-04 12:36:00,11.72,N,Active
+310,88,2,Lead Planner,2024-11-12 18:36:00,31.98,Y,Active
+311,88,5,Coordinator,2025-12-01 18:36:00,15.36,N,Active
+312,88,7,Event Staff,2025-12-07 18:36:00,10.68,N,Active
+313,89,1,Lead Planner,2024-11-16 11:34:00,52.4,Y,Active
+314,89,4,Planner,2024-11-16 11:34:00,31.92,N,Active
+315,89,6,Coordinator,2025-09-16 11:34:00,14.2,N,Active
+316,89,7,Event Staff,2025-10-03 11:34:00,11.76,N,Active
+317,90,2,Lead Planner,2024-11-16 16:41:00,73.59,Y,Active
+318,90,4,Planner,2024-11-16 16:41:00,37.94,N,Active
+319,90,6,Coordinator,2025-05-29 16:41:00,14.7,N,Active
+320,90,7,Event Staff,2025-06-16 16:41:00,10.41,N,Active
+321,91,1,Lead Planner,2024-11-04 10:57:00,22.57,Y,Active
+322,91,6,Coordinator,2025-09-16 10:57:00,23.32,N,Active
+323,91,7,Event Staff,2025-09-25 10:57:00,10.97,N,Active
+324,92,2,Lead Planner,2024-11-27 10:44:00,39.69,Y,Active
+325,92,5,Coordinator,2025-03-25 10:44:00,22.88,N,Active
+326,92,7,Event Staff,2025-04-09 10:44:00,15.01,N,Active
+327,93,3,Lead Planner,2024-11-19 10:06:00,34.97,Y,Active
+328,93,5,Coordinator,2025-09-14 10:06:00,22.49,N,Active
+329,93,7,Event Staff,2025-09-30 10:06:00,11.42,N,Active
+330,94,1,Lead Planner,2024-11-23 14:12:00,76.78,Y,Active
+331,94,4,Planner,2024-11-23 14:12:00,42.72,N,Active
+332,94,6,Coordinator,2025-10-28 14:12:00,23.0,N,Active
+333,94,7,Event Staff,2025-10-31 14:12:00,10.55,N,Active
+334,95,1,Lead Planner,2024-11-25 11:22:00,104.07,Y,Active
+335,95,4,Planner,2024-11-25 11:22:00,36.51,N,Active
+336,95,5,Coordinator,2025-10-13 11:22:00,24.49,N,Active
+337,95,7,Event Staff,2025-10-13 11:22:00,15.2,N,Active
+338,96,1,Lead Planner,2024-12-12 17:19:00,44.41,Y,Active
+339,96,4,Planner,2024-12-12 17:19:00,25.63,N,Active
+340,96,5,Coordinator,2025-02-02 17:19:00,23.95,N,Active
+341,96,7,Event Staff,2025-01-30 17:19:00,11.16,N,Active
+342,97,3,Lead Planner,2024-12-10 09:51:00,72.58,Y,Active
+343,97,4,Planner,2024-12-10 09:51:00,48.54,N,Active
+344,97,6,Coordinator,2025-09-30 09:51:00,28.52,N,Active
+345,97,7,Event Staff,2025-09-23 09:51:00,13.28,N,Active
+346,98,3,Lead Planner,2024-12-20 10:49:00,73.34,Y,Active
+347,98,4,Planner,2024-12-20 10:49:00,43.92,N,Active
+348,98,5,Coordinator,2025-04-30 10:49:00,22.56,N,Active
+349,98,7,Event Staff,2025-05-13 10:49:00,11.12,N,Active
+350,99,1,Lead Planner,2024-12-18 19:16:00,73.78,Y,Active
+351,99,4,Planner,2024-12-18 19:16:00,21.68,N,Active
+352,99,5,Coordinator,2025-09-28 19:16:00,21.8,N,Active
+353,99,7,Event Staff,2025-09-26 19:16:00,11.62,N,Active
+354,100,2,Lead Planner,2024-12-06 17:26:00,35.0,Y,Active
+355,100,5,Coordinator,2025-07-25 17:26:00,17.41,N,Active
+356,100,7,Event Staff,2025-08-11 17:26:00,11.6,N,Active
+357,101,1,Lead Planner,2024-12-10 16:34:00,78.32,Y,Active
+358,101,4,Planner,2024-12-10 16:34:00,27.41,N,Active
+359,101,6,Coordinator,2025-11-06 16:34:00,27.95,N,Active
+360,101,7,Event Staff,2025-11-16 16:34:00,13.65,N,Active
+361,102,1,Lead Planner,2024-12-19 14:47:00,81.7,Y,Active
+362,102,4,Planner,2024-12-19 14:47:00,43.44,N,Active
+363,102,6,Coordinator,2025-02-12 14:47:00,20.2,N,Active
+364,102,7,Event Staff,2025-02-07 14:47:00,10.59,N,Active
+365,103,2,Lead Planner,2024-12-20 10:54:00,54.22,Y,Active
+366,103,4,Planner,2024-12-20 10:54:00,20.63,N,Active
+367,103,6,Coordinator,2025-04-10 10:54:00,16.73,N,Active
+368,103,7,Event Staff,2025-04-07 10:54:00,11.92,N,Active
+369,104,3,Lead Planner,2024-12-09 10:03:00,71.52,Y,Active
+370,104,4,Planner,2024-12-09 10:03:00,26.13,N,Active
+371,104,6,Coordinator,2025-11-20 10:03:00,17.58,N,Active
+372,104,7,Event Staff,2025-11-06 10:03:00,11.2,N,Active
+373,105,3,Lead Planner,2024-12-14 10:41:00,31.2,Y,Active
+374,105,5,Coordinator,2025-11-19 10:41:00,25.2,N,Active
+375,105,7,Event Staff,2025-11-28 10:41:00,14.59,N,Active
+376,106,2,Lead Planner,2025-01-06 10:06:00,47.52,Y,Active
+377,106,4,Planner,2025-01-06 10:06:00,28.93,N,Active
+378,106,5,Coordinator,2025-06-12 10:06:00,18.9,N,Active
+379,106,7,Event Staff,2025-05-23 10:06:00,11.53,N,Active
+380,107,1,Lead Planner,2025-01-06 09:38:00,72.48,Y,Active
+381,107,4,Planner,2025-01-06 09:38:00,26.96,N,Active
+382,107,5,Coordinator,2025-02-07 09:38:00,22.04,N,Active
+383,107,7,Event Staff,2025-01-23 09:38:00,11.39,N,Active
+384,108,3,Lead Planner,2025-02-04 14:01:00,27.97,Y,Active
+385,108,5,Coordinator,2025-02-04 14:01:00,14.11,N,Active
+386,108,7,Event Staff,2025-02-24 14:01:00,11.79,N,Active
+387,109,3,Lead Planner,2025-01-13 09:33:00,68.26,Y,Active
+388,109,4,Planner,2025-01-13 09:33:00,36.97,N,Active
+389,109,5,Coordinator,2025-11-16 09:33:00,21.17,N,Active
+390,109,7,Event Staff,2025-11-20 09:33:00,10.38,N,Active
+391,110,1,Lead Planner,2025-01-28 10:28:00,71.0,Y,Active
+392,110,4,Planner,2025-01-28 10:28:00,26.13,N,Active
+393,110,5,Coordinator,2026-03-05 10:28:00,23.62,N,Active
+394,110,7,Event Staff,2026-03-01 10:28:00,11.16,N,Active
+395,111,1,Lead Planner,2025-01-27 10:20:00,71.77,Y,Active
+396,111,4,Planner,2025-01-27 10:20:00,39.72,N,Active
+397,111,6,Coordinator,2025-01-28 10:20:00,24.86,N,Active
+398,111,7,Event Staff,2025-01-29 10:20:00,13.63,N,Active
+399,112,2,Lead Planner,2025-02-03 10:15:00,87.73,Y,Active
+400,112,4,Planner,2025-02-03 10:15:00,34.34,N,Active
+401,112,5,Coordinator,2025-09-27 10:15:00,19.62,N,Active
+402,112,7,Event Staff,2025-10-04 10:15:00,10.76,N,Active
+403,113,1,Lead Planner,2025-01-31 12:13:00,79.79,Y,Active
+404,113,4,Planner,2025-01-31 12:13:00,43.69,N,Active
+405,113,5,Coordinator,2025-12-07 12:13:00,20.92,N,Active
+406,113,7,Event Staff,2025-11-20 12:13:00,10.97,N,Active
+407,114,3,Lead Planner,2025-02-17 19:11:00,27.15,Y,Active
+408,114,5,Coordinator,2025-11-11 19:11:00,21.49,N,Active
+409,114,7,Event Staff,2025-10-27 19:11:00,10.76,N,Active
+410,115,1,Lead Planner,2025-02-10 16:03:00,32.61,Y,Active
+411,115,6,Coordinator,2025-09-29 16:03:00,14.36,N,Active
+412,115,7,Event Staff,2025-10-18 16:03:00,10.7,N,Active
+413,116,2,Lead Planner,2025-02-15 17:37:00,20.2,Y,Active
+414,116,6,Coordinator,2025-12-07 17:37:00,15.5,N,Active
+415,116,7,Event Staff,2025-12-10 17:37:00,11.65,N,Active
+416,117,2,Lead Planner,2025-03-07 12:10:00,28.93,Y,Active
+417,117,5,Coordinator,2026-01-14 12:10:00,20.91,N,Active
+418,117,7,Event Staff,2025-12-23 12:10:00,11.57,N,Active
+419,118,1,Lead Planner,2025-02-16 09:45:00,33.38,Y,Active
+420,118,6,Coordinator,2025-07-19 09:45:00,23.12,N,Active
+421,118,7,Event Staff,2025-07-17 09:45:00,14.78,N,Active
+422,119,1,Lead Planner,2025-02-27 18:09:00,71.68,Y,Active
+423,119,4,Planner,2025-02-27 18:09:00,29.49,N,Active
+424,119,6,Coordinator,2025-12-15 18:09:00,24.43,N,Active
+425,119,7,Event Staff,2025-12-04 18:09:00,13.53,N,Active
+426,120,3,Lead Planner,2025-02-25 12:19:00,53.76,Y,Active
+427,120,4,Planner,2025-02-25 12:19:00,23.48,N,Active
+428,120,5,Coordinator,2025-12-08 12:19:00,19.92,N,Active
+429,120,7,Event Staff,2025-11-24 12:19:00,11.75,N,Active
+430,121,1,Lead Planner,2025-03-04 12:13:00,30.22,Y,Active
+431,121,6,Coordinator,2025-04-20 12:13:00,18.72,N,Active
+432,121,7,Event Staff,2025-05-08 12:13:00,13.91,N,Active
+433,122,3,Lead Planner,2025-02-10 10:29:00,74.64,Y,Active
+434,122,4,Planner,2025-02-10 10:29:00,34.48,N,Active
+435,122,5,Coordinator,2025-10-16 10:29:00,19.16,N,Active
+436,122,7,Event Staff,2025-10-30 10:29:00,11.19,N,Active
+437,123,2,Lead Planner,2025-02-24 13:19:00,98.14,Y,Active
+438,123,4,Planner,2025-02-24 13:19:00,50.52,N,Active
+439,123,6,Coordinator,2025-07-12 13:19:00,23.01,N,Active
+440,123,7,Event Staff,2025-07-08 13:19:00,14.64,N,Active
+441,124,1,Lead Planner,2025-02-26 18:33:00,77.73,Y,Active
+442,124,4,Planner,2025-02-26 18:33:00,33.69,N,Active
+443,124,6,Coordinator,2026-01-04 18:33:00,21.41,N,Active
+444,124,7,Event Staff,2025-12-31 18:33:00,10.94,N,Active
+445,125,3,Lead Planner,2025-02-25 19:47:00,24.54,Y,Active
+446,125,6,Coordinator,2025-10-03 19:47:00,17.95,N,Active
+447,125,7,Event Staff,2025-10-03 19:47:00,11.72,N,Active
+448,126,3,Lead Planner,2025-03-10 10:09:00,19.45,Y,Active
+449,126,6,Coordinator,2025-10-22 10:09:00,16.35,N,Active
+450,126,7,Event Staff,2025-10-14 10:09:00,10.11,N,Active
+451,127,1,Lead Planner,2025-03-14 10:17:00,27.77,Y,Active
+452,127,6,Coordinator,2025-11-07 10:17:00,26.98,N,Active
+453,127,7,Event Staff,2025-10-31 10:17:00,14.13,N,Active
+454,128,3,Lead Planner,2025-03-16 13:52:00,73.79,Y,Active
+455,128,4,Planner,2025-03-16 13:52:00,31.0,N,Active
+456,128,6,Coordinator,2025-09-28 13:52:00,22.7,N,Active
+457,128,7,Event Staff,2025-09-23 13:52:00,10.59,N,Active
+458,129,2,Lead Planner,2025-03-31 10:20:00,71.86,Y,Active
+459,129,4,Planner,2025-03-31 10:20:00,34.69,N,Active
+460,129,5,Coordinator,2025-10-16 10:20:00,18.2,N,Active
+461,129,7,Event Staff,2025-10-08 10:20:00,10.63,N,Active
+462,130,3,Lead Planner,2025-03-30 10:21:00,26.85,Y,Active
+463,130,5,Coordinator,2025-08-30 10:21:00,18.25,N,Active
+464,130,7,Event Staff,2025-09-05 10:21:00,11.15,N,Active
+465,131,1,Lead Planner,2025-04-12 12:25:00,40.51,Y,Active
+466,131,4,Planner,2025-04-12 12:25:00,38.41,N,Active
+467,131,5,Coordinator,2026-01-25 12:25:00,14.48,N,Active
+468,131,7,Event Staff,2026-01-28 12:25:00,11.15,N,Active
+469,132,3,Lead Planner,2025-04-08 10:48:00,60.14,Y,Active
+470,132,4,Planner,2025-04-08 10:48:00,40.11,N,Active
+471,132,6,Coordinator,2025-10-02 10:48:00,16.44,N,Active
+472,132,7,Event Staff,2025-09-21 10:48:00,10.21,N,Active
+473,133,3,Lead Planner,2025-04-12 09:18:00,16.65,Y,Active
+474,133,5,Coordinator,2025-12-01 09:18:00,19.48,N,Active
+475,133,7,Event Staff,2025-11-13 09:18:00,11.61,N,Active
+476,134,1,Lead Planner,2025-04-06 10:24:00,58.49,Y,Active
+477,134,4,Planner,2025-04-06 10:24:00,37.85,N,Active
+478,134,5,Coordinator,2025-11-28 10:24:00,23.19,N,Active
+479,134,7,Event Staff,2025-12-06 10:24:00,11.34,N,Active
+480,135,3,Lead Planner,2025-04-02 10:03:00,49.63,Y,Active
+481,135,4,Planner,2025-04-02 10:03:00,21.86,N,Active
+482,135,5,Coordinator,2025-09-16 10:03:00,22.06,N,Active
+483,135,7,Event Staff,2025-09-25 10:03:00,10.88,N,Active
+484,136,3,Lead Planner,2025-04-08 17:30:00,21.86,Y,Active
+485,136,6,Coordinator,2025-12-09 17:30:00,22.07,N,Active
+486,136,7,Event Staff,2025-12-02 17:30:00,11.09,N,Active
+487,137,3,Lead Planner,2025-04-03 17:14:00,30.73,Y,Active
+488,137,5,Coordinator,2025-10-06 17:14:00,21.17,N,Active
+489,137,7,Event Staff,2025-10-07 17:14:00,13.48,N,Active
+490,138,3,Lead Planner,2025-04-17 19:01:00,88.56,Y,Active
+491,138,4,Planner,2025-04-17 19:01:00,30.22,N,Active
+492,138,5,Coordinator,2026-03-14 19:01:00,23.85,N,Active
+493,138,7,Event Staff,2026-04-03 19:01:00,14.76,N,Active
+494,139,1,Lead Planner,2025-04-17 19:44:00,23.19,Y,Active
+495,139,5,Coordinator,2025-09-26 19:44:00,25.09,N,Active
+496,139,7,Event Staff,2025-09-26 19:44:00,15.45,N,Active
+497,140,1,Lead Planner,2025-04-24 15:26:00,84.21,Y,Active
+498,140,4,Planner,2025-04-24 15:26:00,24.03,N,Active
+499,140,5,Coordinator,2025-10-25 15:26:00,16.58,N,Active
+500,140,7,Event Staff,2025-11-09 15:26:00,11.57,N,Active
+501,141,3,Lead Planner,2025-04-24 10:15:00,54.2,Y,Active
+502,141,4,Planner,2025-04-24 10:15:00,21.74,N,Active
+503,141,6,Coordinator,2026-03-19 10:15:00,14.02,N,Active
+504,141,7,Event Staff,2026-03-21 10:15:00,11.6,N,Active
+505,142,3,Lead Planner,2025-05-06 12:36:00,74.76,Y,Active
+506,142,4,Planner,2025-05-06 12:36:00,32.2,N,Active
+507,142,6,Coordinator,2026-01-14 12:36:00,15.74,N,Active
+508,142,7,Event Staff,2026-02-05 12:36:00,11.9,N,Active
+509,143,3,Lead Planner,2025-05-04 15:50:00,43.54,Y,Active
+510,143,6,Coordinator,2025-10-01 15:50:00,19.47,N,Active
+511,143,7,Event Staff,2025-09-23 15:50:00,14.07,N,Active
+512,144,2,Lead Planner,2025-05-13 10:35:00,23.97,Y,Cancelled
+513,144,6,Coordinator,2025-12-08 10:35:00,15.39,N,Cancelled
+514,144,7,Event Staff,2025-11-18 10:35:00,11.64,N,Cancelled
+515,145,1,Lead Planner,2025-05-26 10:01:00,24.73,Y,Cancelled
+516,145,5,Coordinator,2026-05-21 10:01:00,18.69,N,Cancelled
+517,145,7,Event Staff,2026-06-03 10:01:00,14.39,N,Cancelled
+518,146,2,Lead Planner,2025-06-02 17:30:00,110.66,Y,Active
+519,146,4,Planner,2025-06-02 17:30:00,39.46,N,Active
+520,146,5,Coordinator,2026-05-21 17:30:00,21.58,N,Active
+521,146,7,Event Staff,2026-05-16 17:30:00,14.52,N,Active
+522,147,1,Lead Planner,2025-06-03 10:25:00,29.09,Y,Active
+523,147,5,Coordinator,2026-05-18 10:25:00,22.01,N,Active
+524,147,7,Event Staff,2026-05-15 10:25:00,10.46,N,Active
+525,148,3,Lead Planner,2025-05-17 09:18:00,31.05,Y,Active
+526,148,6,Coordinator,2025-11-08 09:18:00,25.69,N,Active
+527,148,7,Event Staff,2025-11-15 09:18:00,14.72,N,Active
+528,149,2,Lead Planner,2025-07-04 09:26:00,68.17,Y,Active
+529,149,4,Planner,2025-07-04 09:26:00,44.07,N,Active
+530,149,6,Coordinator,2026-02-10 09:26:00,28.78,N,Active
+531,149,7,Event Staff,2026-01-26 09:26:00,14.52,N,Active
+532,150,2,Lead Planner,2025-06-29 09:24:00,44.18,Y,Active
+533,150,4,Planner,2025-06-29 09:24:00,35.12,N,Active
+534,150,5,Coordinator,2026-04-25 09:24:00,18.11,N,Active
+535,150,7,Event Staff,2026-04-10 09:24:00,11.53,N,Active
+536,151,3,Lead Planner,2025-06-28 10:24:00,92.61,Y,Active
+537,151,4,Planner,2025-06-28 10:24:00,51.57,N,Active
+538,151,5,Coordinator,2026-04-30 10:24:00,21.4,N,Active
+539,151,7,Event Staff,2026-04-11 10:24:00,15.17,N,Active
+540,152,3,Lead Planner,2025-06-26 13:09:00,42.03,Y,Active
+541,152,4,Planner,2025-06-26 13:09:00,32.43,N,Active
+542,152,6,Coordinator,2025-09-09 13:09:00,19.71,N,Active
+543,152,7,Event Staff,2025-09-03 13:09:00,10.36,N,Active
+544,153,1,Lead Planner,2025-07-21 09:26:00,16.14,Y,Active
+545,153,6,Coordinator,2026-02-22 09:26:00,20.83,N,Active
+546,153,7,Event Staff,2026-02-02 09:26:00,10.22,N,Active
+547,154,2,Lead Planner,2025-07-01 10:22:00,21.84,Y,Active
+548,154,5,Coordinator,2025-12-11 10:22:00,23.99,N,Active
+549,154,7,Event Staff,2025-12-08 10:22:00,11.42,N,Active
+550,155,2,Lead Planner,2025-07-04 18:29:00,48.39,Y,Active
+551,155,4,Planner,2025-07-04 18:29:00,36.21,N,Active
+552,155,5,Coordinator,2025-11-23 18:29:00,14.55,N,Active
+553,155,7,Event Staff,2025-11-27 18:29:00,10.59,N,Active
+554,156,1,Lead Planner,2025-07-15 09:32:00,46.98,Y,Active
+555,156,4,Planner,2025-07-15 09:32:00,40.56,N,Active
+556,156,6,Coordinator,2025-12-09 09:32:00,22.93,N,Active
+557,156,7,Event Staff,2025-11-23 09:32:00,11.35,N,Active
+558,157,2,Lead Planner,2025-07-26 18:40:00,36.77,Y,Active
+559,157,6,Coordinator,2025-11-27 18:40:00,28.56,N,Active
+560,157,7,Event Staff,2025-11-27 18:40:00,15.07,N,Active
+561,158,3,Lead Planner,2025-07-15 19:52:00,18.67,Y,Active
+562,158,5,Coordinator,2025-10-18 19:52:00,15.08,N,Active
+563,158,7,Event Staff,2025-10-02 19:52:00,11.86,N,Active
+564,159,1,Lead Planner,2025-07-28 10:23:00,58.45,Y,Active
+565,159,4,Planner,2025-07-28 10:23:00,35.59,N,Active
+566,159,5,Coordinator,2026-02-27 10:23:00,14.68,N,Active
+567,159,7,Event Staff,2026-02-23 10:23:00,10.88,N,Active
+568,160,3,Lead Planner,2025-08-08 16:37:00,20.95,Y,Active
+569,160,5,Coordinator,2026-01-25 16:37:00,16.31,N,Active
+570,160,7,Event Staff,2026-01-16 16:37:00,10.86,N,Active
+571,161,1,Lead Planner,2025-08-17 09:28:00,21.24,Y,Active
+572,161,5,Coordinator,2026-05-17 09:28:00,21.73,N,Active
+573,161,7,Event Staff,2026-05-19 09:28:00,11.39,N,Active
+574,162,3,Lead Planner,2025-08-07 16:35:00,31.02,Y,Active
+575,162,6,Coordinator,2026-10-02 16:35:00,22.48,N,Active
+576,162,7,Event Staff,2026-09-15 16:35:00,14.77,N,Active
+577,163,3,Lead Planner,2025-08-04 10:09:00,72.51,Y,Active
+578,163,4,Planner,2025-08-04 10:09:00,36.12,N,Active
+579,163,5,Coordinator,2026-03-30 10:09:00,22.12,N,Active
+580,163,7,Event Staff,2026-03-20 10:09:00,10.67,N,Active
+581,164,1,Lead Planner,2025-08-18 16:02:00,23.86,Y,Cancelled
+582,164,5,Coordinator,2026-04-05 16:02:00,22.84,N,Cancelled
+583,164,7,Event Staff,2026-04-22 16:02:00,11.94,N,Cancelled
+584,165,1,Lead Planner,2025-08-29 10:22:00,50.58,Y,Active
+585,165,4,Planner,2025-08-29 10:22:00,32.63,N,Active
+586,165,5,Coordinator,2026-02-03 10:22:00,15.52,N,Active
+587,165,7,Event Staff,2026-02-14 10:22:00,10.2,N,Active
+588,166,3,Lead Planner,2025-09-08 09:22:00,86.72,Y,Active
+589,166,4,Planner,2025-09-08 09:22:00,32.67,N,Active
+590,166,6,Coordinator,2026-05-12 09:22:00,15.19,N,Active
+591,166,7,Event Staff,2026-05-28 09:22:00,10.23,N,Active
+592,167,1,Lead Planner,2025-09-16 15:23:00,69.41,Y,Active
+593,167,4,Planner,2025-09-16 15:23:00,24.26,N,Active
+594,167,6,Coordinator,2026-09-20 15:23:00,19.79,N,Active
+595,167,7,Event Staff,2026-09-15 15:23:00,10.36,N,Active
+596,168,1,Lead Planner,2025-09-18 10:54:00,22.5,Y,Active
+597,168,6,Coordinator,2026-05-30 10:54:00,19.6,N,Active
+598,168,7,Event Staff,2026-06-16 10:54:00,11.41,N,Active
+599,169,3,Lead Planner,2025-09-24 17:59:00,65.91,Y,Active
+600,169,4,Planner,2025-09-24 17:59:00,22.04,N,Active
+601,169,5,Coordinator,2026-10-29 17:59:00,14.28,N,Active
+602,169,7,Event Staff,2026-11-05 17:59:00,10.74,N,Active
+603,170,1,Lead Planner,2025-09-12 09:11:00,41.61,Y,Active
+604,170,5,Coordinator,2026-06-08 09:11:00,27.65,N,Active
+605,170,7,Event Staff,2026-06-12 09:11:00,15.51,N,Active
+606,171,2,Lead Planner,2025-09-21 15:59:00,49.07,Y,Active
+607,171,4,Planner,2025-09-21 15:59:00,38.92,N,Active
+608,171,5,Coordinator,2026-01-23 15:59:00,23.58,N,Active
+609,171,7,Event Staff,2026-01-31 15:59:00,10.79,N,Active
+610,172,2,Lead Planner,2025-10-11 10:51:00,78.43,Y,Active
+611,172,4,Planner,2025-10-11 10:51:00,40.06,N,Active
+612,172,5,Coordinator,2026-06-13 10:51:00,16.99,N,Active
+613,172,7,Event Staff,2026-06-19 10:51:00,10.1,N,Active
+614,173,2,Lead Planner,2025-10-28 16:37:00,60.57,Y,Active
+615,173,4,Planner,2025-10-28 16:37:00,20.61,N,Active
+616,173,6,Coordinator,2026-11-14 16:37:00,15.4,N,Active
+617,173,7,Event Staff,2026-11-18 16:37:00,11.97,N,Active
+618,174,2,Lead Planner,2025-10-12 19:10:00,25.34,Y,Active
+619,174,6,Coordinator,2026-11-15 19:10:00,17.42,N,Active
+620,174,7,Event Staff,2026-10-21 19:10:00,10.06,N,Active
+621,175,1,Lead Planner,2025-11-11 11:00:00,52.5,Y,Active
+622,175,4,Planner,2025-11-11 11:00:00,54.24,N,Active
+623,175,5,Coordinator,2026-12-07 11:00:00,19.38,N,Active
+624,175,7,Event Staff,2026-12-08 11:00:00,13.29,N,Active
+625,176,2,Lead Planner,2025-11-11 10:47:00,33.62,Y,Active
+626,176,5,Coordinator,2026-09-28 10:47:00,16.26,N,Active
+627,176,7,Event Staff,2026-10-01 10:47:00,10.46,N,Active
+628,177,2,Lead Planner,2025-11-09 11:47:00,89.91,Y,Active
+629,177,4,Planner,2025-11-09 11:47:00,42.11,N,Active
+630,177,6,Coordinator,2026-11-03 11:47:00,20.45,N,Active
+631,177,7,Event Staff,2026-11-01 11:47:00,11.74,N,Active
+632,178,2,Lead Planner,2025-11-16 10:12:00,64.92,Y,Active
+633,178,4,Planner,2025-11-16 10:12:00,31.08,N,Active
+634,178,6,Coordinator,2026-11-19 10:12:00,23.4,N,Active
+635,178,7,Event Staff,2026-11-02 10:12:00,10.11,N,Active
+636,179,2,Lead Planner,2025-11-11 09:09:00,110.18,Y,Active
+637,179,4,Planner,2025-11-11 09:09:00,42.96,N,Active
+638,179,5,Coordinator,2026-10-05 09:09:00,18.61,N,Active
+639,179,7,Event Staff,2026-09-15 09:09:00,14.53,N,Active
+640,180,3,Lead Planner,2025-11-13 10:01:00,73.24,Y,Active
+641,180,4,Planner,2025-11-13 10:01:00,57.69,N,Active
+642,180,5,Coordinator,2026-01-16 10:01:00,19.74,N,Active
+643,180,7,Event Staff,2026-01-21 10:01:00,14.21,N,Active
+644,181,1,Lead Planner,2025-11-14 12:20:00,21.62,Y,Active
+645,181,6,Coordinator,2026-05-31 12:20:00,19.21,N,Active
+646,181,7,Event Staff,2026-06-05 12:20:00,15.03,N,Active
+647,182,2,Lead Planner,2025-11-14 11:00:00,27.31,Y,Active
+648,182,5,Coordinator,2026-09-01 11:00:00,19.26,N,Active
+649,182,7,Event Staff,2026-08-28 11:00:00,11.36,N,Active
+650,183,2,Lead Planner,2025-11-08 14:52:00,69.39,Y,Active
+651,183,4,Planner,2025-11-08 14:52:00,25.45,N,Active
+652,183,6,Coordinator,2026-09-28 14:52:00,15.82,N,Active
+653,183,7,Event Staff,2026-09-19 14:52:00,11.41,N,Active
+654,184,1,Lead Planner,2025-11-27 09:36:00,68.35,Y,Cancelled
+655,184,4,Planner,2025-11-27 09:36:00,39.06,N,Cancelled
+656,184,6,Coordinator,2027-02-01 09:36:00,14.54,N,Cancelled
+657,184,7,Event Staff,2027-01-21 09:36:00,10.22,N,Cancelled
+658,185,2,Lead Planner,2025-12-03 16:36:00,30.25,Y,Active
+659,185,5,Coordinator,2026-08-16 16:36:00,14.34,N,Active
+660,185,7,Event Staff,2026-08-08 16:36:00,11.83,N,Active
+661,186,3,Lead Planner,2025-12-03 10:38:00,48.06,Y,Active
+662,186,4,Planner,2025-12-03 10:38:00,39.27,N,Active
+663,186,6,Coordinator,2026-05-20 10:38:00,16.91,N,Active
+664,186,7,Event Staff,2026-05-19 10:38:00,11.08,N,Active
+665,187,1,Lead Planner,2025-12-21 17:27:00,21.34,Y,Active
+666,187,6,Coordinator,2027-01-03 17:27:00,28.01,N,Active
+667,187,7,Event Staff,2026-12-29 17:27:00,14.7,N,Active
+668,188,1,Lead Planner,2025-12-24 19:34:00,19.97,Y,Active
+669,188,5,Coordinator,2026-10-23 19:34:00,23.55,N,Active
+670,188,7,Event Staff,2026-11-14 19:34:00,10.56,N,Active
+671,189,1,Lead Planner,2026-01-04 17:31:00,24.88,Y,Active
+672,189,5,Coordinator,2026-05-03 17:31:00,22.51,N,Active
+673,189,7,Event Staff,2026-05-16 17:31:00,11.83,N,Active
+674,190,1,Lead Planner,2026-01-14 10:20:00,33.45,Y,Active
+675,190,5,Coordinator,2027-03-19 10:20:00,14.63,N,Active
+676,190,7,Event Staff,2027-02-27 10:20:00,11.56,N,Active
+677,191,3,Lead Planner,2026-01-27 09:44:00,61.69,Y,Active
+678,191,4,Planner,2026-01-27 09:44:00,24.68,N,Active
+679,191,5,Coordinator,2026-10-28 09:44:00,23.91,N,Active
+680,191,7,Event Staff,2026-10-30 09:44:00,10.31,N,Active
+681,192,2,Lead Planner,2026-01-14 14:37:00,19.74,Y,Active
+682,192,6,Coordinator,2026-03-25 14:37:00,21.07,N,Active
+683,192,7,Event Staff,2026-03-15 14:37:00,11.01,N,Active
+684,193,1,Lead Planner,2026-01-19 11:29:00,80.16,Y,Active
+685,193,4,Planner,2026-01-19 11:29:00,25.82,N,Active
+686,193,6,Coordinator,2026-12-13 11:29:00,15.27,N,Active
+687,193,7,Event Staff,2026-12-15 11:29:00,11.87,N,Active
+688,194,2,Lead Planner,2026-01-22 09:45:00,66.73,Y,Active
+689,194,4,Planner,2026-01-22 09:45:00,24.01,N,Active
+690,194,6,Coordinator,2026-05-12 09:45:00,14.32,N,Active
+691,194,7,Event Staff,2026-05-23 09:45:00,10.39,N,Active
+692,195,1,Lead Planner,2026-01-23 09:06:00,56.26,Y,Active
+693,195,4,Planner,2026-01-23 09:06:00,29.74,N,Active
+694,195,5,Coordinator,2026-12-01 09:06:00,19.23,N,Active
+695,195,7,Event Staff,2026-12-18 09:06:00,11.5,N,Active
+696,196,1,Lead Planner,2026-02-02 10:58:00,65.27,Y,Active
+697,196,4,Planner,2026-02-02 10:58:00,30.3,N,Active
+698,196,5,Coordinator,2026-05-10 10:58:00,16.98,N,Active
+699,196,7,Event Staff,2026-05-08 10:58:00,11.0,N,Active
+700,197,1,Lead Planner,2026-02-01 18:57:00,22.59,Y,Active
+701,197,5,Coordinator,2026-03-23 18:57:00,26.93,N,Active
+702,197,7,Event Staff,2026-03-27 18:57:00,14.75,N,Active
+703,198,2,Lead Planner,2026-02-26 12:46:00,63.02,Y,Active
+704,198,4,Planner,2026-02-26 12:46:00,36.65,N,Active
+705,198,6,Coordinator,2026-11-21 12:46:00,17.64,N,Active
+706,198,7,Event Staff,2026-11-19 12:46:00,10.76,N,Active
+707,199,3,Lead Planner,2026-02-17 09:42:00,29.92,Y,Active
+708,199,5,Coordinator,2027-03-20 09:42:00,19.24,N,Active
+709,199,7,Event Staff,2027-04-05 09:42:00,10.93,N,Active
+710,200,1,Lead Planner,2026-02-03 16:42:00,51.13,Y,Active
+711,200,4,Planner,2026-02-03 16:42:00,33.87,N,Active
+712,200,6,Coordinator,2026-05-21 16:42:00,21.88,N,Active
+713,200,7,Event Staff,2026-05-19 16:42:00,11.96,N,Active
+714,201,3,Lead Planner,2026-02-17 09:31:00,17.32,Y,Active
+715,201,6,Coordinator,2026-10-10 09:31:00,20.3,N,Active
+716,201,7,Event Staff,2026-10-02 09:31:00,10.67,N,Active
+717,202,3,Lead Planner,2026-02-07 10:23:00,23.62,Y,Active
+718,202,5,Coordinator,2026-04-18 10:23:00,19.71,N,Active
+719,202,7,Event Staff,2026-04-03 10:23:00,11.03,N,Active
+720,203,2,Lead Planner,2026-02-14 16:48:00,68.23,Y,Active
+721,203,4,Planner,2026-02-14 16:48:00,45.96,N,Active
+722,203,5,Coordinator,2027-03-30 16:48:00,18.23,N,Active
+723,203,7,Event Staff,2027-03-18 16:48:00,13.2,N,Active
+724,204,1,Lead Planner,2026-03-03 18:55:00,42.85,Y,Active
+725,204,4,Planner,2026-03-03 18:55:00,30.49,N,Active
+726,204,6,Coordinator,2026-09-10 18:55:00,21.61,N,Active
+727,204,7,Event Staff,2026-09-13 18:55:00,10.97,N,Active
+728,205,1,Lead Planner,2026-03-04 11:50:00,27.85,Y,Active
+729,205,5,Coordinator,2026-10-23 11:50:00,15.42,N,Active
+730,205,7,Event Staff,2026-10-19 11:50:00,11.67,N,Active
+731,206,1,Lead Planner,2026-03-18 13:22:00,60.17,Y,Active
+732,206,4,Planner,2026-03-18 13:22:00,26.1,N,Active
+733,206,6,Coordinator,2026-10-06 13:22:00,29.88,N,Active
+734,206,7,Event Staff,2026-10-01 13:22:00,13.26,N,Active
+735,207,1,Lead Planner,2026-03-15 17:12:00,20.14,Y,Active
+736,207,5,Coordinator,2026-12-11 17:12:00,15.77,N,Active
+737,207,7,Event Staff,2026-12-14 17:12:00,11.64,N,Active
+738,208,2,Lead Planner,2026-03-18 10:20:00,31.7,Y,Active
+739,208,5,Coordinator,2026-09-28 10:20:00,14.75,N,Active
+740,208,7,Event Staff,2026-09-23 10:20:00,10.33,N,Active
+741,209,2,Lead Planner,2026-04-07 15:47:00,17.29,Y,Active
+742,209,5,Coordinator,2026-05-12 15:47:00,20.17,N,Active
+743,209,7,Event Staff,2026-05-12 15:47:00,11.78,N,Active
+744,210,2,Lead Planner,2026-04-10 13:43:00,30.71,Y,Cancelled
+745,210,5,Coordinator,2026-12-04 13:43:00,16.61,N,Cancelled
+746,210,7,Event Staff,2026-11-23 13:43:00,10.9,N,Cancelled
+747,211,3,Lead Planner,2026-03-28 14:30:00,34.9,Y,Active
+748,211,6,Coordinator,2026-10-10 14:30:00,14.43,N,Active
+749,211,7,Event Staff,2026-09-15 14:30:00,10.42,N,Active
+750,212,1,Lead Planner,2026-04-14 09:37:00,88.08,Y,Cancelled
+751,212,4,Planner,2026-04-14 09:37:00,40.94,N,Cancelled
+752,212,5,Coordinator,2027-05-30 09:37:00,22.23,N,Cancelled
+753,212,7,Event Staff,2027-06-06 09:37:00,10.65,N,Cancelled
+754,213,1,Lead Planner,2026-04-17 13:42:00,96.74,Y,Active
+755,213,4,Planner,2026-04-17 13:42:00,26.15,N,Active
+756,213,5,Coordinator,2027-01-27 13:42:00,30.14,N,Active
+757,213,7,Event Staff,2027-01-26 13:42:00,14.25,N,Active
+758,214,1,Lead Planner,2026-04-05 10:41:00,75.35,Y,Active
+759,214,4,Planner,2026-04-05 10:41:00,52.34,N,Active
+760,214,5,Coordinator,2026-11-20 10:41:00,26.77,N,Active
+761,214,7,Event Staff,2026-11-15 10:41:00,13.3,N,Active
+762,215,2,Lead Planner,2026-05-04 10:54:00,50.45,Y,Active
+763,215,4,Planner,2026-05-04 10:54:00,40.73,N,Active
+764,215,6,Coordinator,2027-05-26 10:54:00,17.67,N,Active
+765,215,7,Event Staff,2027-06-07 10:54:00,11.6,N,Active
+766,216,3,Lead Planner,2026-05-14 19:00:00,29.94,Y,Active
+767,216,6,Coordinator,2027-04-10 19:00:00,22.23,N,Active
+768,216,7,Event Staff,2027-03-22 19:00:00,11.31,N,Active
+769,217,1,Lead Planner,2026-05-16 16:12:00,54.18,Y,Active
+770,217,4,Planner,2026-05-16 16:12:00,25.95,N,Active
+771,217,6,Coordinator,2027-05-13 16:12:00,23.16,N,Active
+772,217,7,Event Staff,2027-05-28 16:12:00,10.31,N,Active
+773,218,3,Lead Planner,2026-05-20 12:21:00,108.9,Y,Active
+774,218,4,Planner,2026-05-20 12:21:00,47.87,N,Active
+775,218,5,Coordinator,2027-05-19 12:21:00,29.27,N,Active
+776,218,7,Event Staff,2027-06-08 12:21:00,14.44,N,Active
+777,219,3,Lead Planner,2026-05-10 09:35:00,89.92,Y,Active
+778,219,4,Planner,2026-05-10 09:35:00,22.44,N,Active
+779,219,5,Coordinator,2026-11-22 09:35:00,14.69,N,Active
+780,219,7,Event Staff,2026-11-29 09:35:00,10.88,N,Active
+781,220,3,Lead Planner,2026-05-10 10:34:00,21.74,Y,Active
+782,220,6,Coordinator,2027-01-13 10:34:00,27.18,N,Active
+783,220,7,Event Staff,2027-01-10 10:34:00,13.25,N,Active
+784,221,3,Lead Planner,2026-05-30 14:14:00,23.94,Y,Cancelled
+785,221,6,Coordinator,2026-06-14 14:14:00,20.51,N,Cancelled
+786,221,7,Event Staff,2026-06-17 14:14:00,11.37,N,Cancelled
+787,222,2,Lead Planner,2026-05-31 18:52:00,72.16,Y,Active
+788,222,4,Planner,2026-05-31 18:52:00,41.05,N,Active
+789,222,6,Coordinator,2027-05-20 18:52:00,20.17,N,Active
+790,222,7,Event Staff,2027-05-13 18:52:00,10.79,N,Active
+791,223,1,Lead Planner,2026-06-12 19:02:00,25.07,Y,Active
+792,223,5,Coordinator,2026-11-05 19:02:00,15.9,N,Active
+793,223,7,Event Staff,2026-11-22 19:02:00,10.7,N,Active
+794,224,1,Lead Planner,2026-05-31 11:19:00,84.64,Y,Active
+795,224,4,Planner,2026-05-31 11:19:00,31.28,N,Active
+796,224,6,Coordinator,2026-11-30 11:19:00,26.7,N,Active
+797,224,7,Event Staff,2026-11-24 11:19:00,14.15,N,Active
+798,225,3,Lead Planner,2026-06-22 18:57:00,28.72,Y,Active
+799,225,5,Coordinator,2027-05-27 18:57:00,20.54,N,Active
+800,225,7,Event Staff,2027-05-21 18:57:00,10.2,N,Active
+801,226,2,Lead Planner,2026-06-29 10:03:00,68.68,Y,Active
+802,226,4,Planner,2026-06-29 10:03:00,35.5,N,Active
+803,226,5,Coordinator,2027-05-02 10:03:00,23.14,N,Active
+804,226,7,Event Staff,2027-05-01 10:03:00,10.63,N,Active
+805,227,3,Lead Planner,2026-07-17 18:09:00,47.25,Y,Active
+806,227,4,Planner,2026-07-17 18:09:00,41.39,N,Active
+807,227,6,Coordinator,2026-12-18 18:09:00,20.93,N,Active
+808,227,7,Event Staff,2026-12-17 18:09:00,10.48,N,Active
+809,228,3,Lead Planner,2026-07-09 09:15:00,32.25,Y,Active
+810,228,6,Coordinator,2027-08-25 09:15:00,18.88,N,Active
+811,228,7,Event Staff,2027-09-06 09:15:00,11.84,N,Active
+812,229,1,Lead Planner,2026-07-05 17:40:00,21.54,Y,Active
+813,229,5,Coordinator,2027-04-21 17:40:00,22.9,N,Active
+814,229,7,Event Staff,2027-04-11 17:40:00,10.1,N,Active
+815,230,2,Lead Planner,2026-07-23 11:34:00,24.43,Y,Active
+816,230,6,Coordinator,2027-03-14 11:34:00,19.88,N,Active
+817,230,7,Event Staff,2027-03-15 11:34:00,14.17,N,Active
+818,231,2,Lead Planner,2026-07-13 10:26:00,30.44,Y,Active
+819,231,6,Coordinator,2027-06-13 10:26:00,18.99,N,Active
+820,231,7,Event Staff,2027-06-01 10:26:00,10.81,N,Active
+821,232,1,Lead Planner,2026-07-28 09:31:00,95.64,Y,Active
+822,232,4,Planner,2026-07-28 09:31:00,54.04,N,Active
+823,232,6,Coordinator,2026-12-13 09:31:00,30.37,N,Active
+824,232,7,Event Staff,2026-12-25 09:31:00,15.31,N,Active
+825,233,2,Lead Planner,2026-08-09 10:28:00,31.09,Y,Active
+826,233,6,Coordinator,2027-02-23 10:28:00,20.12,N,Active
+827,233,7,Event Staff,2027-03-05 10:28:00,13.75,N,Active
+828,234,1,Lead Planner,2026-08-02 14:49:00,67.49,Y,Active
+829,234,4,Planner,2026-08-02 14:49:00,40.35,N,Active
+830,234,5,Coordinator,2026-12-16 14:49:00,19.29,N,Active
+831,234,7,Event Staff,2026-12-15 14:49:00,13.87,N,Active
+832,235,2,Lead Planner,2026-08-22 10:00:00,19.65,Y,Active
+833,235,6,Coordinator,2027-02-19 10:00:00,15.04,N,Active
+834,235,7,Event Staff,2027-02-03 10:00:00,10.94,N,Active
+835,236,2,Lead Planner,2026-08-21 14:05:00,87.52,Y,Active
+836,236,4,Planner,2026-08-21 14:05:00,40.73,N,Active
+837,236,6,Coordinator,2027-02-10 14:05:00,16.19,N,Active
+838,236,7,Event Staff,2027-01-31 14:05:00,10.52,N,Active
+839,237,3,Lead Planner,2026-09-04 15:35:00,67.93,Y,Active
+840,237,4,Planner,2026-09-04 15:35:00,44.17,N,Active
+841,237,5,Coordinator,2027-09-29 15:35:00,30.58,N,Active
+842,237,7,Event Staff,2027-10-08 15:35:00,14.25,N,Active
+843,238,1,Lead Planner,2026-09-04 13:32:00,50.88,Y,Active
+844,238,4,Planner,2026-09-04 13:32:00,37.71,N,Active
+845,238,6,Coordinator,2027-11-01 13:32:00,23.73,N,Active
+846,238,7,Event Staff,2027-11-08 13:32:00,10.74,N,Active
+847,239,1,Lead Planner,2026-08-24 09:13:00,23.99,Y,Cancelled
+848,239,6,Coordinator,2026-12-06 09:13:00,15.62,N,Cancelled
+849,239,7,Event Staff,2026-12-25 09:13:00,11.79,N,Cancelled
+850,240,1,Lead Planner,2026-09-07 15:54:00,37.93,Y,Active
+851,240,6,Coordinator,2026-11-06 15:54:00,23.5,N,Active
+852,240,7,Event Staff,2026-11-19 15:54:00,14.29,N,Active
+853,241,1,Lead Planner,2026-09-13 10:37:00,70.92,Y,Active
+854,241,4,Planner,2026-09-13 10:37:00,32.31,N,Active
+855,241,5,Coordinator,2027-05-05 10:37:00,31.18,N,Active
+856,241,7,Event Staff,2027-04-23 10:37:00,14.25,N,Active
+857,242,1,Lead Planner,2026-09-16 09:23:00,16.75,Y,Active
+858,242,6,Coordinator,2027-12-10 09:23:00,15.51,N,Active
+859,242,7,Event Staff,2027-12-20 09:23:00,11.74,N,Active
+860,243,2,Lead Planner,2026-09-06 19:41:00,63.66,Y,Active
+861,243,4,Planner,2026-09-06 19:41:00,26.55,N,Active
+862,243,5,Coordinator,2026-12-11 19:41:00,19.84,N,Active
+863,243,7,Event Staff,2026-12-17 19:41:00,11.09,N,Active
+864,244,3,Lead Planner,2026-09-09 17:36:00,32.86,Y,Active
+865,244,6,Coordinator,2027-04-22 17:36:00,20.6,N,Active
+866,244,7,Event Staff,2027-05-09 17:36:00,14.52,N,Active
+867,245,3,Lead Planner,2026-09-18 09:35:00,114.79,Y,Active
+868,245,4,Planner,2026-09-18 09:35:00,57.13,N,Active
+869,245,6,Coordinator,2027-04-28 09:35:00,28.83,N,Active
+870,245,7,Event Staff,2027-05-07 09:35:00,14.66,N,Active
+871,246,1,Lead Planner,2026-09-15 13:42:00,42.32,Y,Active
+872,246,5,Coordinator,2027-06-15 13:42:00,25.33,N,Active
+873,246,7,Event Staff,2027-06-15 13:42:00,14.87,N,Active
+874,247,1,Lead Planner,2026-10-03 15:12:00,44.26,Y,Active
+875,247,5,Coordinator,2027-10-27 15:12:00,22.96,N,Active
+876,247,7,Event Staff,2027-10-12 15:12:00,15.38,N,Active
+877,248,3,Lead Planner,2026-10-13 13:29:00,24.34,Y,Active
+878,248,6,Coordinator,2027-05-30 13:29:00,14.63,N,Active
+879,248,7,Event Staff,2027-06-06 13:29:00,11.11,N,Active
+880,249,1,Lead Planner,2026-10-18 11:20:00,39.13,Y,Active
+881,249,5,Coordinator,2027-04-03 11:20:00,30.23,N,Active
+882,249,7,Event Staff,2027-04-20 11:20:00,13.4,N,Active
+883,250,2,Lead Planner,2026-10-10 14:23:00,87.07,Y,Active
+884,250,4,Planner,2026-10-10 14:23:00,56.49,N,Active
+885,250,5,Coordinator,2027-08-17 14:23:00,23.74,N,Active
+886,250,7,Event Staff,2027-08-12 14:23:00,13.64,N,Active
+887,251,1,Lead Planner,2026-10-31 12:54:00,85.51,Y,Active
+888,251,4,Planner,2026-10-31 12:54:00,34.16,N,Active
+889,251,5,Coordinator,2027-02-14 12:54:00,21.69,N,Active
+890,251,7,Event Staff,2027-02-11 12:54:00,11.87,N,Active
+891,252,3,Lead Planner,2026-10-24 10:31:00,114.2,Y,Active
+892,252,4,Planner,2026-10-24 10:31:00,39.72,N,Active
+893,252,5,Coordinator,2027-02-16 10:31:00,22.98,N,Active
+894,252,7,Event Staff,2027-02-20 10:31:00,13.71,N,Active
+895,253,2,Lead Planner,2026-10-25 15:05:00,20.71,Y,Cancelled
+896,253,6,Coordinator,2027-06-10 15:05:00,17.36,N,Cancelled
+897,253,7,Event Staff,2027-06-26 15:05:00,10.72,N,Cancelled
+898,254,1,Lead Planner,2026-10-24 11:35:00,44.19,Y,Active
+899,254,5,Coordinator,2027-03-02 11:35:00,19.76,N,Active
+900,254,7,Event Staff,2027-03-02 11:35:00,13.61,N,Active
+901,255,2,Lead Planner,2026-11-06 14:31:00,75.4,Y,Active
+902,255,4,Planner,2026-11-06 14:31:00,26.5,N,Active
+903,255,6,Coordinator,2027-05-03 14:31:00,18.4,N,Active
+904,255,7,Event Staff,2027-04-17 14:31:00,10.87,N,Active
+905,256,1,Lead Planner,2026-11-07 10:49:00,72.29,Y,Active
+906,256,4,Planner,2026-11-07 10:49:00,28.43,N,Active
+907,256,5,Coordinator,2027-12-03 10:49:00,29.84,N,Active
+908,256,7,Event Staff,2027-12-10 10:49:00,13.09,N,Active
+909,257,2,Lead Planner,2026-10-28 11:00:00,44.21,Y,Active
+910,257,4,Planner,2026-10-28 11:00:00,26.47,N,Active
+911,257,5,Coordinator,2027-04-18 11:00:00,20.33,N,Active
+912,257,7,Event Staff,2027-04-12 11:00:00,10.99,N,Active
+913,258,3,Lead Planner,2026-11-03 15:20:00,22.86,Y,Active
+914,258,5,Coordinator,2027-10-07 15:20:00,14.36,N,Active
+915,258,7,Event Staff,2027-10-01 15:20:00,10.5,N,Active
+916,259,1,Lead Planner,2026-11-09 17:10:00,61.4,Y,Active
+917,259,4,Planner,2026-11-09 17:10:00,31.37,N,Active
+918,259,6,Coordinator,2027-03-12 17:10:00,20.23,N,Active
+919,259,7,Event Staff,2027-03-11 17:10:00,11.33,N,Active
+920,260,3,Lead Planner,2026-11-13 09:52:00,52.51,Y,Active
+921,260,4,Planner,2026-11-13 09:52:00,34.99,N,Active
+922,260,6,Coordinator,2027-02-18 09:52:00,23.92,N,Active
+923,260,7,Event Staff,2027-03-04 09:52:00,13.08,N,Active
+924,261,2,Lead Planner,2026-11-21 17:29:00,31.88,Y,Active
+925,261,5,Coordinator,2027-11-09 17:29:00,23.6,N,Active
+926,261,7,Event Staff,2027-10-25 17:29:00,10.61,N,Active
+927,262,1,Lead Planner,2026-11-25 13:19:00,109.52,Y,Active
+928,262,4,Planner,2026-11-25 13:19:00,39.45,N,Active
+929,262,6,Coordinator,2027-09-11 13:19:00,21.99,N,Active
+930,262,7,Event Staff,2027-10-01 13:19:00,13.56,N,Active
+931,263,3,Lead Planner,2026-11-30 09:27:00,67.01,Y,Active
+932,263,4,Planner,2026-11-30 09:27:00,38.92,N,Active
+933,263,6,Coordinator,2027-06-08 09:27:00,21.01,N,Active
+934,263,7,Event Staff,2027-06-10 09:27:00,11.25,N,Active
+935,264,1,Lead Planner,2026-12-12 10:26:00,69.16,Y,Active
+936,264,4,Planner,2026-12-12 10:26:00,53.5,N,Active
+937,264,6,Coordinator,2027-05-13 10:26:00,21.68,N,Active
+938,264,7,Event Staff,2027-05-29 10:26:00,14.75,N,Active
+939,265,1,Lead Planner,2026-12-07 10:41:00,25.11,Y,Active
+940,265,5,Coordinator,2027-03-09 10:41:00,17.75,N,Active
+941,265,7,Event Staff,2027-03-23 10:41:00,10.61,N,Active
+942,266,1,Lead Planner,2026-12-04 10:47:00,42.53,Y,Active
+943,266,4,Planner,2026-12-04 10:47:00,33.89,N,Active
+944,266,5,Coordinator,2027-11-03 10:47:00,21.79,N,Active
+945,266,7,Event Staff,2027-11-14 10:47:00,10.8,N,Active
+946,267,2,Lead Planner,2026-12-15 16:07:00,30.75,Y,Active
+947,267,5,Coordinator,2027-01-03 16:07:00,28.0,N,Active
+948,267,7,Event Staff,2027-01-06 16:07:00,13.17,N,Active
+949,268,2,Lead Planner,2026-12-15 09:20:00,22.9,Y,Active
+950,268,5,Coordinator,2027-04-05 09:20:00,16.79,N,Active
+951,268,7,Event Staff,2027-03-25 09:20:00,11.71,N,Active
+952,269,1,Lead Planner,2026-12-23 09:32:00,33.37,Y,Active
+953,269,6,Coordinator,2027-11-29 09:32:00,25.1,N,Active
+954,269,7,Event Staff,2027-12-13 09:32:00,14.99,N,Active
+955,270,2,Lead Planner,2026-12-27 10:17:00,34.68,Y,Active
+956,270,5,Coordinator,2027-05-30 10:17:00,23.97,N,Active
+957,270,7,Event Staff,2027-05-10 10:17:00,10.2,N,Active
+958,271,3,Lead Planner,2027-01-13 10:38:00,34.62,Y,Active
+959,271,5,Coordinator,2027-11-23 10:38:00,18.75,N,Active
+960,271,7,Event Staff,2027-12-07 10:38:00,10.72,N,Active
+961,272,3,Lead Planner,2026-12-27 18:34:00,40.91,Y,Active
+962,272,4,Planner,2026-12-27 18:34:00,37.11,N,Active
+963,272,6,Coordinator,2027-04-25 18:34:00,16.54,N,Active
+964,272,7,Event Staff,2027-04-12 18:34:00,10.6,N,Active
+965,273,2,Lead Planner,2027-01-12 11:10:00,111.4,Y,Active
+966,273,4,Planner,2027-01-12 11:10:00,58.39,N,Active
+967,273,5,Coordinator,2028-02-14 11:10:00,29.64,N,Active
+968,273,7,Event Staff,2028-02-26 11:10:00,14.92,N,Active
+969,274,2,Lead Planner,2023-11-13 10:00:00,20.35,Y,Active
+970,274,6,Coordinator,2024-02-10 10:00:00,23.9,N,Active
+971,274,7,Event Staff,2024-01-23 10:00:00,10.68,N,Active
+972,275,3,Lead Planner,2024-02-18 10:00:00,20.34,Y,Active
+973,275,5,Coordinator,2024-05-15 10:00:00,19.87,N,Active
+974,275,7,Event Staff,2024-05-21 10:00:00,11.81,N,Active
+975,276,3,Lead Planner,2024-01-27 10:00:00,24.87,Y,Active
+976,276,6,Coordinator,2024-04-05 10:00:00,18.51,N,Active
+977,276,7,Event Staff,2024-04-15 10:00:00,11.49,N,Active
+978,277,2,Lead Planner,2023-10-14 10:00:00,26.38,Y,Active
+979,277,6,Coordinator,2024-02-08 10:00:00,20.3,N,Active
+980,277,7,Event Staff,2024-02-26 10:00:00,11.7,N,Active
+981,278,1,Lead Planner,2024-08-11 10:00:00,22.02,Y,Active
+982,278,6,Coordinator,2024-11-05 10:00:00,17.25,N,Active
+983,278,7,Event Staff,2024-11-12 10:00:00,10.02,N,Active
+984,279,1,Lead Planner,2024-04-30 10:00:00,28.02,Y,Active
+985,279,5,Coordinator,2024-09-07 10:00:00,22.93,N,Active
+986,279,7,Event Staff,2024-08-28 10:00:00,10.15,N,Active
+987,280,1,Lead Planner,2023-12-29 10:00:00,16.64,Y,Active
+988,280,5,Coordinator,2024-03-10 10:00:00,15.76,N,Active
+989,280,7,Event Staff,2024-03-10 10:00:00,10.14,N,Active
+990,281,2,Lead Planner,2024-01-01 10:00:00,27.53,Y,Active
+991,281,5,Coordinator,2024-06-07 10:00:00,15.31,N,Active
+992,281,7,Event Staff,2024-06-20 10:00:00,10.94,N,Active
+993,282,2,Lead Planner,2024-12-23 10:00:00,29.7,Y,Active
+994,282,5,Coordinator,2025-03-16 10:00:00,16.71,N,Active
+995,282,7,Event Staff,2025-03-21 10:00:00,11.62,N,Active
+996,283,3,Lead Planner,2025-06-04 10:00:00,21.83,Y,Active
+997,283,6,Coordinator,2025-11-05 10:00:00,23.67,N,Active
+998,283,7,Event Staff,2025-10-25 10:00:00,11.4,N,Active
+999,284,2,Lead Planner,2024-12-28 10:00:00,26.06,Y,Active
+1000,284,6,Coordinator,2025-04-20 10:00:00,19.43,N,Active
+1001,284,7,Event Staff,2025-04-15 10:00:00,11.04,N,Active
+1002,285,1,Lead Planner,2024-11-14 10:00:00,27.84,Y,Active
+1003,285,6,Coordinator,2025-04-27 10:00:00,23.55,N,Active
+1004,285,7,Event Staff,2025-04-14 10:00:00,11.29,N,Active
+1005,286,3,Lead Planner,2024-10-30 10:00:00,25.39,Y,Active
+1006,286,5,Coordinator,2025-02-24 10:00:00,20.79,N,Active
+1007,286,7,Event Staff,2025-02-19 10:00:00,10.77,N,Active
+1008,287,2,Lead Planner,2024-10-11 10:00:00,30.34,Y,Active
+1009,287,5,Coordinator,2025-02-06 10:00:00,15.88,N,Active
+1010,287,7,Event Staff,2025-02-10 10:00:00,10.02,N,Active
+1011,288,2,Lead Planner,2025-01-28 10:00:00,34.91,Y,Active
+1012,288,6,Coordinator,2025-04-25 10:00:00,17.35,N,Active
+1013,288,7,Event Staff,2025-05-01 10:00:00,11.81,N,Active
+1014,289,3,Lead Planner,2025-01-25 10:00:00,24.35,Y,Active
+1015,289,6,Coordinator,2025-04-30 10:00:00,20.21,N,Active
+1016,289,7,Event Staff,2025-04-30 10:00:00,10.21,N,Active
+1017,290,2,Lead Planner,2026-03-19 10:00:00,31.67,Y,Active
+1018,290,6,Coordinator,2026-07-25 10:00:00,14.29,N,Active
+1019,290,7,Event Staff,2026-07-24 10:00:00,11.83,N,Active
+1020,291,1,Lead Planner,2025-10-06 10:00:00,22.35,Y,Active
+1021,291,5,Coordinator,2026-03-10 10:00:00,14.45,N,Active
+1022,291,7,Event Staff,2026-03-16 10:00:00,10.59,N,Active
+1023,292,3,Lead Planner,2026-08-21 10:00:00,28.68,Y,Active
+1024,292,5,Coordinator,2026-10-20 10:00:00,14.83,N,Active
+1025,292,7,Event Staff,2026-10-28 10:00:00,10.66,N,Active
+1026,293,1,Lead Planner,2026-09-02 10:00:00,32.05,Y,Active
+1027,293,5,Coordinator,2026-10-19 10:00:00,18.96,N,Active
+1028,293,7,Event Staff,2026-10-28 10:00:00,10.21,N,Active
+1029,294,2,Lead Planner,2026-02-04 10:00:00,23.64,Y,Active
+1030,294,6,Coordinator,2026-06-15 10:00:00,19.41,N,Active
+1031,294,7,Event Staff,2026-06-16 10:00:00,11.34,N,Active
+1032,295,3,Lead Planner,2026-01-05 10:00:00,30.1,Y,Active
+1033,295,5,Coordinator,2026-04-17 10:00:00,18.36,N,Active
+1034,295,7,Event Staff,2026-04-18 10:00:00,10.84,N,Active
+1035,296,1,Lead Planner,2025-10-20 10:00:00,29.42,Y,Active
+1036,296,6,Coordinator,2026-03-23 10:00:00,17.91,N,Active
+1037,296,7,Event Staff,2026-04-08 10:00:00,10.94,N,Active
+1038,297,3,Lead Planner,2026-02-07 10:00:00,34.84,Y,Active
+1039,297,5,Coordinator,2026-08-03 10:00:00,19.45,N,Active
+1040,297,7,Event Staff,2026-07-15 10:00:00,10.72,N,Active

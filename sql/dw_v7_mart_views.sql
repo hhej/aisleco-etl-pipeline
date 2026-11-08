@@ -96,3 +96,40 @@ SELECT sum("InquiryCount") AS inquiries, sum("IsConsulted") AS consulted, sum("I
        round(avg("DaysQuoteToBooking"), 1) AS avg_days_quote_to_booking,
        round(avg("DaysToConvert"), 1) AS avg_days_to_convert
 FROM mart.v_inquiry;
+
+-- "No reply" (ghosting) rate: share of decided inquiries the 30-day silence rule closed
+CREATE OR REPLACE VIEW mart.v_no_reply_rate AS
+SELECT d."YearMonth" AS inquiry_month, f."ChannelName", count(*) FILTER (WHERE f."IsOpen" = 0) AS decided,
+       count(*) FILTER (WHERE f."LostReason" = 'No reply') AS no_reply,
+       round(count(*) FILTER (WHERE f."LostReason" = 'No reply')::numeric
+             / nullif(count(*) FILTER (WHERE f."IsOpen" = 0), 0), 3) AS no_reply_rate
+FROM mart.v_inquiry f JOIN dim."DimDate" d ON d."DateKey" = f."InquiryDateKey"
+GROUP BY 1, 2;
+
+-- ---------- Conversion model (feature store + registry, sql/ml_feature_store.sql) ----------
+
+-- Sales follow-up list: open inquiries on the latest scoring day, most likely to book first
+CREATE OR REPLACE VIEW mart.v_followup_list AS
+SELECT s."AsOfDate", s."InquiryID", s."Band", s."Score", f."Channel", f."BudgetRange", f."PackageType",
+       f."AgeDays", f."HoursSilent", f."CoupleMsgs", f."Consulted", f."Quoted", s."Version"
+FROM ml."InquiryScore" s
+JOIN feature."InquiryFeatures" f ON f."InquiryID" = s."InquiryID" AND f."AsOf"::date = s."AsOfDate"
+WHERE s."AsOfDate" = (SELECT max("AsOfDate") FROM ml."InquiryScore");
+
+-- Model health: the production model's test metrics and its latest monitoring checks
+CREATE OR REPLACE VIEW mart.v_model_health AS
+SELECT v."Version", v."Algorithm", v."AsOfDate" AS trained_on_data_to, v."TrainedAt",
+       (v."Metrics" -> 'chosen' ->> 'auc')::numeric AS test_auc,
+       (v."Metrics" -> 'baseline' ->> 'auc')::numeric AS baseline_auc,
+       d."AsOfDate" AS checked_on, d."Check", d."Value", d."Status", d."Detail"
+FROM ml."ModelVersion" v
+LEFT JOIN ml."DriftCheck" d ON d."Version" = v."Version"
+     AND d."AsOfDate" = (SELECT max("AsOfDate") FROM ml."DriftCheck" WHERE "Version" = v."Version")
+WHERE v."Status" = 'production';
+
+-- Registry history: every training run and the gate's decision (the model itself is left out)
+CREATE OR REPLACE VIEW mart.v_model_versions AS
+SELECT "Version", "TrainedAt", "AsOfDate" AS trained_on_data_to, "Algorithm", "Status", "TrainRows", "TestRows",
+       ("Metrics" -> 'chosen' ->> 'auc')::numeric AS test_auc, ("Metrics" -> 'baseline' ->> 'auc')::numeric AS baseline_auc,
+       ("Metrics" -> 'chosen' ->> 'top20_capture')::numeric AS top20_capture, "Decision"
+FROM ml."ModelVersion";

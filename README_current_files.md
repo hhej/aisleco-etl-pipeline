@@ -2,6 +2,7 @@
 
 Scope from Revision 10: **Problem 1, Seasonal demand and capacity** and **Problem 2, High inquiry, low conversion**.
 Revision 11 (November 2026) adds the ETL pipeline, written up in `docs/Section6_ETL_Design.md`.
+Revision 12 adds the conversion model (feature store, MLOps) and the dashboard, written up in `docs/Section7_ML_Design.md`.
 
 ## Current
 
@@ -13,15 +14,19 @@ Revision 11 (November 2026) adds the ETL pipeline, written up in `docs/Section6_
 | `sql/oltp_v5_cdc_support.sql`, `sql/dw_v7_functions.sql`, `sql/dw_v7_mart_views.sql` | Trigger + indexes for incremental extraction; helper functions and shared rules; KPI views. Not importable into dbdiagram. |
 | `sql/transform/*.sql` | One transformation per dimension / fact |
 | `etl/` | The pipeline (Python): extract, stage, quality, load, pipeline runner, CLI |
-| `airflow/dags/aisleco_daily_etl.py` | The same steps as an Airflow DAG |
+| `ml/`, `sql/ml_feature_store.sql` | Conversion model: point-in-time feature store (`feature`), training with a validation gate, registry, daily scoring and drift monitoring (`ml`); CLI `python -m ml` |
+| `dashboard/app.py` | Streamlit dashboard on the `mart` views: Problem 1, Problem 2, follow-up list, model health |
+| `airflow/dags/aisleco_daily_etl.py`, `aisleco_weekly_train.py` | The ETL steps + the model's daily steps as an Airflow DAG; weekly training |
+| `AisleCo_ML_Conversion_Demo.ipynb` (+ `_Colab`) | **The Chapter 7 demo**: feature store, training and gate, registry, 15 months of weekly scoring, drift and retraining. Built with `scripts/build_ml_notebook.py [--colab]` |
 | `AisleCo_ETL_Pipeline_Demo.ipynb` | **The demo to present**, with outputs saved: architecture and schema, Problem 1 (staffing) and Problem 2 (conversion) followed run by run through Appendix B, dead letter, quality gate, source → target for one inquiry, crash + resume, extract failure and the E/T/L error matrix, idempotency, source-to-target, stress-test results and a live batch-cap (backlog queue) demo, latency vs the 2-minute target, tests |
 | `AisleCo_ETL_Pipeline_Demo_Colab.ipynb` | The same demo for Google Colab (GitHub `hhej/aisleco-etl-pipeline`): clones the repo and installs PostgreSQL 16 in the session. Built with `scripts/build_demo_notebook.py --colab`; shipped without outputs |
-| `docs/Section6_ETL_Design.md` | Report text: Section 6, the Appendix A row for Rev 11, a correction to Appendix B.5 |
-| `docs/*.png`, `docs/stress_test.txt` | Architecture (five zones) and DW schema diagrams (`etl_architecture.png`, `dw_schema.png`), the DAG, the Valentine's-week chart, stress-test results (`stress_test.png`) |
-| `tests/` | 30 pytest tests (rules, Appendix B, incremental = full, idempotency, errors, source-to-target) |
+| `docs/Section6_ETL_Design.md` | Report text: Section 6, the Appendix A rows for Rev 11 and 12, a correction to Appendix B.5 |
+| `docs/Section7_ML_Design.md` | Report text: Section 7, the conversion model and MLOps |
+| `docs/*.png`, `docs/stress_test.txt` | Architecture (five zones) and DW schema diagrams (`etl_architecture.png`, `dw_schema.png`), the DAG, the Valentine's-week chart, stress-test results (`stress_test.png`), dashboard screenshots (`dashboard_*.png`) |
+| `tests/` | 38 pytest tests (rules, Appendix B, incremental = full, idempotency, errors, batch cap, source-to-target, conversion model) |
 | `scripts/` | Load the walkthrough or the simulated CRM, cross-check, benchmark, Airflow launcher, notebook builder |
 | `AisleCo_Lean_Walkthrough.sql` | Appendix B as SQL; `scripts/load_walkthrough.py` replays it with the ETL runs in between |
-| `AisleCo_MultiZone_Architecture_v3.ipynb` | Collection → Bronze → Silver → Gold notebook on simulated data (pandas). Its Gold is the reference for the source-to-target check. |
+| `AisleCo_MultiZone_Architecture_v3.ipynb` | Collection → Bronze → Silver → Gold notebook on simulated data (pandas): three years, 2024–2026, driven by each couple's readiness to book (assumptions in its section 4). Its Gold is the reference for the source-to-target check. |
 
 ## Kept as reference (superseded by the pipeline)
 
@@ -39,23 +44,27 @@ brew install postgresql@16
 pg_ctl -D /opt/homebrew/var/postgresql@16 -l /opt/homebrew/var/log/postgresql@16.log start   # (or: brew services start postgresql@16)
 python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
-# simulated business year for the source-to-target check (writes data/sim/zones_v3)
+# three simulated business years for the source-to-target check and the model (writes data/sim/zones_v3)
 mkdir -p data/sim && cp AisleCo_MultiZone_Architecture_v3.ipynb data/sim/ && \
   (cd data/sim && ../../.venv/bin/jupyter nbconvert --to notebook --execute AisleCo_MultiZone_Architecture_v3.ipynb --output executed.ipynb)
 
 # the story, the checks, the demo
 .venv/bin/python scripts/load_walkthrough.py      # CRM + DW from scratch, Appendix B with 4 ETL runs
 .venv/bin/python -m etl status                    # run log
-.venv/bin/python -m pytest tests -q               # 32 tests
+.venv/bin/python -m pytest tests -q               # 38 tests
 ETL_CRM_DSN=dbname=aisleco_crm_bench ETL_DW_DSN=dbname=aisleco_dw_bench ETL_LANDING_DIR=data/landing_bench \
   .venv/bin/python scripts/benchmark.py data/sim/zones_v3 --stress   # offline, about 25 min: writes docs/stress_test.*
 .venv/bin/python scripts/build_demo_notebook.py && \
   .venv/bin/jupyter nbconvert --to notebook --execute --inplace AisleCo_ETL_Pipeline_Demo.ipynb
+.venv/bin/python scripts/build_ml_notebook.py && \
+  .venv/bin/jupyter nbconvert --to notebook --execute --inplace AisleCo_ML_Conversion_Demo.ipynb   # fills aisleco_dw_ml
+ETL_DW_DSN=dbname=aisleco_dw_ml .venv/bin/streamlit run dashboard/app.py                          # http://localhost:8501
 ```
 
 Pipeline commands: `python -m etl run --asof 2027-02-01 [--full-refresh]`, `python -m etl resume RUN_ID`,
 `python -m etl status`, `python -m etl init-dw --drop`. Settings are environment variables (`ETL_CRM_DSN`,
 `ETL_DW_DSN`, `ETL_OVERLAP_SECONDS`, `ETL_MAX_REJECT_RATE`, `ETL_MAX_ROWS_PER_RUN` (batch cap), … see `etl/config.py`).
+Model commands: `python -m ml train --asof D`, `python -m ml daily --asof D` (features, score, monitor), `python -m ml status`.
 
 ### Airflow
 
@@ -88,5 +97,5 @@ no password. Open `etl.Run`, `etl.StepRun`, `etl.RejectedRow`, `etl.Alert`, the 
 ### Databases created
 
 `aisleco_crm` / `aisleco_dw` (demo), `aisleco_crm_p2` / `aisleco_dw_p2` (demo section 6, Problem 2 day by day),
-`aisleco_crm_sim` / `aisleco_dw_sim` (simulated year),
+`aisleco_crm_sim` / `aisleco_dw_sim` (simulated years), `aisleco_crm_ml` / `aisleco_dw_ml` (ML notebook, dashboard),
 `aisleco_crm_bench` / `aisleco_dw_bench` (benchmark and stress test), `aisleco_*_test` (pytest), `airflow`.

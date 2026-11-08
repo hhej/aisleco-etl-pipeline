@@ -30,7 +30,7 @@ def init_dw(cfg, drop):
             sys.exit(f"database {dbname} already exists (use --drop to recreate it)")
         c.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier(dbname)))
     with db.connect(cfg.dw_dsn, cfg, purpose="warehouse") as c:
-        for f in ("WeddingOrganizer_DW_v7_dbdiagram.sql", "dw_v7_functions.sql", "dw_v7_mart_views.sql"):
+        for f in ("WeddingOrganizer_DW_v7_dbdiagram.sql", "dw_v7_functions.sql", "ml_feature_store.sql", "dw_v7_mart_views.sql"):
             db.run_sql_file(c, SQL_DIR / f)
         quality.seed_rules(c)
     print(f"warehouse {dbname} created (DW v7) with {len(quality.RULES)} data-quality rules")

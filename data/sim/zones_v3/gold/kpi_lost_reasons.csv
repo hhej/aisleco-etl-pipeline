@@ -1,7 +1,7 @@
 ,ClosedBy,LostReason,Lost,Share
-0,AutoRule,No reply,396,0.769
-4,Sales,Price,49,0.095
-3,Sales,Date unavailable,35,0.068
-2,Sales,Chose competitor,19,0.037
-1,Sales,Budget changed,8,0.016
-5,Sales,Scope mismatch,8,0.016
+0,AutoRule,No reply,1220,0.757
+4,Sales,Price,127,0.079
+3,Sales,Date unavailable,109,0.068
+2,Sales,Chose competitor,81,0.05
+1,Sales,Budget changed,40,0.025
+5,Sales,Scope mismatch,35,0.022

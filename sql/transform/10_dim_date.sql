@@ -1,4 +1,4 @@
--- Step dim_date. DimDate 2025-2028: calendar inserted once; auspicious flags refreshed
+-- Step dim_date. DimDate 2023-2028: calendar inserted once; auspicious flags refreshed
 -- from stg.AuspiciousDate (Thai + Chinese entries merged, highest level kept).
 INSERT INTO dim."DimDate"("DateKey","FullDate") VALUES (-1,'1900-01-01') ON CONFLICT DO NOTHING;
 
@@ -12,7 +12,7 @@ SELECT etl.dk(g.d), g.d, trim(to_char(g.d,'Day')), CASE WHEN extract(isodow from
        CASE WHEN (extract(month from g.d) = 7 AND extract(day from g.d) >= 20) OR extract(month from g.d) IN (8,9)
                  OR (extract(month from g.d) = 10 AND extract(day from g.d) <= 17) THEN 'Y' ELSE 'N' END,
        CASE WHEN a.cd IS NOT NULL THEN 'Y' ELSE 'N' END, a.lvl
-FROM (SELECT gs::date FROM generate_series('2025-01-01'::date, '2028-12-31'::date, interval '1 day') gs) g(d)
+FROM (SELECT gs::date FROM generate_series('2023-01-01'::date, '2028-12-31'::date, interval '1 day') gs) g(d)
 LEFT JOIN (SELECT "CalendarDate" cd,
                   (array['Low','Medium','High'])[max(array_position(array['Low','Medium','High'], "AuspiciousLevel"))] lvl
            FROM stg."AuspiciousDate" GROUP BY 1) a ON a.cd = g.d

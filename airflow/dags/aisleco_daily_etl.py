@@ -4,6 +4,10 @@ Each task is one pipeline step (etl/pipeline.py), run with the project's own Pyt
 Airflow only orchestrates: schedule, dependencies, retries, logs and alerts. The step
 code, checkpoints and run log are the same as on the command line.
 
+After the load, the conversion model's daily steps run (ml/): store today's features of the
+open inquiries, score them with the production model, check drift. Training is weekly, in
+aisleco_weekly_train.
+
 Trigger with a config to replay a date or rebuild:  {"asof": "2027-02-01", "full_refresh": false}
 """
 import logging
@@ -39,6 +43,14 @@ DOCS = {
     "reconcile": "Source-to-target reconciliation (counts, hours, keys)",
     "finish": "Advance watermarks, close the run",
 }
+ML_DOCS = {
+    "ml_features": "Feature store: features of every open inquiry as of today -> feature.InquiryFeatures",
+    "ml_score": "Batch prediction with the production model -> ml.InquiryScore (sales follow-up list)",
+    "ml_monitor": "Drift (PSI vs training) and live AUC -> ml.DriftCheck; alerts to etl.Alert",
+}
+# as-of = the Bangkok date the run is for (Airflow's ds is a UTC date), or the one given in the trigger config
+ASOF = ("{{ dag_run.conf['asof'] if dag_run and dag_run.conf and dag_run.conf.get('asof') "
+        "else data_interval_end.in_timezone('Asia/Bangkok').strftime('%Y-%m-%d') }}")
 
 
 def on_failure(context):
@@ -65,9 +77,7 @@ with DAG(
     start = BashOperator(
         task_id="start_run",
         bash_command=f"{PY} -m etl start --triggered-by airflow "
-                     # as-of = the Bangkok date the run is for (Airflow's ds is a UTC date)
-                     "--asof {{ dag_run.conf['asof'] if dag_run and dag_run.conf and dag_run.conf.get('asof') "
-                     "else data_interval_end.in_timezone('Asia/Bangkok').strftime('%Y-%m-%d') }}"
+                     f"--asof {ASOF}"
                      "{{ ' --full-refresh' if dag_run and dag_run.conf and dag_run.conf.get('full_refresh') else '' }}",
         cwd=ROOT, env=ENV, append_env=True, retries=0,
         doc_md="Creates the run in etl.Run and passes its RunID to every step (XCom)")
@@ -83,3 +93,6 @@ with DAG(
             start >> tasks[name]
         for up in ups:
             tasks[up] >> tasks[name]
+    ml = [BashOperator(task_id=name, bash_command=f"{PY} -m ml {name[3:]} --asof {ASOF}",
+                       cwd=ROOT, env=ENV, append_env=True, doc_md=doc) for name, doc in ML_DOCS.items()]
+    tasks["finish"] >> ml[0] >> ml[1] >> ml[2]
